@@ -65,16 +65,18 @@ python3 tests/run_tests.py --report tests/REPORT.md       # applies the app's ma
 
 `tests/plants.csv` describes each plant with the questions and answers a beginner would use (3 to 6 at the family step and 3 to 6 at the species step). `run_tests.py` uses the same rules as `docs/index.html` (an unknown state counts half a mismatch) and reports, for each plant, whether the right family and the right species fit every answer and rank in the top 3. After changing scores, run both commands and check that no plant stops fitting. A plant that fits but ranks lower is usually a tie with other plants that fit the same answers, not a scoring error. `tests/REVIEW_LOG.md` records what the first review changed and why.
 
-## Monthly open-data update
+## Open-data update (run by hand)
 
-A GitHub job (`.github/workflows/enrich.yml`) runs `scripts/enrich.py` on the 2nd of each month, or whenever you start it from the **Actions** tab ("Fetch English names and flowering months" → *Run workflow*). It:
+A GitHub job (`.github/workflows/enrich.yml`) runs `scripts/enrich.py` when you start it from the **Actions** tab ("Fetch English names, flowering months and record counts" → *Run workflow*). It no longer runs on a schedule. Instead, `.github/workflows/enrich-reminder.yml` opens an issue assigned to the repo owner on 1 February, May, August and November, giving the date of the last successful run and a link to start a new one. It:
 
 - fetches English names from **Wikidata** (CC0) into `data/auto/english_names.csv`;
 - works out flowering months from **iNaturalist** observations in Britain and Ireland marked "Flowering" (counts per month only) into `data/auto/flowering.csv`;
 - counts GBIF records in Great Britain and Ireland into `data/auto/gbif_counts.csv`; for species the Kew table has no hectad counts for, the build estimates hectads by matching rank order against species that have both (shown as "about … hectads (estimated from GBIF records)");
 - rebuilds the key and commits the result.
 
-Hand-entered names and observations still take priority. The flowering run takes one to two hours, because iNaturalist asks for about one request a second; it costs nothing.
+Hand-entered names and observations still take priority. A full run takes about 1.5 to 2.5 hours, mostly because iNaturalist asks for about one request a second; it costs nothing on a public repo.
+
+GitHub switches off scheduled jobs in a public repo after 60 days with no commits. If that happens to the reminder, GitHub shows a notice on the Actions tab; turn it back on there.
 
 ## Licences
 

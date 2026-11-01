@@ -1,0 +1,62 @@
+name: Reminder to run the open-data update
+
+# Every 3 months, open an issue (assigned to the repo owner, so GitHub emails
+# them) saying when "Fetch English names, flowering months and record counts"
+# last ran. The update itself only runs when started by hand.
+
+on:
+  schedule:
+    - cron: "41 9 1 2,5,8,11 *"   # 09:41 UTC on 1 Feb, 1 May, 1 Aug and 1 Nov
+  workflow_dispatch:               # test it by hand from the Actions tab
+
+permissions:
+  actions: read
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Open reminder issue
+        run: |
+          fmt() { date -u -d "$1" "+%-d %B %Y"; }
+          days() { echo $(( ( $(date -u +%s) - $(date -u -d "$1" +%s) ) / 86400 )); }
+
+          ok=$(gh run list --workflow enrich.yml --status success --limit 1 \
+                 --json createdAt,url --jq '.[0] // empty | "\(.createdAt) \(.url)"')
+          any=$(gh run list --workflow enrich.yml --limit 1 \
+                 --json createdAt,url,conclusion --jq '.[0] // empty | "\(.createdAt) \(.url) \(.conclusion)"')
+
+          if [ -n "$ok" ]; then
+            set -- $ok
+            last="**Last successful run:** $(fmt "$1") ($(days "$1") days ago) — [details]($2)"
+          else
+            last="**Last successful run:** none yet."
+          fi
+          if [ -n "$any" ]; then
+            set -- $any
+            if [ "$3" != "success" ]; then
+              last="$last"$'\n\n'"**Most recent attempt:** $(fmt "$1"), ended *${3:-still running}* — [details]($2)"
+            fi
+          fi
+
+          body="Time to refresh the English names, flowering months and GBIF record counts.
+
+          $last
+
+          **To run it:** [Actions → Fetch English names, flowering months and record counts](https://github.com/$GH_REPO/actions/workflows/enrich.yml) → *Run workflow* (leave it on \`all\`). It takes about 1.5 to 2.5 hours and costs nothing on a public repo.
+
+          Close this issue once it has run."
+          body=$(printf '%s\n' "$body" | sed 's/^          //')
+
+          gh label create reminder --color FBCA04 --description "Scheduled reminder" --force
+          # close earlier reminders so only the latest stays open
+          for n in $(gh issue list --label reminder --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Replaced by a newer reminder."
+          done
+          gh issue create --title "Reminder: run the open-data update ($(date -u '+%B %Y'))" \
+            --label reminder --assignee "${{ github.repository_owner }}" --body "$body"
