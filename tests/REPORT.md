@@ -1,14 +1,14 @@
 # Test report
 
-417 plants, 92 families. Data: docs/data/species.json.
+572 plants, 92 families. Data: docs/data/species.json.
 
 | | family fits all answers | family in top 3 | species fits all answers | species in top 3 | both steps pass |
 |---|---|---|---|---|---|
-| plants | 417 | 342 | 417 | 397 | **322** |
+| plants | 572 | 462 | 572 | 516 | **407** |
 
-Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 295.
+Overall pass rate: **71.2%**. Rank 1 at family step: 311; rank 1 at species step: 359.
 
-## Failures (95)
+## Failures (165)
 
 - **Sonchus oleraceus** (Asteraceae), species step: fits but ranks 4 (14 fit all answers). Top: Scorzoneroides autumnalis (0.0), Sonchus asper (0.0), Crepis capillaris (0.0)
 - **Briza media** (Poaceae), species step: fits but ranks 9 (22 fit all answers). Top: Holcus lanatus (0.0), Agrostis capillaris (0.0), Poa trivialis (0.0)
@@ -35,7 +35,10 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Ranunculus hederaceus** (Ranunculaceae), family step: fits but ranks 6 (10 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Plantaginaceae (0.0)
 - **Ophrys apifera** (Orchidaceae), species step: fits but ranks 4 (16 fit all answers). Top: Dactylorhiza fuchsii (0.0), Dactylorhiza maculata (0.0), Orchis mascula (0.0)
 - **Anacamptis pyramidalis** (Orchidaceae), species step: fits but ranks 5 (11 fit all answers). Top: Dactylorhiza fuchsii (0.0), Orchis mascula (0.0), Ophrys apifera (0.0)
+- **Borago officinalis** (Boraginaceae), family step: fits but ranks 4 (6 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Apiaceae (0.0)
 - **Beta vulgaris** (Amaranthaceae), family step: fits but ranks 7 (17 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Plantaginaceae (0.0)
+- **Salicornia europaea** (Amaranthaceae), family step: fits but ranks 4 (5 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
+- **Suaeda maritima** (Amaranthaceae), family step: fits but ranks 5 (7 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
 - **Rhinanthus minor** (Orobanchaceae), family step: fits but ranks 7 (12 fit all answers). Top: Plantaginaceae (0.0), Lamiaceae (0.0), Ranunculaceae (0.0)
 - **Pedicularis sylvatica** (Orobanchaceae), family step: fits but ranks 6 (12 fit all answers). Top: Plantaginaceae (0.0), Lamiaceae (0.0), Apiaceae (0.0)
 - **Odontites vernus** (Orobanchaceae), family step: fits but ranks 7 (13 fit all answers). Top: Plantaginaceae (0.0), Lamiaceae (0.0), Ranunculaceae (0.0)
@@ -47,6 +50,10 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Lysimachia vulgaris** (Primulaceae), family step: fits but ranks 12 (23 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
 - **Lysimachia arvensis** (Primulaceae), family step: fits but ranks 7 (18 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
 - **Lysimachia nemorum** (Primulaceae), family step: fits but ranks 7 (18 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
+- **Sedum acre** (Crassulaceae), family step: fits but ranks 9 (12 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
+- **Sedum album** (Crassulaceae), family step: fits but ranks 9 (12 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
+- **Umbilicus rupestris** (Crassulaceae), family step: fits but ranks 6 (6 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Hylotelephium telephium** (Crassulaceae), family step: fits but ranks 4 (6 fit all answers). Top: Asteraceae (0.0), Boraginaceae (0.0), Polygonaceae (0.0)
 - **Polystichum setiferum** (Polypodiaceae), species step: fits but ranks 5 (6 fit all answers). Top: Dryopteris dilatata (0.0), Dryopteris filix-mas (0.0), Dryopteris affinis (0.0)
 - **Valeriana officinalis** (Caprifoliaceae), family step: fits but ranks 4 (5 fit all answers). Top: Brassicaceae (0.0), Ranunculaceae (0.0), Geraniaceae (0.0)
 - **Centranthus ruber** (Caprifoliaceae), family step: fits but ranks 7 (34 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
@@ -90,6 +97,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Viola riviniana** (Violaceae), family step: fits but ranks 8 (15 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Apiaceae (0.0)
 - **Viola odorata** (Violaceae), family step: fits but ranks 8 (11 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Lamiaceae (0.0)
 - **Viola arvensis** (Violaceae), family step: fits but ranks 8 (15 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Apiaceae (0.0)
+- **Ilex aquifolium** (Aquifoliaceae), family step: fits but ranks 4 (4 fit all answers). Top: Rosaceae (0.0), Ericaceae (0.0), Rhamnaceae (0.0)
 - **Impatiens glandulifera** (Balsaminaceae), family step: fits but ranks 7 (10 fit all answers). Top: Plantaginaceae (0.0), Ranunculaceae (0.0), Onagraceae (0.0)
 - **Menyanthes trifoliata** (Menyanthaceae), family step: fits but ranks 4 (4 fit all answers). Top: Brassicaceae (0.0), Apiaceae (0.0), Ranunculaceae (0.0)
 - **Nuphar lutea** (Nymphaeaceae), family step: fits but ranks 10 (13 fit all answers). Top: Brassicaceae (0.0), Plantaginaceae (0.0), Apiaceae (0.0)
@@ -105,6 +113,69 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Daphne laureola** (Thymelaeaceae), family step: fits but ranks 9 (13 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Ericaceae (0.0)
 - **Lysimachia tenella** (Primulaceae), family step: fits but ranks 7 (15 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
 - **Cirsium acaule** (Asteraceae), species step: fits but ranks 6 (14 fit all answers). Top: Arctium minus (0.0), Carduus nutans (0.0), Arctium lappa (0.0)
+- **Leontodon hispidus** (Asteraceae), species step: fits but ranks 5 (34 fit all answers). Top: Hypochaeris radicata (0.0), Pilosella officinarum (0.0), Crepis capillaris (0.0)
+- **Helminthotheca echioides** (Asteraceae), species step: fits but ranks 8 (41 fit all answers). Top: Hypochaeris radicata (0.0), Pilosella officinarum (0.0), Crepis capillaris (0.0)
+- **Matricaria chamomilla** (Asteraceae), species step: fits but ranks 4 (10 fit all answers). Top: Achillea millefolium (0.0), Tripleurospermum inodorum (0.0), Tanacetum parthenium (0.0)
+- **Poa pratensis** (Poaceae), species step: fits but ranks 6 (18 fit all answers). Top: Agrostis stolonifera (0.0), Agrostis capillaris (0.0), Poa trivialis (0.0)
+- **Glyceria fluitans** (Poaceae), species step: fits but ranks 5 (16 fit all answers). Top: Agrostis stolonifera (0.0), Agrostis capillaris (0.0), Poa trivialis (0.0)
+- **Schedonorus pratensis** (Poaceae), species step: fits but ranks 5 (11 fit all answers). Top: Holcus lanatus (0.0), Poa trivialis (0.0), Festuca rubra (0.0)
+- **Trisetum flavescens** (Poaceae), species step: fits but ranks 6 (22 fit all answers). Top: Arrhenatherum elatius (0.0), Festuca rubra (0.0), Bromus hordeaceus (0.0)
+- **Melica uniflora** (Poaceae), species step: fits but ranks 5 (9 fit all answers). Top: Poa trivialis (0.0), Festuca rubra (0.0), Glyceria fluitans (0.0)
+- **Elymus caninus** (Poaceae), species step: fits but ranks 4 (7 fit all answers). Top: Brachypodium sylvaticum (0.0), Lolium multiflorum (0.0), Triticum aestivum (0.0)
+- **Carex pallescens** (Cyperaceae), species step: fits but ranks 5 (23 fit all answers). Top: Carex flacca (0.0), Carex pendula (0.0), Carex sylvatica (0.0)
+- **Eleocharis quinqueflora** (Cyperaceae), species step: fits but ranks 4 (13 fit all answers). Top: Eleocharis palustris (0.0), Isolepis setacea (0.0), Trichophorum germanicum (0.0)
+- **Carex spicata** (Cyperaceae), species step: fits but ranks 5 (13 fit all answers). Top: Carex leporina (0.0), Carex remota (0.0), Carex otrubae (0.0)
+- **Medicago arabica** (Fabaceae), species step: fits but ranks 4 (10 fit all answers). Top: Trifolium dubium (0.0), Medicago lupulina (0.0), Trifolium micranthum (0.0)
+- **Lupinus polyphyllus** (Fabaceae), species step: fits but ranks 12 (22 fit all answers). Top: Trifolium pratense (0.0), Vicia cracca (0.0), Vicia sepium (0.0)
+- **Onobrychis viciifolia** (Fabaceae), species step: fits but ranks 6 (14 fit all answers). Top: Trifolium pratense (0.0), Vicia sativa (0.0), Anthyllis vulneraria (0.0)
+- **Ononis spinosa** (Fabaceae), species step: fits but ranks 12 (25 fit all answers). Top: Trifolium pratense (0.0), Vicia sativa (0.0), Trifolium medium (0.0)
+- **Hippocrepis comosa** (Fabaceae), species step: fits but ranks 7 (15 fit all answers). Top: Medicago lupulina (0.0), Anthyllis vulneraria (0.0), Laburnum anagyroides (0.0)
+- **Medicago sativa** (Fabaceae), species step: fits but ranks 7 (29 fit all answers). Top: Trifolium pratense (0.0), Vicia cracca (0.0), Vicia sepium (0.0)
+- **Diplotaxis muralis** (Brassicaceae), species step: fits but ranks 10 (29 fit all answers). Top: Sisymbrium officinale (0.0), Sinapis arvensis (0.0), Brassica napus (0.0)
+- **Cardamine amara** (Brassicaceae), species step: fits but ranks 4 (7 fit all answers). Top: Cardamine pratensis (0.0), Cardamine flexuosa (0.0), Nasturtium officinale (0.0)
+- **Cerastium glomeratum** (Caryophyllaceae), family step: fits but ranks 4 (39 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Stellaria graminea** (Caryophyllaceae), family step: fits but ranks 4 (39 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Stellaria alsine** (Caryophyllaceae), family step: fits but ranks 4 (25 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Moehringia trinervia** (Caryophyllaceae), family step: fits but ranks 4 (39 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Moehringia trinervia** (Caryophyllaceae), species step: fits but ranks 4 (12 fit all answers). Top: Cerastium fontanum (0.0), Stellaria media (0.0), Cerastium glomeratum (0.0)
+- **Spergularia marina** (Caryophyllaceae), family step: fits but ranks 4 (23 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Sagina apetala** (Caryophyllaceae), species step: fits but ranks 4 (17 fit all answers). Top: Sagina procumbens (0.0), Stellaria graminea (0.0), Spergula arvensis (0.0)
+- **Honckenya peploides** (Caryophyllaceae), family step: fits but ranks 4 (11 fit all answers). Top: Asteraceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Dianthus deltoides** (Caryophyllaceae), species step: fits but ranks 4 (12 fit all answers). Top: Silene flos-cuculi (0.0), Spergularia media (0.0), Silene noctiflora (0.0)
+- **Heracleum mantegazzianum** (Apiaceae), species step: fits but ranks 4 (5 fit all answers). Top: Heracleum sphondylium (0.0), Daucus carota (0.0), Conium maculatum (0.0)
+- **Pimpinella saxifraga** (Apiaceae), species step: fits but ranks 6 (42 fit all answers). Top: Angelica sylvestris (0.0), Heracleum sphondylium (0.0), Aegopodium podagraria (0.0)
+- **Chaerophyllum temulum** (Apiaceae), species step: fits but ranks 4 (9 fit all answers). Top: Heracleum sphondylium (0.0), Anthriscus sylvestris (0.0), Daucus carota (0.0)
+- **Aethusa cynapium** (Apiaceae), species step: fits but ranks 4 (20 fit all answers). Top: Sanicula europaea (0.0), Pimpinella saxifraga (0.0), Conium maculatum (0.0)
+- **Berula erecta** (Apiaceae), species step: fits but ranks 6 (34 fit all answers). Top: Angelica sylvestris (0.0), Aegopodium podagraria (0.0), Pimpinella saxifraga (0.0)
+- **Oenanthe fistulosa** (Apiaceae), species step: fits but ranks 18 (52 fit all answers). Top: Angelica sylvestris (0.0), Heracleum sphondylium (0.0), Aegopodium podagraria (0.0)
+- **Myrrhis odorata** (Apiaceae), species step: fits but ranks 4 (5 fit all answers). Top: Heracleum sphondylium (0.0), Anthriscus sylvestris (0.0), Chaerophyllum temulum (0.0)
+- **Eryngium maritimum** (Apiaceae), family step: fits but ranks 4 (6 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Fabaceae (0.0)
+- **Veronica filiformis** (Plantaginaceae), species step: fits but ranks 7 (14 fit all answers). Top: Veronica serpyllifolia (0.0), Veronica chamaedrys (0.0), Veronica arvensis (0.0)
+- **Ranunculus lingua** (Ranunculaceae), family step: fits but ranks 8 (32 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Fabaceae (0.0)
+- **Nigella damascena** (Ranunculaceae), family step: fits but ranks 7 (23 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Brassicaceae (0.0)
+- **Eranthis hyemalis** (Ranunculaceae), family step: fits but ranks 7 (23 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Brassicaceae (0.0)
+- **Trollius europaeus** (Ranunculaceae), family step: fits but ranks 7 (23 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Brassicaceae (0.0)
+- **Helleborus viridis** (Ranunculaceae), family step: fits but ranks 7 (23 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Brassicaceae (0.0)
+- **Geranium pusillum** (Geraniaceae), species step: fits but ranks 4 (6 fit all answers). Top: Geranium molle (0.0), Geranium dissectum (0.0), Erodium cicutarium (0.0)
+- **Epilobium parviflorum** (Onagraceae), species step: fits but ranks 5 (7 fit all answers). Top: Epilobium obscurum (0.0), Epilobium ciliatum (0.0), Epilobium palustre (0.0)
+- **Oenothera biennis** (Onagraceae), family step: fits but ranks 6 (14 fit all answers). Top: Rosaceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Hypericum humifusum** (Hypericaceae), family step: fits but ranks 9 (19 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
+- **Galium uliginosum** (Rubiaceae), species step: fits but ranks 4 (10 fit all answers). Top: Galium aparine (0.0), Galium palustre (0.0), Galium album (0.0)
+- **Ribes nigrum** (Grossulariaceae), family step: fits but ranks 4 (6 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Solanaceae (0.0)
+- **Viola palustris** (Violaceae), family step: fits but ranks 8 (9 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Lamiaceae (0.0)
+- **Viola reichenbachiana** (Violaceae), family step: fits but ranks 8 (15 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Apiaceae (0.0)
+- **Viola tricolor** (Violaceae), family step: fits but ranks 8 (15 fit all answers). Top: Fabaceae (0.0), Plantaginaceae (0.0), Apiaceae (0.0)
+- **Malva neglecta** (Malvaceae), family step: fits but ranks 9 (11 fit all answers). Top: Asteraceae (0.0), Rosaceae (0.0), Plantaginaceae (0.0)
+- **Papaver dubium** (Papaveraceae), family step: fits but ranks 5 (7 fit all answers). Top: Rosaceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Papaver somniferum** (Papaveraceae), family step: fits but ranks 5 (7 fit all answers). Top: Rosaceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Eschscholzia californica** (Papaveraceae), family step: fits but ranks 7 (10 fit all answers). Top: Rosaceae (0.0), Brassicaceae (0.0), Plantaginaceae (0.0)
+- **Persicaria lapathifolia** (Polygonaceae), species step: fits but ranks 5 (11 fit all answers). Top: Persicaria maculosa (0.0), Polygonum aviculare (0.0), Persicaria amphibia (0.0)
+- **Myosotis sylvatica** (Boraginaceae), species step: fits but ranks 6 (9 fit all answers). Top: Myosotis arvensis (0.0), Myosotis laxa (0.0), Myosotis discolor (0.0)
+- **Euphrasia nemorosa** (Orobanchaceae), family step: fits but ranks 7 (13 fit all answers). Top: Plantaginaceae (0.0), Lamiaceae (0.0), Ranunculaceae (0.0)
+- **Pedicularis palustris** (Orobanchaceae), family step: fits but ranks 6 (8 fit all answers). Top: Plantaginaceae (0.0), Lamiaceae (0.0), Apiaceae (0.0)
+- **Campanula latifolia** (Campanulaceae), family step: fits but ranks 6 (14 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Boraginaceae (0.0)
+- **Lysimachia punctata** (Primulaceae), family step: fits but ranks 5 (10 fit all answers). Top: Plantaginaceae (0.0), Caryophyllaceae (0.0), Rubiaceae (0.0)
+- **Calystegia silvatica** (Convolvulaceae), family step: fits but ranks 4 (5 fit all answers). Top: Caprifoliaceae (0.0), Rubiaceae (0.0), Solanaceae (0.0)
 
 ## All plants
 
@@ -276,7 +347,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Antirrhinum majus | Plantaginaceae | 5 | yes | 1 | 5 | yes | 1 (1) |
 | Callitriche stagnalis | Plantaginaceae | 4 | yes | 2 | 6 | yes | 1 (4) |
 | Plantago coronopus | Plantaginaceae | 4 | yes | 4 | 6 | yes | 1 (1) |
-| Plantago maritima | Plantaginaceae | 4 | yes | 2 | 6 | yes | 2 (5) |
+| Plantago maritima | Plantaginaceae | 4 | yes | 3 | 6 | yes | 2 (5) |
 | Ranunculus repens | Ranunculaceae | 6 | yes | 2 | 6 | yes | 1 (2) |
 | Ranunculus acris | Ranunculaceae | 6 | yes | 2 | 6 | yes | 1 (1) |
 | Ranunculus bulbosus | Ranunculaceae | 6 | yes | 2 | 5 | yes | 1 (4) |
@@ -299,13 +370,13 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Stachys sylvatica | Lamiaceae | 5 | yes | 1 | 6 | yes | 1 (3) |
 | Stachys palustris | Lamiaceae | 5 | yes | 1 | 4 | yes | 1 (2) |
 | Teucrium scorodonia | Lamiaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
-| Mentha aquatica | Lamiaceae | 4 | yes | 1 | 5 | yes | 1 (2) |
-| Origanum vulgare | Lamiaceae | 3 | yes | 1 | 4 | yes | 1 (8) |
+| Mentha aquatica | Lamiaceae | 4 | yes | 2 | 5 | yes | 1 (2) |
+| Origanum vulgare | Lamiaceae | 3 | yes | 2 | 4 | yes | 1 (8) |
 | Thymus drucei | Lamiaceae | 4 | yes | 3 | 5 | yes | 2 (2) |
 | Galeopsis tetrahit | Lamiaceae | 4 | yes | 1 | 5 | yes | 2 (6) |
 | Lamium galeobdolon | Lamiaceae | 4 | yes | 1 | 4 | yes | 1 (2) |
-| Clinopodium vulgare | Lamiaceae | 3 | yes | 1 | 4 | yes | 1 (7) |
-| Lycopus europaeus | Lamiaceae | 4 | yes | 1 | 4 | yes | 1 (1) |
+| Clinopodium vulgare | Lamiaceae | 3 | yes | 2 | 4 | yes | 1 (7) |
+| Lycopus europaeus | Lamiaceae | 4 | yes | 2 | 4 | yes | 1 (1) |
 | Ballota nigra | Lamiaceae | 4 | yes | 1 | 5 | yes | 2 (3) |
 | Scutellaria galericulata | Lamiaceae | 5 | yes | 1 | 4 | yes | 1 (1) |
 | Dactylorhiza fuchsii | Orchidaceae | 6 | yes | 2 | 4 | yes | 1 (16) |
@@ -323,16 +394,16 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Reynoutria japonica | Polygonaceae | 5 | yes | 1 | 5 | yes | 2 (5) |
 | Persicaria amphibia | Polygonaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
 | Myosotis arvensis | Boraginaceae | 6 | yes | 1 | 6 | yes | 1 (9) |
-| Symphytum officinale | Boraginaceae | 5 | yes | 1 | 5 | yes | 1 (3) |
+| Symphytum officinale | Boraginaceae | 5 | yes | 2 | 5 | yes | 1 (3) |
 | Echium vulgare | Boraginaceae | 5 | yes | 1 | 5 | yes | 3 (11) |
-| Borago officinalis | Boraginaceae | 5 | yes | 2 | 6 | yes | 3 (8) |
+| Borago officinalis | Boraginaceae | 5 | yes | 4 | 6 | yes | 3 (8) |
 | Myosotis scorpioides | Boraginaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
-| Pulmonaria officinalis | Boraginaceae | 5 | yes | 1 | 5 | yes | 1 (2) |
+| Pulmonaria officinalis | Boraginaceae | 5 | yes | 2 | 5 | yes | 1 (2) |
 | Chenopodium album | Amaranthaceae | 4 | yes | 3 | 5 | yes | 1 (20) |
 | Atriplex prostrata | Amaranthaceae | 4 | yes | 3 | 4 | yes | 1 (3) |
 | Beta vulgaris | Amaranthaceae | 4 | yes | 7 | 6 | yes | 2 (6) |
-| Salicornia europaea | Amaranthaceae | 5 | yes | 2 | 6 | yes | 1 (5) |
-| Suaeda maritima | Amaranthaceae | 3 | yes | 2 | 6 | yes | 3 (6) |
+| Salicornia europaea | Amaranthaceae | 5 | yes | 4 | 6 | yes | 1 (5) |
+| Suaeda maritima | Amaranthaceae | 3 | yes | 5 | 6 | yes | 3 (6) |
 | Rhinanthus minor | Orobanchaceae | 5 | yes | 7 | 5 | yes | 1 (4) |
 | Pedicularis sylvatica | Orobanchaceae | 4 | yes | 6 | 6 | yes | 1 (2) |
 | Odontites vernus | Orobanchaceae | 4 | yes | 7 | 6 | yes | 1 (2) |
@@ -363,7 +434,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Erodium cicutarium | Geraniaceae | 5 | yes | 1 | 6 | yes | 3 (6) |
 | Geranium sanguineum | Geraniaceae | 6 | yes | 1 | 6 | yes | 2 (3) |
 | Campanula rotundifolia | Campanulaceae | 5 | yes | 6 | 6 | yes | 1 (7) |
-| Campanula trachelium | Campanulaceae | 6 | yes | 2 | 6 | yes | 1 (2) |
+| Campanula trachelium | Campanulaceae | 6 | yes | 3 | 6 | yes | 1 (2) |
 | Jasione montana | Campanulaceae | 4 | yes | 5 | 6 | yes | 2 (5) |
 | Primula vulgaris | Primulaceae | 6 | yes | 4 | 6 | yes | 1 (3) |
 | Primula veris | Primulaceae | 5 | yes | 2 | 6 | yes | 1 (2) |
@@ -371,10 +442,10 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Lysimachia vulgaris | Primulaceae | 5 | yes | 12 | 5 | yes | 1 (1) |
 | Lysimachia arvensis | Primulaceae | 5 | yes | 7 | 6 | yes | 1 (4) |
 | Lysimachia nemorum | Primulaceae | 5 | yes | 7 | 6 | yes | 1 (2) |
-| Sedum acre | Crassulaceae | 5 | yes | 3 | 6 | yes | 1 (3) |
-| Sedum album | Crassulaceae | 4 | yes | 3 | 5 | yes | 1 (6) |
-| Umbilicus rupestris | Crassulaceae | 4 | yes | 3 | 4 | yes | 1 (1) |
-| Hylotelephium telephium | Crassulaceae | 5 | yes | 1 | 5 | yes | 1 (2) |
+| Sedum acre | Crassulaceae | 5 | yes | 9 | 6 | yes | 1 (3) |
+| Sedum album | Crassulaceae | 4 | yes | 9 | 5 | yes | 1 (6) |
+| Umbilicus rupestris | Crassulaceae | 4 | yes | 6 | 4 | yes | 1 (1) |
+| Hylotelephium telephium | Crassulaceae | 5 | yes | 4 | 5 | yes | 1 (2) |
 | Athyrium filix-femina | Aspleniaceae | 4 | yes | 1 | 5 | yes | 1 (3) |
 | Asplenium scolopendrium | Aspleniaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
 | Asplenium trichomanes | Aspleniaceae | 4 | yes | 1 | 4 | yes | 1 (6) |
@@ -430,12 +501,12 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Euphorbia amygdaloides | Euphorbiaceae | 3 | yes | 2 | 6 | yes | 2 (3) |
 | Hypericum perforatum | Hypericaceae | 6 | yes | 1 | 6 | yes | 3 (8) |
 | Hypericum hirsutum | Hypericaceae | 4 | yes | 2 | 5 | yes | 1 (1) |
-| Hypericum tetrapterum | Hypericaceae | 5 | yes | 2 | 5 | yes | 1 (3) |
+| Hypericum tetrapterum | Hypericaceae | 5 | yes | 3 | 5 | yes | 1 (3) |
 | Hypericum androsaemum | Hypericaceae | 4 | yes | 4 | 5 | yes | 3 (10) |
 | Centaurium erythraea | Gentianaceae | 4 | yes | 16 | 6 | yes | 1 (3) |
 | Blackstonia perfoliata | Gentianaceae | 3 | yes | 19 | 5 | yes | 1 (1) |
 | Gentiana pneumonanthe | Gentianaceae | 4 | yes | 10 | 6 | yes | 1 (1) |
-| Carpobrotus edulis | Aizoaceae | 5 | yes | 2 | 6 | yes | 1 (1) |
+| Carpobrotus edulis | Aizoaceae | 5 | yes | 3 | 6 | yes | 1 (1) |
 | Malva sylvestris | Malvaceae | 5 | yes | 9 | 6 | yes | 2 (4) |
 | Malva moschata | Malvaceae | 5 | yes | 9 | 5 | yes | 1 (4) |
 | Tilia cordata | Malvaceae | 4 | yes | 3 | 6 | yes | 1 (2) |
@@ -471,7 +542,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Urtica dioica | Urticaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
 | Parietaria judaica | Urticaceae | 3 | yes | 13 | 6 | yes | 2 (4) |
 | Soleirolia soleirolii | Urticaceae | 4 | yes | 10 | 6 | yes | 2 (3) |
-| Ribes uva-crispa | Grossulariaceae | 5 | yes | 2 | 6 | yes | 1 (4) |
+| Ribes uva-crispa | Grossulariaceae | 5 | yes | 3 | 6 | yes | 1 (4) |
 | Ribes rubrum | Grossulariaceae | 4 | yes | 4 | 6 | yes | 2 (4) |
 | Ribes sanguineum | Grossulariaceae | 4 | yes | 6 | 5 | yes | 2 (2) |
 | Cornus sanguinea | Cornaceae | 5 | yes | 7 | 6 | yes | 1 (3) |
@@ -490,7 +561,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Viola riviniana | Violaceae | 6 | yes | 8 | 6 | yes | 1 (5) |
 | Viola odorata | Violaceae | 5 | yes | 8 | 6 | yes | 2 (4) |
 | Viola arvensis | Violaceae | 4 | yes | 8 | 5 | yes | 1 (2) |
-| Ilex aquifolium | Aquifoliaceae | 4 | yes | 3 | 6 | yes | 1 (1) |
+| Ilex aquifolium | Aquifoliaceae | 4 | yes | 4 | 6 | yes | 1 (1) |
 | Taxus baccata | Taxaceae | 4 | yes | 2 | 4 | yes | 1 (1) |
 | Drosera rotundifolia | Droseraceae | 4 | yes | 2 | 6 | yes | 1 (2) |
 | Impatiens glandulifera | Balsaminaceae | 5 | yes | 7 | 6 | yes | 1 (1) |
@@ -514,7 +585,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Bryonia dioica | Cucurbitaceae | 5 | yes | 1 | 5 | yes | 1 (1) |
 | Frangula alnus | Rhamnaceae | 4 | yes | 8 | 6 | yes | 1 (2) |
 | Daphne laureola | Thymelaeaceae | 4 | yes | 9 | 6 | yes | 1 (1) |
-| Rhamnus cathartica | Rhamnaceae | 5 | yes | 2 | 6 | yes | 1 (2) |
+| Rhamnus cathartica | Rhamnaceae | 5 | yes | 3 | 6 | yes | 1 (2) |
 | Ulex gallii | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (2) |
 | Trifolium arvense | Fabaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
 | Hippuris vulgaris | Plantaginaceae | 5 | yes | 1 | 6 | yes | 1 (3) |
@@ -527,3 +598,158 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Juncus conglomeratus | Juncaceae | 4 | yes | 2 | 6 | yes | 2 (3) |
 | Luzula multiflora | Juncaceae | 4 | yes | 3 | 6 | yes | 2 (7) |
 | Rumex crispus | Polygonaceae | 4 | yes | 1 | 4 | yes | 1 (11) |
+| Crepis capillaris | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (6) |
+| Leontodon hispidus | Asteraceae | 4 | yes | 1 | 6 | yes | 5 (34) |
+| Pilosella officinarum | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (3) |
+| Senecio sylvaticus | Asteraceae | 4 | yes | 1 | 5 | yes | 3 (31) |
+| Centaurea scabiosa | Asteraceae | 5 | yes | 1 | 6 | yes | 3 (6) |
+| Carduus nutans | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (2) |
+| Glebionis segetum | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (6) |
+| Mycelis muralis | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (4) |
+| Helminthotheca echioides | Asteraceae | 3 | yes | 1 | 6 | yes | 8 (41) |
+| Solidago canadensis | Asteraceae | 5 | yes | 1 | 6 | yes | 2 (7) |
+| Matricaria chamomilla | Asteraceae | 5 | yes | 1 | 5 | yes | 4 (10) |
+| Tanacetum parthenium | Asteraceae | 5 | yes | 1 | 5 | yes | 3 (13) |
+| Arctium lappa | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (3) |
+| Antennaria dioica | Asteraceae | 4 | yes | 1 | 5 | yes | 2 (6) |
+| Agrostis capillaris | Poaceae | 4 | yes | 1 | 6 | yes | 1 (19) |
+| Poa pratensis | Poaceae | 4 | yes | 1 | 6 | yes | 6 (18) |
+| Glyceria fluitans | Poaceae | 4 | yes | 1 | 6 | yes | 5 (16) |
+| Alopecurus geniculatus | Poaceae | 4 | yes | 1 | 6 | yes | 1 (1) |
+| Phalaris arundinacea | Poaceae | 4 | yes | 1 | 6 | yes | 2 (4) |
+| Schedonorus pratensis | Poaceae | 3 | yes | 1 | 6 | yes | 5 (11) |
+| Trisetum flavescens | Poaceae | 3 | yes | 1 | 6 | yes | 6 (22) |
+| Melica uniflora | Poaceae | 3 | yes | 1 | 6 | yes | 5 (9) |
+| Milium effusum | Poaceae | 3 | yes | 1 | 6 | yes | 1 (3) |
+| Danthonia decumbens | Poaceae | 3 | yes | 1 | 6 | yes | 2 (6) |
+| Koeleria macrantha | Poaceae | 4 | yes | 1 | 6 | yes | 1 (2) |
+| Ammophila arenaria | Poaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
+| Elymus caninus | Poaceae | 4 | yes | 1 | 6 | yes | 4 (7) |
+| Carex pallescens | Cyperaceae | 4 | yes | 1 | 6 | yes | 5 (23) |
+| Carex echinata | Cyperaceae | 5 | yes | 1 | 6 | yes | 3 (15) |
+| Carex rostrata | Cyperaceae | 5 | yes | 1 | 6 | yes | 1 (11) |
+| Carex binervis | Cyperaceae | 4 | yes | 1 | 6 | yes | 1 (1) |
+| Trichophorum germanicum | Cyperaceae | 3 | yes | 2 | 6 | yes | 3 (2) |
+| Isolepis setacea | Cyperaceae | 3 | yes | 2 | 5 | yes | 1 (8) |
+| Eleocharis quinqueflora | Cyperaceae | 4 | yes | 1 | 5 | yes | 4 (13) |
+| Carex paniculata | Cyperaceae | 5 | yes | 1 | 6 | yes | 3 (5) |
+| Carex spicata | Cyperaceae | 4 | yes | 1 | 6 | yes | 5 (13) |
+| Prunus domestica | Rosaceae | 4 | yes | 1 | 6 | yes | 3 (12) |
+| Prunus laurocerasus | Rosaceae | 4 | yes | 1 | 6 | yes | 1 (2) |
+| Malus domestica | Rosaceae | 4 | yes | 1 | 6 | yes | 2 (47) |
+| Rubus caesius | Rosaceae | 5 | yes | 1 | 6 | yes | 3 (8) |
+| Rosa rugosa | Rosaceae | 5 | yes | 1 | 6 | yes | 2 (8) |
+| Alchemilla mollis | Rosaceae | 4 | yes | 2 | 6 | yes | 1 (14) |
+| Cotoneaster simonsii | Rosaceae | 4 | yes | 1 | 6 | yes | 3 (14) |
+| Sorbus aria | Rosaceae | 5 | yes | 1 | 6 | yes | 1 (40) |
+| Crataegus laevigata | Rosaceae | 4 | yes | 1 | 6 | yes | 2 (3) |
+| Fragaria ananassa | Rosaceae | 5 | yes | 1 | 6 | yes | 2 (4) |
+| Trifolium dubium | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (18) |
+| Trifolium campestre | Fabaceae | 4 | yes | 1 | 5 | yes | 3 (17) |
+| Medicago arabica | Fabaceae | 4 | yes | 1 | 5 | yes | 4 (10) |
+| Lathyrus linifolius | Fabaceae | 4 | yes | 1 | 4 | yes | 3 (15) |
+| Melilotus officinalis | Fabaceae | 4 | yes | 1 | 5 | yes | 2 (5) |
+| Lupinus polyphyllus | Fabaceae | 5 | yes | 1 | 4 | yes | 12 (22) |
+| Robinia pseudoacacia | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (4) |
+| Onobrychis viciifolia | Fabaceae | 4 | yes | 1 | 5 | yes | 6 (14) |
+| Ononis spinosa | Fabaceae | 4 | yes | 1 | 4 | yes | 12 (25) |
+| Genista tinctoria | Fabaceae | 4 | yes | 1 | 5 | yes | 3 (8) |
+| Hippocrepis comosa | Fabaceae | 4 | yes | 1 | 5 | yes | 7 (15) |
+| Medicago sativa | Fabaceae | 4 | yes | 1 | 4 | yes | 7 (29) |
+| Lathyrus latifolius | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (2) |
+| Cardamine flexuosa | Brassicaceae | 5 | yes | 1 | 6 | yes | 1 (2) |
+| Arabidopsis thaliana | Brassicaceae | 4 | yes | 1 | 5 | yes | 1 (16) |
+| Sisymbrium officinale | Brassicaceae | 5 | yes | 1 | 6 | yes | 1 (9) |
+| Erophila verna | Brassicaceae | 4 | yes | 1 | 5 | yes | 2 (9) |
+| Lepidium draba | Brassicaceae | 5 | yes | 1 | 6 | yes | 2 (4) |
+| Cochlearia officinalis | Brassicaceae | 5 | yes | 1 | 6 | yes | 3 (4) |
+| Rorippa palustris | Brassicaceae | 5 | yes | 2 | 5 | yes | 3 (17) |
+| Diplotaxis muralis | Brassicaceae | 5 | yes | 1 | 4 | yes | 10 (29) |
+| Brassica oleracea | Brassicaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
+| Erysimum cheiri | Brassicaceae | 5 | yes | 2 | 5 | yes | 1 (3) |
+| Lobularia maritima | Brassicaceae | 4 | yes | 2 | 5 | yes | 1 (3) |
+| Cardamine amara | Brassicaceae | 5 | yes | 2 | 4 | yes | 4 (7) |
+| Cerastium glomeratum | Caryophyllaceae | 3 | yes | 4 | 6 | yes | 3 (12) |
+| Stellaria graminea | Caryophyllaceae | 3 | yes | 4 | 6 | yes | 1 (5) |
+| Stellaria alsine | Caryophyllaceae | 3 | yes | 4 | 6 | yes | 1 (4) |
+| Moehringia trinervia | Caryophyllaceae | 3 | yes | 4 | 6 | yes | 4 (12) |
+| Spergularia marina | Caryophyllaceae | 3 | yes | 4 | 6 | yes | 1 (4) |
+| Sagina apetala | Caryophyllaceae | 3 | yes | 3 | 5 | yes | 4 (17) |
+| Honckenya peploides | Caryophyllaceae | 4 | yes | 4 | 6 | yes | 2 (2) |
+| Silene uniflora | Caryophyllaceae | 5 | yes | 3 | 6 | yes | 1 (1) |
+| Dianthus deltoides | Caryophyllaceae | 5 | yes | 3 | 5 | yes | 4 (12) |
+| Heracleum mantegazzianum | Apiaceae | 5 | yes | 1 | 5 | yes | 4 (5) |
+| Pimpinella saxifraga | Apiaceae | 4 | yes | 1 | 4 | yes | 6 (42) |
+| Chaerophyllum temulum | Apiaceae | 5 | yes | 1 | 5 | yes | 4 (9) |
+| Aethusa cynapium | Apiaceae | 4 | yes | 1 | 5 | yes | 4 (20) |
+| Foeniculum vulgare | Apiaceae | 5 | yes | 1 | 4 | yes | 1 (3) |
+| Berula erecta | Apiaceae | 5 | yes | 1 | 5 | yes | 6 (34) |
+| Oenanthe fistulosa | Apiaceae | 4 | yes | 1 | 4 | yes | 18 (52) |
+| Myrrhis odorata | Apiaceae | 5 | yes | 1 | 5 | yes | 4 (5) |
+| Crithmum maritimum | Apiaceae | 4 | yes | 1 | 5 | yes | 2 (3) |
+| Eryngium maritimum | Apiaceae | 4 | yes | 4 | 6 | yes | 1 (1) |
+| Mentha spicata | Lamiaceae | 3 | yes | 2 | 5 | yes | 2 (2) |
+| Mentha arvensis | Lamiaceae | 4 | yes | 1 | 5 | yes | 1 (4) |
+| Lamium amplexicaule | Lamiaceae | 4 | yes | 1 | 5 | yes | 2 (2) |
+| Lamium maculatum | Lamiaceae | 4 | yes | 1 | 5 | yes | 3 (5) |
+| Stachys arvensis | Lamiaceae | 4 | yes | 1 | 5 | yes | 2 (2) |
+| Salvia verbenaca | Lamiaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
+| Betonica officinalis | Lamiaceae | 5 | yes | 1 | 4 | yes | 2 (4) |
+| Galeopsis bifida | Lamiaceae | 4 | yes | 1 | 5 | yes | 2 (4) |
+| Melissa officinalis | Lamiaceae | 3 | yes | 2 | 5 | yes | 1 (3) |
+| Veronica serpyllifolia | Plantaginaceae | 4 | yes | 2 | 5 | yes | 1 (4) |
+| Veronica arvensis | Plantaginaceae | 3 | yes | 2 | 6 | yes | 3 (11) |
+| Veronica officinalis | Plantaginaceae | 4 | yes | 2 | 6 | yes | 2 (2) |
+| Veronica hederifolia | Plantaginaceae | 4 | yes | 2 | 5 | yes | 1 (3) |
+| Veronica montana | Plantaginaceae | 3 | yes | 2 | 6 | yes | 1 (1) |
+| Veronica filiformis | Plantaginaceae | 4 | yes | 2 | 4 | yes | 7 (14) |
+| Linaria purpurea | Plantaginaceae | 5 | yes | 2 | 5 | yes | 1 (3) |
+| Plantago media | Plantaginaceae | 4 | yes | 1 | 6 | yes | 3 (4) |
+| Kickxia elatine | Plantaginaceae | 4 | yes | 2 | 6 | yes | 1 (1) |
+| Ranunculus lingua | Ranunculaceae | 5 | yes | 8 | 5 | yes | 1 (1) |
+| Ranunculus trichophyllus | Ranunculaceae | 4 | yes | 3 | 5 | yes | 2 (5) |
+| Ranunculus peltatus | Ranunculaceae | 5 | yes | 3 | 5 | yes | 1 (1) |
+| Aconitum napellus | Ranunculaceae | 5 | yes | 3 | 5 | yes | 1 (1) |
+| Nigella damascena | Ranunculaceae | 3 | yes | 7 | 4 | yes | 1 (2) |
+| Eranthis hyemalis | Ranunculaceae | 3 | yes | 7 | 6 | yes | 1 (1) |
+| Trollius europaeus | Ranunculaceae | 3 | yes | 7 | 5 | yes | 1 (1) |
+| Thalictrum minus | Ranunculaceae | 3 | yes | 3 | 5 | yes | 1 (1) |
+| Helleborus viridis | Ranunculaceae | 3 | yes | 7 | 5 | yes | 1 (1) |
+| Geranium dissectum | Geraniaceae | 5 | yes | 1 | 6 | yes | 2 (3) |
+| Geranium lucidum | Geraniaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
+| Geranium pyrenaicum | Geraniaceae | 5 | yes | 1 | 5 | yes | 2 (7) |
+| Geranium pusillum | Geraniaceae | 5 | yes | 1 | 6 | yes | 4 (6) |
+| Epilobium parviflorum | Onagraceae | 4 | yes | 2 | 5 | yes | 5 (7) |
+| Oenothera biennis | Onagraceae | 4 | yes | 6 | 6 | yes | 2 (3) |
+| Hypericum pulchrum | Hypericaceae | 4 | yes | 2 | 5 | yes | 1 (13) |
+| Hypericum humifusum | Hypericaceae | 4 | yes | 9 | 5 | yes | 1 (1) |
+| Galium album | Rubiaceae | 3 | yes | 3 | 6 | yes | 2 (3) |
+| Galium uliginosum | Rubiaceae | 4 | yes | 3 | 5 | yes | 4 (10) |
+| Sherardia arvensis | Rubiaceae | 3 | yes | 1 | 5 | yes | 1 (3) |
+| Salix aurita | Salicaceae | 3 | yes | 1 | 5 | yes | 3 (6) |
+| Populus alba | Salicaceae | 3 | yes | 1 | 5 | yes | 1 (1) |
+| Ribes nigrum | Grossulariaceae | 4 | yes | 4 | 6 | yes | 3 (4) |
+| Euphorbia lathyris | Euphorbiaceae | 4 | yes | 2 | 5 | yes | 1 (2) |
+| Viola palustris | Violaceae | 5 | yes | 8 | 5 | yes | 1 (2) |
+| Viola reichenbachiana | Violaceae | 4 | yes | 8 | 5 | yes | 3 (4) |
+| Viola tricolor | Violaceae | 5 | yes | 8 | 4 | yes | 2 (4) |
+| Malva neglecta | Malvaceae | 5 | yes | 9 | 6 | yes | 2 (5) |
+| Papaver dubium | Papaveraceae | 5 | yes | 5 | 6 | yes | 2 (4) |
+| Papaver somniferum | Papaveraceae | 5 | yes | 5 | 6 | yes | 1 (2) |
+| Eschscholzia californica | Papaveraceae | 4 | yes | 7 | 6 | yes | 1 (3) |
+| Dactylorhiza maculata | Orchidaceae | 5 | yes | 2 | 5 | yes | 1 (1) |
+| Dactylorhiza purpurella | Orchidaceae | 5 | yes | 2 | 5 | yes | 3 (8) |
+| Persicaria hydropiper | Polygonaceae | 5 | yes | 1 | 6 | yes | 2 (7) |
+| Persicaria lapathifolia | Polygonaceae | 4 | yes | 1 | 5 | yes | 5 (11) |
+| Myosotis laxa | Boraginaceae | 5 | yes | 1 | 5 | yes | 2 (11) |
+| Myosotis sylvatica | Boraginaceae | 5 | yes | 1 | 6 | yes | 6 (9) |
+| Myosotis discolor | Boraginaceae | 4 | yes | 1 | 6 | yes | 3 (10) |
+| Euphrasia nemorosa | Orobanchaceae | 3 | yes | 7 | 6 | yes | 1 (12) |
+| Pedicularis palustris | Orobanchaceae | 4 | yes | 6 | 5 | yes | 1 (1) |
+| Allium vineale | Amaryllidaceae | 4 | yes | 1 | 4 | yes | 1 (9) |
+| Vaccinium vitis-idaea | Ericaceae | 4 | yes | 3 | 6 | yes | 1 (4) |
+| Campanula latifolia | Campanulaceae | 5 | yes | 6 | 6 | yes | 1 (3) |
+| Lysimachia punctata | Primulaceae | 4 | yes | 5 | 5 | yes | 1 (3) |
+| Valerianella locusta | Caprifoliaceae | 4 | yes | 3 | 5 | yes | 1 (3) |
+| Leucojum aestivum | Amaryllidaceae | 6 | yes | 1 | 4 | yes | 2 (8) |
+| Calystegia silvatica | Convolvulaceae | 5 | yes | 4 | 5 | yes | 2 (2) |

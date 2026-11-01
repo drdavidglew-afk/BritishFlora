@@ -10,9 +10,11 @@ fam:Asteraceae,lform,simple,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,lform,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,lform,grassy,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Asteraceae,feature,milky,claude-draft,,unverified,Claude,2026-11-01
-fam:Asteraceae,feature,spiny,claude-draft,,unverified,Claude,2026-11-01
-fam:Asteraceae,feature,aromatic,claude-draft,,unverified,Claude,2026-11-01
+fam:Asteraceae,feature,milky,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Asteraceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Asteraceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Asteraceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Asteraceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,flowers,showy,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,flowers,small_green,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asteraceae,inflor,head,claude-bulk,,reviewed,Claude,2026-11-01
@@ -39,7 +41,9 @@ fam:Rosaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Rosaceae,lform,lobed,claude-draft,,unverified,Claude,2026-11-01
 fam:Rosaceae,lform,compound,claude-draft,,unverified,Claude,2026-11-01
 fam:Rosaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Rosaceae,feature,spiny,claude-draft,,unverified,Claude,2026-11-01
+fam:Rosaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Rosaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Rosaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Rosaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Rosaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Rosaceae,inflor,single,claude-draft,,unverified,Claude,2026-11-01
@@ -81,8 +85,9 @@ fam:Fabaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
 fam:Fabaceae,lform,compound,claude-draft,,unverified,Claude,2026-11-01
 fam:Fabaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Fabaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Fabaceae,feature,tendril,claude-draft,,unverified,Claude,2026-11-01
-fam:Fabaceae,feature,spiny,claude-draft,,unverified,Claude,2026-11-01
+fam:Fabaceae,feature,tendril,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Fabaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Fabaceae,feature,square,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Fabaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Fabaceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
 fam:Fabaceae,inflor,head,claude-draft,,unverified,Claude,2026-11-01
@@ -133,6 +138,7 @@ fam:Brassicaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Brassicaceae,fruit,crucifer,claude-draft,,unverified,Claude,2026-11-01
 fam:Brassicaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Brassicaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Brassicaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Caryophyllaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,fhabit,creep,claude-draft,,unverified,Claude,2026-11-01
@@ -141,7 +147,9 @@ fam:Caryophyllaceae,larr,whorl,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Caryophyllaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,lform,grassy,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Caryophyllaceae,feature,nodes,claude-draft,,unverified,Claude,2026-11-01
+fam:Caryophyllaceae,feature,nodes,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Caryophyllaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Caryophyllaceae,feature,square,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Caryophyllaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Caryophyllaceae,inflor,single,claude-draft,,unverified,Claude,2026-11-01
@@ -166,6 +174,9 @@ fam:Apiaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Apiaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
 fam:Apiaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Apiaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Apiaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Apiaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Apiaceae,feature,milky,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Apiaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Apiaceae,inflor,umbel,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Apiaceae,inflor,head,claude-bulk,,reviewed,Claude,2026-11-01
@@ -184,8 +195,9 @@ fam:Lamiaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
 fam:Lamiaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Lamiaceae,lform,lobed,claude-draft,,unverified,Claude,2026-11-01
 fam:Lamiaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Lamiaceae,feature,square,claude-draft,,unverified,Claude,2026-11-01
-fam:Lamiaceae,feature,aromatic,claude-draft,,unverified,Claude,2026-11-01
+fam:Lamiaceae,feature,square,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Lamiaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Lamiaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Lamiaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Lamiaceae,inflor,whorls,claude-draft,,unverified,Claude,2026-11-01
 fam:Lamiaceae,inflor,head,claude-draft,,unverified,Claude,2026-11-01
@@ -285,6 +297,7 @@ fam:Polygonaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Polygonaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
 fam:Polygonaceae,feature,sheath,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Polygonaceae,feature,nodes,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Polygonaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Polygonaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Polygonaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Polygonaceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
@@ -307,7 +320,10 @@ fam:Amaranthaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
 fam:Amaranthaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Amaranthaceae,lform,lobed,claude-draft,,unverified,Claude,2026-11-01
 fam:Amaranthaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Amaranthaceae,feature,succulent,claude-draft,,unverified,Claude,2026-11-01
+fam:Amaranthaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Amaranthaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Amaranthaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Amaranthaceae,feature,jointed,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Amaranthaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Amaranthaceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
 fam:Amaranthaceae,inflor,branched,claude-draft,,unverified,Claude,2026-11-01
@@ -325,7 +341,8 @@ fam:Boraginaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
 fam:Boraginaceae,larr,basal,claude-draft,,unverified,Claude,2026-11-01
 fam:Boraginaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Boraginaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Boraginaceae,feature,bristly,claude-draft,,unverified,Claude,2026-11-01
+fam:Boraginaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Boraginaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Boraginaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Boraginaceae,inflor,coil,claude-draft,,unverified,Claude,2026-11-01
 fam:Boraginaceae,inflor,branched,claude-draft,,unverified,Claude,2026-11-01
@@ -383,7 +400,9 @@ fam:Ericaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
 fam:Ericaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Ericaceae,lform,needle,claude-draft,,unverified,Claude,2026-11-01
 fam:Ericaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Ericaceae,feature,nogreen,claude-draft,,unverified,Claude,2026-11-01
+fam:Ericaceae,feature,nogreen,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Ericaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Ericaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Ericaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Ericaceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
 fam:Ericaceae,inflor,single,claude-draft,,unverified,Claude,2026-11-01
@@ -511,6 +530,7 @@ fam:Primulaceae,fused,fused,claude-draft,,unverified,Claude,2026-11-01
 fam:Primulaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Primulaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Primulaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
+fam:Primulaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Crassulaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Crassulaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Crassulaceae,fhabit,creep,claude-draft,,unverified,Claude,2026-11-01
@@ -566,6 +586,7 @@ fam:Aspleniaceae,flowers,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Aspleniaceae,petals,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Aspleniaceae,fused,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Aspleniaceae,fruit,spores,claude-draft,,unverified,Claude,2026-11-01
+fam:Aspleniaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Papaveraceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,fhabit,climb,claude-draft,,unverified,Claude,2026-11-01
@@ -574,7 +595,9 @@ fam:Papaveraceae,larr,basal,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,lform,lobed,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,lform,compound,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Papaveraceae,feature,milky,claude-draft,,unverified,Claude,2026-11-01
+fam:Papaveraceae,feature,milky,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Papaveraceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Papaveraceae,feature,tendril,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Papaveraceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,inflor,single,claude-draft,,unverified,Claude,2026-11-01
 fam:Papaveraceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
@@ -609,6 +632,7 @@ fam:Saxifragaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Saxifragaceae,ovary,inf,claude-draft,,unverified,Claude,2026-11-01
 fam:Saxifragaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Saxifragaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
+fam:Saxifragaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Potamogetonaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Potamogetonaceae,fhabit,water,claude-draft,,unverified,Claude,2026-11-01
 fam:Potamogetonaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
@@ -661,6 +685,7 @@ fam:Salicaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Salicaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Salicaceae,fruit,plumed,claude-draft,,unverified,Claude,2026-11-01
 fam:Salicaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
+fam:Salicaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Rubiaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,fhabit,climb,claude-draft,,unverified,Claude,2026-11-01
@@ -668,8 +693,9 @@ fam:Rubiaceae,fhabit,creep,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,larr,whorl,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Rubiaceae,feature,square,claude-draft,,unverified,Claude,2026-11-01
-fam:Rubiaceae,feature,bristly,claude-draft,,unverified,Claude,2026-11-01
+fam:Rubiaceae,feature,square,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Rubiaceae,feature,bristly,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Rubiaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Rubiaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Rubiaceae,inflor,branched,claude-draft,,unverified,Claude,2026-11-01
@@ -693,6 +719,8 @@ fam:Polypodiaceae,flowers,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Polypodiaceae,petals,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Polypodiaceae,fused,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Polypodiaceae,fruit,spores,claude-draft,,unverified,Claude,2026-11-01
+fam:Polypodiaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Polypodiaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Hypericaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Hypericaceae,ptype,shrub,claude-draft,,unverified,Claude,2026-11-01
 fam:Hypericaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
@@ -720,7 +748,8 @@ fam:Euphorbiaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
 fam:Euphorbiaceae,larr,whorl,claude-draft,,unverified,Claude,2026-11-01
 fam:Euphorbiaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Euphorbiaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Euphorbiaceae,feature,milky,claude-draft,,unverified,Claude,2026-11-01
+fam:Euphorbiaceae,feature,milky,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Euphorbiaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Euphorbiaceae,flowers,small_green,claude-draft,,unverified,Claude,2026-11-01
 fam:Euphorbiaceae,inflor,umbel,claude-draft,,unverified,Claude,2026-11-01
 fam:Euphorbiaceae,inflor,spike,claude-draft,,unverified,Claude,2026-11-01
@@ -832,6 +861,7 @@ fam:Solanaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Solanaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Solanaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 fam:Solanaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
+fam:Solanaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Violaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Violaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Violaceae,fhabit,creep,claude-draft,,unverified,Claude,2026-11-01
@@ -865,7 +895,8 @@ fam:Aizoaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 fam:Aizoaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
 fam:Malvaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Malvaceae,ptype,tree,claude-draft,,unverified,Claude,2026-11-01
-fam:Malvaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
+fam:Malvaceae,fhabit,up,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Malvaceae,fhabit,creep,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Malvaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
 fam:Malvaceae,lform,lobed,claude-draft,,unverified,Claude,2026-11-01
 fam:Malvaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
@@ -932,6 +963,7 @@ fam:Araliaceae,ovary,inf,claude-draft,,unverified,Claude,2026-11-01
 fam:Araliaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Araliaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 fam:Araliaceae,fruit,small_dry,claude-draft,,unverified,Claude,2026-11-01
+fam:Araliaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Lentibulariaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Lentibulariaceae,fhabit,water,claude-draft,,unverified,Claude,2026-11-01
 fam:Lentibulariaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
@@ -974,6 +1006,7 @@ fam:Pinaceae,flowers,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Pinaceae,petals,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Pinaceae,fused,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Pinaceae,fruit,cone,claude-draft,,unverified,Claude,2026-11-01
+fam:Pinaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Liliaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Liliaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Liliaceae,larr,basal,claude-draft,,unverified,Claude,2026-11-01
@@ -1021,6 +1054,7 @@ fam:Viburnaceae,fused,fused,claude-draft,,unverified,Claude,2026-11-01
 fam:Viburnaceae,ovary,inf,claude-draft,,unverified,Claude,2026-11-01
 fam:Viburnaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Viburnaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
+fam:Viburnaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Asphodelaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Asphodelaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Asphodelaceae,larr,basal,claude-draft,,unverified,Claude,2026-11-01
@@ -1058,7 +1092,8 @@ fam:Convolvulaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
 fam:Convolvulaceae,larr,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Convolvulaceae,lform,simple,claude-draft,,unverified,Claude,2026-11-01
 fam:Convolvulaceae,veins,net,claude-draft,,unverified,Claude,2026-11-01
-fam:Convolvulaceae,feature,nogreen,claude-draft,,unverified,Claude,2026-11-01
+fam:Convolvulaceae,feature,nogreen,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Convolvulaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Convolvulaceae,flowers,showy,claude-draft,,unverified,Claude,2026-11-01
 fam:Convolvulaceae,inflor,single,claude-draft,,unverified,Claude,2026-11-01
 fam:Convolvulaceae,sym,radial,claude-draft,,unverified,Claude,2026-11-01
@@ -1080,6 +1115,7 @@ fam:Fagaceae,fused,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Fagaceae,ovary,inf,claude-draft,,unverified,Claude,2026-11-01
 fam:Fagaceae,stamens,many,claude-draft,,unverified,Claude,2026-11-01
 fam:Fagaceae,fruit,nut,claude-draft,,unverified,Claude,2026-11-01
+fam:Fagaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Oleaceae,ptype,tree,claude-draft,,unverified,Claude,2026-11-01
 fam:Oleaceae,ptype,shrub,claude-draft,,unverified,Claude,2026-11-01
 fam:Oleaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
@@ -1121,6 +1157,7 @@ fam:Sapindaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Sapindaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Sapindaceae,fruit,winged,claude-draft,,unverified,Claude,2026-11-01
 fam:Sapindaceae,fruit,nut,claude-draft,,unverified,Claude,2026-11-01
+fam:Sapindaceae,feature,milky,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Urticaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Urticaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Urticaceae,fhabit,creep,claude-draft,,unverified,Claude,2026-11-01
@@ -1252,7 +1289,8 @@ fam:Cupressaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Cupressaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
 fam:Cupressaceae,larr,whorl,claude-draft,,unverified,Claude,2026-11-01
 fam:Cupressaceae,lform,needle,claude-draft,,unverified,Claude,2026-11-01
-fam:Cupressaceae,feature,aromatic,claude-draft,,unverified,Claude,2026-11-01
+fam:Cupressaceae,feature,aromatic,claude-bulk,,reviewed,Claude,2026-11-01
+fam:Cupressaceae,feature,spiny,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Cupressaceae,flowers,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Cupressaceae,petals,none,claude-draft,,unverified,Claude,2026-11-01
 fam:Cupressaceae,fused,none,claude-draft,,unverified,Claude,2026-11-01
@@ -1396,6 +1434,7 @@ fam:Balsaminaceae,fused,free,claude-draft,,unverified,Claude,2026-11-01
 fam:Balsaminaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Balsaminaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Balsaminaceae,fruit,capsule,claude-draft,,unverified,Claude,2026-11-01
+fam:Balsaminaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Acanthaceae,ptype,herb,claude-draft,,unverified,Claude,2026-11-01
 fam:Acanthaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Acanthaceae,larr,opp,claude-draft,,unverified,Claude,2026-11-01
@@ -1726,6 +1765,7 @@ fam:Juncaginaceae,fused,free,claude-draft,,unverified,Claude,2026-11-01
 fam:Juncaginaceae,ovary,sup,claude-draft,,unverified,Claude,2026-11-01
 fam:Juncaginaceae,stamens,few,claude-draft,,unverified,Claude,2026-11-01
 fam:Juncaginaceae,fruit,small_dry,claude-draft,,unverified,Claude,2026-11-01
+fam:Juncaginaceae,feature,succulent,claude-bulk,,reviewed,Claude,2026-11-01
 fam:Elaeagnaceae,ptype,shrub,claude-draft,,unverified,Claude,2026-11-01
 fam:Elaeagnaceae,fhabit,up,claude-draft,,unverified,Claude,2026-11-01
 fam:Elaeagnaceae,larr,alt,claude-draft,,unverified,Claude,2026-11-01
@@ -7921,7 +7961,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 199715-1,flower_start,6,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 199715-1,flower_end,9,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 199753-1,gcolour,yellow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-199753-1,gsize,medium,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+199753-1,gsize,medium,claude-bulk,,reviewed,Claude,2026-11-01
+199753-1,gsize,small,claude-bulk,,reviewed,Claude,2026-11-01
 199753-1,gleaf,lobed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 199753-1,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 199753-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
