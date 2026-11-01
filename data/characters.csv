@@ -4,7 +4,6 @@ fhabit,Growth habit,state,family,
 larr,Leaf arrangement,state,family,Look at where leaves join the stem.
 lform,Leaf form,state,family,
 veins,Leaf veins,state,family,
-feature,Special features,feature,family,Pick one only if you notice it.
 flowers,Flowers,state,family,
 inflor,How the flowers are arranged,state,family,
 sym,Flower shape,state,family,
@@ -56,6 +55,7 @@ gleaf,Leaf shape,state,generic,
 gedge,Leaf edge,state,generic,
 ghair,Hairiness,state,generic,Look at stems and leaves.
 height,Height of the tallest stem,height,all,
+feature,Special features,feature,family,Pick one only if you notice it.
 light,Light,state,species,This and the next four habitat questions are calculated from published Ellenberg values. A rough answer is fine.
 moist,How wet is the ground?,state,species,
 soil,Soil,state,species,
