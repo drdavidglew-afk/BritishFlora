@@ -9,7 +9,7 @@ An open, multi-access identification key to the wild plants of Britain and Irela
   - All 2,565 species are now described: the 917 widespread ones first, then about 1,650 rarer, local and introduced species (critical groups such as whitebeams, eyebrights, hawkweeds and sea-lavenders are scored at group level, with a "specialist needed" note). The mint and buttercup families have their own questions; the daisy, grass, rose and sedge families have the standard questions plus a few of their own; all other families use the standard set.
   - Most widespread species were bulk-drafted by a smaller Claude model and spot-checked by Claude (source `claude-bulk`); all scores are unverified until checked by a botanist.
 
-All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. In a test with 25 well-known plants described as a beginner would, each landed in the correct family with no mismatches.
+All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. A test set of 572 widespread plants described as a beginner would (`tests/plants.csv`) has the right family and the right species fitting every answer for all 572, and in the top 3 of the ranking for 81% (family) and 90% (species); see `tests/REPORT.md`, and `tests/REVIEW_LOG.md` for what the review changed.
 
 ## Use it
 
@@ -55,6 +55,15 @@ Every score records where it came from. When sources disagree, the one with the 
 2. Run `python3 scripts/build.py` (needs `pip install pandas`). It stops with a clear message if a value isn't an allowed state or a Kew ID doesn't exist, and warns if two species can't be told apart.
 3. In `docs/sw.js`, bump `VERSION` (e.g. `core-v2`) so installed copies update.
 4. Commit and push.
+
+## Tests
+
+```
+python3 scripts/build.py                                  # rebuilds docs/data/species.json
+python3 tests/run_tests.py --report tests/REPORT.md       # applies the app's matching rules to tests/plants.csv
+```
+
+`tests/plants.csv` describes each plant with the questions and answers a beginner would use (3 to 6 at the family step and 3 to 6 at the species step). `run_tests.py` uses the same rules as `docs/index.html` (an unknown state counts half a mismatch) and reports, for each plant, whether the right family and the right species fit every answer and rank in the top 3. After changing scores, run both commands and check that no plant stops fitting. A plant that fits but ranks lower is usually a tie with other plants that fit the same answers, not a scoring error. `tests/REVIEW_LOG.md` records what the first review changed and why.
 
 ## Monthly open-data update
 
