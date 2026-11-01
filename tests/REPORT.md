@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | plants | 417 | 342 | 417 | 397 | **322** |
 
-Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 295.
+Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 294.
 
 ## Failures (95)
 
@@ -378,11 +378,11 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Athyrium filix-femina | Aspleniaceae | 4 | yes | 1 | 5 | yes | 1 (3) |
 | Asplenium scolopendrium | Aspleniaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
 | Asplenium trichomanes | Aspleniaceae | 4 | yes | 1 | 4 | yes | 1 (6) |
-| Asplenium ruta-muraria | Aspleniaceae | 4 | yes | 1 | 3 | yes | 1 (2) |
+| Asplenium ruta-muraria | Aspleniaceae | 4 | yes | 1 | 3 | yes | 2 (12) |
 | Blechnum spicant | Aspleniaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
 | Dryopteris filix-mas | Polypodiaceae | 4 | yes | 2 | 4 | yes | 2 (6) |
 | Dryopteris dilatata | Polypodiaceae | 4 | yes | 2 | 4 | yes | 1 (6) |
-| Polypodium vulgare | Polypodiaceae | 4 | yes | 2 | 4 | yes | 1 (2) |
+| Polypodium vulgare | Polypodiaceae | 4 | yes | 2 | 4 | yes | 1 (4) |
 | Pteridium aquilinum | Dennstaedtiaceae | 4 | yes | 3 | 3 | yes | 1 (1) |
 | Polystichum setiferum | Polypodiaceae | 4 | yes | 2 | 4 | yes | 5 (6) |
 | Equisetum arvense | Equisetaceae | 5 | yes | 1 | 3 | yes | 1 (2) |

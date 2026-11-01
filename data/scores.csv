@@ -5217,7 +5217,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 651693-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 651693-1,flower_start,5,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 651693-1,flower_end,7,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17038650-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17038650-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17038650-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17038650-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17038650-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17040860-1,gleaf,lobed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -5230,26 +5231,33 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 30216020-2,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30216020-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30216020-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-310197-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+310197-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+310197-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 310197-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 310197-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 310197-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-30055316-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+30055316-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30055316-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30055316-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30055316-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-30079143-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+30079143-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30079143-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30079143-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30079143-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-30013429-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+30013429-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30013429-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30013429-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30013429-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17112110-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17112110-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17112110-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17112110-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17112110-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17446120-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17446120-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17446120-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17446120-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17446120-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17344580-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17344580-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17344580-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17344580-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17344580-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17344580-1,ghair,hairy,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -5861,19 +5869,23 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 30021527-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30021527-2,flower_start,6,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30021527-2,flower_end,8,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17556900-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17556900-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17556900-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17556900-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17556900-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17556900-1,ghair,hairy,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17390210-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17390210-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17390210-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17390210-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17390210-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17390210-1,ghair,hairy,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-30117034-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+30117034-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30117034-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30117034-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30117034-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30117034-2,ghair,hairy,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-30345915-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+30345915-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30345915-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30345915-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30345915-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30345915-2,ghair,hairy,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -5886,11 +5898,13 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 300720-2,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 300720-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 300720-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17413440-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17413440-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17413440-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17413440-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17413440-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17413440-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17414550-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17414550-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17414550-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17414550-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17414550-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17414550-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -6192,7 +6206,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 345568-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 345568-1,flower_start,3,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 345568-1,flower_end,6,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-346469-1,gcolour,yellow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+346469-1,gcolour,yellow,claude-bulk,,reviewed,Claude,2026-11-01
+346469-1,gcolour,green_brown,claude-bulk,,reviewed,Claude,2026-11-01
 346469-1,gsize,small,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 346469-1,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 346469-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -6207,7 +6222,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 346754-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 346754-1,flower_start,4,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 346754-1,flower_end,10,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-347072-1,gcolour,yellow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+347072-1,gcolour,yellow,claude-bulk,,reviewed,Claude,2026-11-01
+347072-1,gcolour,green_brown,claude-bulk,,reviewed,Claude,2026-11-01
 347072-1,gsize,small,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 347072-1,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 347072-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -6891,7 +6907,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 1148915-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 1148915-2,flower_start,3,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 1148915-2,flower_end,5,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-30021929-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+30021929-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30021929-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30021929-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30021929-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 304390-2,gleaf,oval,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -6992,7 +7009,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 553777-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 553777-1,flower_start,6,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 553777-1,flower_end,10,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-147990-2,gcolour,pink_red,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+147990-2,gcolour,pink_red,claude-bulk,,reviewed,Claude,2026-11-01
+147990-2,gcolour,blue_purple,claude-bulk,,reviewed,Claude,2026-11-01
 147990-2,gsize,medium,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 147990-2,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 147990-2,gleaf,oval,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -7254,7 +7272,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 538658-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 538658-1,flower_start,7,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 538658-1,flower_end,8,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-305721-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+305721-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+305721-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 305721-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 305721-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 184091-2,gcolour,green_brown,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -7272,7 +7291,8 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 526527-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 526527-1,flower_start,5,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 526527-1,flower_end,7,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17210060-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17210060-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17210060-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17210060-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17210060-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 70939-1,gcolour,green_brown,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -7366,8 +7386,9 @@ fam:Taxaceae,fruit,berry,claude-draft,,unverified,Claude,2026-11-01
 274226-1,ghair,hairless,claude-draft,,unverified-high,Claude,2026-11-01
 274226-1,flower_start,7,claude-draft,,unverified-high,Claude,2026-11-01
 274226-1,flower_end,9,claude-draft,,unverified-high,Claude,2026-11-01
-77100386-1,gcolour,pink_red,claude-draft,,unverified-high,Claude,2026-11-01
-77100386-1,gcolour,blue_purple,claude-draft,,unverified-high,Claude,2026-11-01
+77100386-1,gcolour,pink_red,claude-bulk,,reviewed,Claude,2026-11-01
+77100386-1,gcolour,blue_purple,claude-bulk,,reviewed,Claude,2026-11-01
+77100386-1,gcolour,yellow,claude-bulk,,reviewed,Claude,2026-11-01
 77100386-1,gsize,small,claude-draft,,unverified-high,Claude,2026-11-01
 77100386-1,gleaf,oval,claude-draft,,unverified-high,Claude,2026-11-01
 77100386-1,gedge,smooth,claude-draft,,unverified-high,Claude,2026-11-01
@@ -17795,8 +17816,9 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 360784-1,ghair,hairless,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 360784-1,flower_start,5,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 360784-1,flower_end,8,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
-361626-1,gcolour,pink_red,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
-361626-1,gcolour,white,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
+361626-1,gcolour,pink_red,claude-bulk,,reviewed,Claude,2026-11-01
+361626-1,gcolour,white,claude-bulk,,reviewed,Claude,2026-11-01
+361626-1,gcolour,blue_purple,claude-bulk,,reviewed,Claude,2026-11-01
 361626-1,gsize,medium,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 361626-1,gleaf,narrow,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 361626-1,gedge,smooth,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
@@ -19444,7 +19466,8 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 673065-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 673065-1,flower_start,6,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 673065-1,flower_end,10,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-673083-1,gcolour,pink_red,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+673083-1,gcolour,pink_red,claude-bulk,,reviewed,Claude,2026-11-01
+673083-1,gcolour,blue_purple,claude-bulk,,reviewed,Claude,2026-11-01
 673083-1,gsize,medium,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 673083-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 673083-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -20248,40 +20271,50 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 304830-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 304830-2,flower_start,6,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 304830-2,flower_end,8,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17268360-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17268360-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17268360-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17268360-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17268360-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17268360-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17075980-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17075980-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17075980-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17075980-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17075980-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17092290-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17092290-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17092290-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17092290-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17092290-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17093920-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17093920-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17093920-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17093920-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17093920-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-84669-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+84669-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+84669-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 84669-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 84669-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17249360-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17249360-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17249360-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17249360-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17249360-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17554520-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17554520-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17554520-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17554520-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17554520-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17448050-1,gleaf,lobed,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 17448050-1,gleaf,narrow,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 17448050-1,gedge,smooth,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 17448050-1,ghair,hairless,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
-17184700-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17184700-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17184700-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17184700-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17184700-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17184700-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17414110-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17414110-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17414110-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17414110-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17414110-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17207740-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17207740-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17207740-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17207740-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17207740-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 283610-2,gcolour,blue_purple,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -20544,17 +20577,21 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 702578-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 702578-1,flower_start,5,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 702578-1,flower_end,8,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-325030-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+325030-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+325030-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 325030-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 325030-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 325030-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-1042066-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+1042066-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+1042066-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 1042066-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 1042066-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17070940-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17070940-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17070940-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17070940-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17070940-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17211870-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17211870-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17211870-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17211870-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17211870-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17211870-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -22393,44 +22430,56 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 541162-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 541162-1,flower_start,5,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 541162-1,flower_end,6,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17046950-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17046950-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17046950-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17046950-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17046950-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17304140-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17304140-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17304140-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17304140-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17304140-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17048600-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17048600-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17048600-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17048600-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17048600-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 304469-2,gleaf,narrow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 304469-2,gleaf,lobed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 304469-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 304469-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17053570-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17053570-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17053570-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17053570-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17053570-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-30045965-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+30045965-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30045965-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30045965-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30045965-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-33533-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+33533-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+33533-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 33533-2,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 33533-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17059990-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17059990-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17059990-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17059990-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17059990-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-75667-2,gleaf,compound,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
+75667-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+75667-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 75667-2,gedge,toothed,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 75667-2,ghair,hairless,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
-17387150-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17387150-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17387150-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17387150-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17387150-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17076650-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17076650-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17076650-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17076650-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17076650-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17112130-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17112130-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17112130-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17112130-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17112130-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17145680-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17145680-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17145680-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17145680-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17145680-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 281589-2,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
@@ -22438,19 +22487,23 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 281589-2,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 281589-2,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 281589-2,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17226930-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17226930-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17226930-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17226930-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17226930-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17226930-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17234640-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17234640-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17234640-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17234640-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17234640-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17234640-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17234860-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17234860-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17234860-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17234860-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17234860-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17234860-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17235500-1,gleaf,compound,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
+17235500-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17235500-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17235500-1,gedge,toothed,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 17235500-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 30008241-2,gcolour,yellow,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -24304,11 +24357,13 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 263956-1,gleaf,narrow,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 263956-1,gedge,smooth,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 263956-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-17082540-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17082540-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17082540-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17082540-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17082540-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17082540-1,ghair,hairy,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17515200-1,gleaf,compound,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
+17515200-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17515200-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17515200-1,gedge,toothed,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 17515200-1,ghair,hairy,claude-bulk,,unverified-low,Claude Sonnet (bulk draft),2026-11-01
 316120-1,gcolour,white,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -25692,14 +25747,17 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 431996-1,ghair,hairless,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 431996-1,flower_start,7,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
 431996-1,flower_end,9,claude-bulk,,unverified-medium,Claude Sonnet (bulk draft),2026-11-01
-30002980-2,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+30002980-2,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+30002980-2,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 30002980-2,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30002980-2,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 30002980-2,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17125870-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17125870-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17125870-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17125870-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17125870-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-17232430-1,gleaf,compound,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+17232430-1,gleaf,compound,claude-bulk,,reviewed,Claude,2026-11-01
+17232430-1,gleaf,lobed,claude-bulk,,reviewed,Claude,2026-11-01
 17232430-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17232430-1,gedge,toothed,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 17232430-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
@@ -26255,7 +26313,8 @@ agg:Taraxacum officinale,salt,coast,claude-draft,,unverified,Claude,2026-11-01
 527199-1,ghair,hairless,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 527199-1,flower_start,6,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 527199-1,flower_end,9,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
-534921-1,gcolour,pink_red,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
+534921-1,gcolour,pink_red,claude-bulk,,reviewed,Claude,2026-11-01
+534921-1,gcolour,blue_purple,claude-bulk,,reviewed,Claude,2026-11-01
 534921-1,gsize,large,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 534921-1,gleaf,oval,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
 534921-1,gedge,smooth,claude-bulk,,unverified-high,Claude Sonnet (bulk draft),2026-11-01
