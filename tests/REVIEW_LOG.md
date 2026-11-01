@@ -116,19 +116,27 @@ Test answers revised because they were unrealistic or conflicted with Kew-derive
 - **family step: prostrate mallows (dwarf mallow) creep** (1): Malvaceae `fhabit` up → up creep
 - **Smooth Hawk's-beard heads are about 1 cm across: small as well as medium** (1): Crepis capillaris `gsize` medium → medium small
 
+### Batch 10: English names (apostrophes, duplicates) and leafless-looking rushes
+
+- **rushes whose green stems carry no obvious leaves: "No obvious leaves" added, as for Soft, Hard and Compact Rush** (4): Juncus maritimus `gleaf` narrow → narrow none; Juncus acutus `gleaf` narrow → narrow none; Juncus balticus `gleaf` narrow → narrow none; Juncus filiformis `gleaf` narrow → narrow none
+- **English name had lost its apostrophe** (22): Campanula cochleariifolia common → "Fairy's-thimble"; Cynoglossum officinale common → "Hound's-tongue"; Cynoglossum germanicum common → "Green Hound's-tongue"; Cystopteris dickieana common → "Dickie's Bladder-fern"; Dipsacus sativus common → "Fuller's Teasel"; Elodea nuttallii common → "Nuttall's Waterweed"; Gypsophila paniculata common → "Baby's-breath"; Legousia hybrida common → "Venus's-looking-glass"; Legousia speculum-veneris common → "Large Venus's-looking-glass"; Lonicera henryi common → "Henry's Honeysuckle"; Lycopodium clavatum common → "Stag's-horn Clubmoss"; Rhus typhina common → "Stag's-horn Sumach"; Ophioglossum vulgatum common → "Adder's-tongue"; Polygonatum multiflorum common → "Solomon's-seal"; Polygonatum odoratum common → "Angular Solomon's-seal"; Polygonatum verticillatum common → "Whorled Solomon's-seal"; Ruscus hypoglossum common → "Spineless Butcher's-broom"; Salpichroa origanifolia common → "Cock's-eggs"; Saxifraga spathularis common → "St Patrick's-cabbage"; Scilla forbesii common → "Forbes's Glory-of-the-snow"; Scrophularia scopolii common → "Scopoli's Figwort"; Selaginella kraussiana common → "Kraus's Spike-moss"
+- **two species shared one English name; the second gets its usual distinct name** (7): Euphrasia officinalis common → "Eyebright"; Trichophorum cespitosum common → "Northern Deergrass"; Aruncus dioicus common → "Buck's-beard"; Anisantha rigida common → "Ripgut Brome"; Paspalum distichum common → "Paspalum"; Arenaria montana common → "Large-flowered Sandwort"; Campanula fragilis common → "Brittle Bellflower"
+Batch 10 also corrected the same stripped apostrophes where five tips quoted the names (Venus's-looking-glass, Nuttall's, butcher's-broom, hound's-tongue).
+
 ## Review coverage
 
 Read by eye, with the scores next to my own botanical knowledge, widespread species first (over 500 hectads) then the rarer ones:
 - **All species, scores, names and tips:** Lamiaceae, Ranunculaceae.
 - **All species, scores and names (tips read for the widespread ones only):** Asteraceae, Poaceae, Rosaceae, Fabaceae, Brassicaceae, Cyperaceae, Caryophyllaceae, Apiaceae, Plantaginaceae.
 - **All species, scores and names, no tips:** Typhaceae, Potamogetonaceae, Alismataceae, Hydrocharitaceae, Haloragaceae, Lentibulariaceae, Plumbaginaceae, Gentianaceae, Convolvulaceae, Oleaceae, Urticaceae, Grossulariaceae, Cornaceae, Cistaceae, Linaceae, Aizoaceae, Liliaceae, Asphodelaceae, Araliaceae, Pinaceae, Equisetaceae, Lycopodiaceae, Aspleniaceae, Polypodiaceae.
-- **Widespread species only (scores, names and tips):** Juncaceae, Orchidaceae, Polygonaceae, Boraginaceae, Amaranthaceae, Orobanchaceae, Amaryllidaceae, Ericaceae, Geraniaceae, Campanulaceae, Primulaceae, Crassulaceae, Caprifoliaceae, Papaveraceae, Saxifragaceae, Onagraceae, Salicaceae, Rubiaceae, Euphorbiaceae, Hypericaceae, Violaceae, Oxalidaceae, Malvaceae, Solanaceae, Scrophulariaceae, Araceae, Betulaceae, Fagaceae, Sapindaceae, Viburnaceae, Iridaceae, Asparagaceae.
+- **Widespread species with tips, and the rarer species of these families with scores and names but no tips (batch 10):** Juncaceae, Orchidaceae, Polygonaceae, Boraginaceae, Amaranthaceae, Orobanchaceae, Ericaceae, Geraniaceae, Campanulaceae, Primulaceae, Caprifoliaceae, Papaveraceae, Saxifragaceae, Onagraceae, Salicaceae, Rubiaceae, Euphorbiaceae.
+- **Widespread species only (scores, names and tips):** Amaryllidaceae, Crassulaceae, Hypericaceae, Violaceae, Oxalidaceae, Malvaceae, Solanaceae, Scrophulariaceae, Araceae, Betulaceae, Fagaceae, Sapindaceae, Viburnaceae, Iridaceae, Asparagaceae.
 
 Checked for all 2,565 species by script instead: tip wording against the scored leaf shape, leaf edge and hairiness (batch 7) and flower colour (batch 4); common names against colour; season words in tips against flowering months (nothing to fix); and the family-step features against what the tips of the family's species describe (batch 9).
 
-**Not read species by species:** the rarer species of the second and fourth groups' families that are not in the first three groups (for example the rarer Orchidaceae, Polygonaceae, Boraginaceae, Violaceae, Onagraceae, Salicaceae) and about 70 smaller families, beyond the script checks above.
+**Not read species by species:** the rarer species of the last group's families (Violaceae, Malvaceae, Solanaceae and so on) and about 70 smaller families, beyond the script checks above.
 The Hieracium, Taraxacum, Rubus, Sorbus, Alchemilla, Euphrasia and Limonium groups are scored at group level and I only checked that their scores are consistent within each group.
-English names: no wrong names were found in what I read. Tips: one factual error was found and corrected (Lesser Stitchwort flower size); the tips I read otherwise agreed with the scores. I cannot check tips against a flora, so the other tips remain unverified.
+English names: batch 10 found and fixed 22 names that had lost an apostrophe and 7 duplicated names (a scan of all species, not just those read). Tips: one factual error was found and corrected (Lesser Stitchwort flower size); the tips I read otherwise agreed with the scores. I cannot check tips against a flora, so the other tips remain unverified.
 
 ## Failures that remain, and why
 
@@ -146,4 +154,3 @@ Suggestions that need app or data design work, so they were not done here:
 1. A flower-colour question at step 1 (it would need scoring all 144 families), which would remove most of the family-step ties.
 2. A second tie-break after family size, such as the number of the user's answers that match exactly rather than by being unknown or multi-valued.
 3. Scoring the largest grass and sedge groups with the leaf-width and ligule questions in the test set, since beginners rarely answer those correctly.
-
