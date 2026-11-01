@@ -294,7 +294,8 @@ function buildStagebar() {
 
 function route() {
   const h = decodeURIComponent(location.hash.slice(1));
-  const next = h.startsWith("species-") && J.keyed.includes(h.slice(8)) ? h.slice(8) : "family";
+  const next = h.startsWith("species-") && J.keyed.includes(h.slice(8)) ? h.slice(8)
+    : (h === "" || h === "families") ? "family" : stage;  // ignore any other address
   if (next !== stage || !document.getElementById("chars").childElementCount) {
     stage = next; query = ""; document.getElementById("search").value = "";
     document.getElementById("search").placeholder = stage === "family" ? "Search by name: buttercup, Ranunculus, Poaceae…" : "Search by name: mint, Stachys…";
@@ -320,6 +321,10 @@ function wire() {
   });
   document.getElementById("search").addEventListener("input", e => { query = e.target.value.trim(); render(); });
   addEventListener("hashchange", route);
+  document.getElementById("jump").addEventListener("click", e => {
+    e.preventDefault();
+    document.getElementById("results").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
   document.getElementById("copy").addEventListener("click", async () => {
     const cs = charsFor(stage).filter(c => c.kind === "state" || c.kind === "feature");
     const lines = [["name", "common", ...cs.map(c => c.id)].join(",")].concat(items().map(s => [s.name, s.common, ...cs.map(c => (s[c.id] || []).join("|"))].map(x => `"${String(x).replace(/"/g, '""')}"`).join(",")));
