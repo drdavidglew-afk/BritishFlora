@@ -53,6 +53,16 @@ Every score records where it came from. When sources disagree, the one with the 
 3. In `docs/sw.js`, bump `VERSION` (e.g. `core-v2`) so installed copies update.
 4. Commit and push.
 
+## Monthly open-data update
+
+A GitHub job (`.github/workflows/enrich.yml`) runs `scripts/enrich.py` on the 2nd of each month, or whenever you start it from the **Actions** tab ("Fetch English names and flowering months" → *Run workflow*). It:
+
+- fetches English names from **Wikidata** (CC0) into `data/auto/english_names.csv`;
+- works out flowering months from **iNaturalist** observations in Britain and Ireland marked "Flowering" (counts per month only) into `data/auto/flowering.csv`;
+- rebuilds the key and commits the result.
+
+Hand-entered names and observations still take priority. The flowering run takes one to two hours, because iNaturalist asks for about one request a second; it costs nothing.
+
 ## Licences
 
 - **Code:** MIT (see `LICENSE`).

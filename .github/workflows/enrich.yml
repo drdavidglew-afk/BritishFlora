@@ -1,0 +1,39 @@
+name: Fetch English names and flowering months
+
+on:
+  schedule:
+    - cron: "17 3 2 * *"   # 03:17 UTC on the 2nd of each month
+  workflow_dispatch:         # or run it by hand: Actions tab > this workflow > Run workflow
+    inputs:
+      what:
+        description: "names, flowering or both"
+        default: "both"
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas requests
+      - name: Fetch open data
+        run: |
+          case "${{ github.event.inputs.what || 'both' }}" in
+            names) python scripts/enrich.py --names ;;
+            flowering) python scripts/enrich.py --flowering ;;
+            *) python scripts/enrich.py ;;
+          esac
+      - name: Rebuild the key
+        run: python scripts/build.py
+      - name: Commit if anything changed
+        run: |
+          git config user.name "British Flora Key bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/auto docs/data
+          git diff --cached --quiet || (git commit -m "Monthly update: English names and flowering months" && git push)
