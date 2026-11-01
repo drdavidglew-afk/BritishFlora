@@ -126,6 +126,11 @@ for t in [t for t in taxa if t["rank"] == "family"]:
             fam[c] = ["n/a"]
     fam["wet"] = wet_states(sub.F_PLANTATT)
     fam["height"] = num(sub.max_veg_height.max())
+    # typical height for the family card only (the height question still uses the tallest species above):
+    # median of the maximum heights of the widespread species, or of all species if none are widespread
+    wide_h = sub[sub.GB_Man_hectads_post2000.fillna(0) > 500].max_veg_height.dropna()
+    typ_h = wide_h if len(wide_h) else sub.max_veg_height.dropna()
+    fam["height_typ"] = num(typ_h.median()) if len(typ_h) else None
     fam["n"] = int(len(sub)); fam["n_native"] = int((sub.StaceIV_nativity == "N").sum())
     fam["n_common"] = int((sub.GB_Man_hectads_post2000.fillna(0) > 500).sum())
     fam["genera"] = list(dict.fromkeys(sub.genus))
