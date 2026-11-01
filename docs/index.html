@@ -146,7 +146,7 @@ a.btn { text-decoration: none; display: inline-block; }
   <p><b>Install.</b> Android/Chrome: menu, then <i>Install app</i>. iPhone: Safari's Share button, then <i>Add to Home Screen</i>. Once installed it works with no signal.</p>
   <div class="packs" id="packs"><b>Offline photos.</b> <span id="packsText">No photo packs are available yet.</span></div>
   <p>Code MIT licence; data CC-BY 4.0. Source and corrections: <a href="https://github.com/drdavidglew-afk/BritishFlora">github.com/drdavidglew-afk/BritishFlora</a></p>
-  <p>Version 7 (1 Nov 2026).</p>
+  <p>Version 8 (1 Nov 2026).</p>
   <div><button class="btn" id="copy" type="button">Copy this stage's matrix as CSV</button> <span class="toast" id="toast"></span></div>
 </footer>
 <script>
@@ -156,7 +156,7 @@ let J = null, stage = "family", sel = { family: {} }, query = "";
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family"
-    : c.stage === "species" || c.stage === (J.bespoke.includes(st) ? st : "generic")))
+    : c.stage === "species" || c.stage === (J.bespoke.includes(st) ? st : "generic") || ((J.extends || []).includes(st) && c.stage === st)))
   .map(c => ({ id: c.char_id, label: c.label, help: c.help || "", kind: c.kind, opts: c.states }));
 const items = () => stage === "family" ? J.families : J.species.filter(s => s.family === stage);
 const S = () => (sel[stage] ||= {});
@@ -194,6 +194,8 @@ function bestNext(cands) {
   return best && best.id;
 }
 
+// Kew has no counts for some common species (renamed or aggregates); described ones were chosen as widespread.
+const freq = s => s.gb ?? (s.described ? 600 : 0);
 const statusText = s => s === "N" ? "Native" : s && s.startsWith("Arch") ? "Ancient introduction" : s && s.startsWith("Neo") ? "Introduced" : "Status unknown";
 const nameHit = it => {
   if (!query) return true;
@@ -241,7 +243,7 @@ function speciesCard(sp, mm) {
       ${sp.months ? `<span>Flowers <b>${MONTHS[sp.months[0]-1]}–${MONTHS[sp.months[1]-1]}</b></span>` : ""}
       ${sp.F != null ? `<span>Wetness <b>${sp.F}</b>/12 · pH <b>${sp.R}</b>/9</span>` : ""}
       ${dist}
-      <a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:${esc(sp.id)}" target="_blank" rel="noopener">Plants of the World Online</a>
+      ${sp.agg ? "" : `<a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:${esc(sp.id)}" target="_blank" rel="noopener">Plants of the World Online</a>`}
     </div>`;
   return el;
 }
@@ -250,7 +252,7 @@ function render() {
   const list = items().filter(nameHit);
   const rows = list.map(it => { const mm = mismatches(it); return { it, mm, score: mm.length + 0.5 * mm.unk }; })
     .sort((a, b) => a.score - b.score || (stage === "family" ? b.it.n_common - a.it.n_common || b.it.n - a.it.n
-      : (b.it.described ? 1 : 0) - (a.it.described ? 1 : 0) || (b.it.gb || 0) - (a.it.gb || 0)));
+      : (b.it.described ? 1 : 0) - (a.it.described ? 1 : 0) || freq(b.it) - freq(a.it)));
   const fit = rows.filter(r => r.score === 0), near = rows.filter(r => r.score > 0 && r.score <= 1);
   const n = Object.keys(S()).length, noun = stage === "family" ? "famil" : "species";
   const pl = k => stage === "family" ? (k === 1 ? "family" : "families") : "species";

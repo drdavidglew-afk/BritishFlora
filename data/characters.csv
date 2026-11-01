@@ -31,6 +31,25 @@ rsepals,Green sepals under the petals,state,Ranunculaceae,Buttercups only: look 
 rstalk,Flower stalk,state,Ranunculaceae,Buttercups only: run a fingernail along the stalk.
 rfruit,Fruit,state,Ranunculaceae,
 rhab,Habitat,state,Ranunculaceae,
+aster_head,Flower heads,state,Asteraceae,
+aster_spiny,Spines,state,Asteraceae,
+aster_sap,Sap from a broken stem,state,Asteraceae,
+aster_leaves,Where are the leaves?,state,Asteraceae,
+aster_seeds,Seeds,state,Asteraceae,Look at an old head.
+grass_head,Flower head,state,Poaceae,
+grass_awn,Bristles (awns) on the spikelets,state,Poaceae,
+grass_ligule,Ligule,state,Poaceae,The flap where the leaf blade meets the stem.
+grass_width,Leaf width,state,Poaceae,
+grass_growth,Growth form,state,Poaceae,
+sedge_type,Which kind?,state,Cyperaceae,
+sedge_spikes,Spikes,state,Cyperaceae,
+sedge_female,Female spikes,state,Cyperaceae,
+sedge_stem,Stem in section,state,Cyperaceae,
+sedge_growth,Growth form,state,Cyperaceae,
+rose_type,Plant,state,Rosaceae,
+rose_prickles,Prickles or thorns,state,Rosaceae,
+rose_fruit,Fruit,state,Rosaceae,
+rose_petals,Petals,state,Rosaceae,
 gcolour,Flower colour,state,generic,
 gsize,Flower or flower-head size,state,generic,Measure across.
 gleaf,Leaf shape,state,generic,

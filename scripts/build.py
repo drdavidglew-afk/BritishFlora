@@ -9,7 +9,8 @@ Two steps in the app:
 
 Character stages (characters.csv):
   family       step 1 questions
-  <Family>     extra species questions for that family only (e.g. Lamiaceae)
+  <Family>     species questions for that family only (e.g. Lamiaceae); if the family is listed in
+               data/extends_generic.csv they are added to the standard (generic) questions instead
   generic      standard species questions, used for families without their own set
   species      used in every species key (month, region, and the Kew habitat questions)
   all          used in both steps (height)
@@ -50,6 +51,7 @@ def num(v):
 
 taxa, chars, states, sources, scores = (rows(n) for n in ["taxa.csv", "characters.csv", "states.csv", "sources.csv", "scores.csv"])
 auto_names = rows("auto/english_names.csv", optional=True)
+extends = {r["family"] for r in rows("extends_generic.csv", optional=True)}  # families using generic + their own questions
 auto_flower = rows("auto/flowering.csv", optional=True)
 prec = {s["source_id"]: int(s["precedence"]) for s in sources}
 
@@ -74,7 +76,7 @@ for i, r in enumerate(scores, start=2):
         errors.append(f"scores.csv line {i}: unknown character {r['char_id']}")
 fam_names = {t["name"] for t in taxa if t["rank"] == "family"}
 for t in taxa:
-    if t["rank"] == "species" and t["kew_id"] not in kew.index: errors.append(f"taxa.csv: {t['name']} kew_id {t['kew_id']} not in Kew table")
+    if t["rank"] == "species" and not t["kew_id"].startswith("agg:") and t["kew_id"] not in kew.index: errors.append(f"taxa.csv: {t['name']} kew_id {t['kew_id']} not in Kew table")
 missing = sorted(set(flora.family) - fam_names)
 if missing: print("Warning: families in the flora with no family row:", ", ".join(missing))
 if errors:
@@ -136,7 +138,8 @@ for k in flora.itertuples():
     kid = k.kew_id
     t = extra.get(kid, {})
     fam = k.family
-    own_chars = [c["char_id"] for c in chars if c["stage"] == fam and c["kind"] in ("state", "feature")] or generic_chars
+    fam_own = [c["char_id"] for c in chars if c["stage"] == fam and c["kind"] in ("state", "feature")]
+    own_chars = (generic_chars + fam_own) if fam in extends else (fam_own or generic_chars)
     sp = dict(id=kid, name=t.get("name") or k.taxon_name_binom, common=t.get("common") or names.get(kid, ""),
               tip=t.get("tip", ""), family=fam, genus=k.genus)
     scored = 0
@@ -148,7 +151,7 @@ for k in flora.itertuples():
     sp["months"] = [int(fs[0]), int(fe[0])] if fs and fe else None
     L, F, R, N, S = (ell(k, x) for x in "LFRNS")
     sp["light"] = bands(L, [("shade", 1, 5), ("part", 5, 7), ("open", 7, 9)])
-    sp["moist"] = bands(F, [("dry", 1, 4), ("damp", 4, 7), ("wet", 7, 9), ("water", 10, 12)])
+    sp["moist"] = bands(F, [("dry", 1, 4), ("damp", 4, 7), ("wet", 7, 10), ("water", 9, 12)])
     sp["soil"] = bands(R, [("acid", 1, 4), ("neutral", 4, 7), ("lime", 7, 9)])
     sp["fertility"] = bands(N, [("poor", 1, 3), ("average", 3, 6), ("rich", 6, 9)])
     sp["salt"] = [] if S is None else (["coast", "inland"] if 1 <= S <= 3 else ["coast"] if S >= 4 else ["inland"])
@@ -162,6 +165,23 @@ for k in flora.itertuples():
     if sp["described"]:
         sigs[(fam,) + tuple(tuple(sorted(sp[c])) for c in own_chars)].append(sp["name"])
 
+# aggregates and other species missing from the Kew table: taxa.csv rows with id "agg:<name>".
+# Habitat answers (light, moist, soil, fertility, salt) and height come from scores.csv.
+for t in [t for t in taxa if t["rank"] == "species" and t["kew_id"].startswith("agg:")]:
+    kid, fam = t["kew_id"], t["family"]
+    fam_own = [c["char_id"] for c in chars if c["stage"] == fam and c["kind"] in ("state", "feature")]
+    own_chars = (generic_chars + fam_own) if fam in extends else (fam_own or generic_chars)
+    sp = dict(id=kid, name=t["name"], common=t["common"], tip=t["tip"], family=fam, genus=t["name"].split()[0], agg=True)
+    for c in own_chars + list(AUTO_SPECIES):
+        sp[c], _ = best(kid, c)
+    sp["described"] = sum(bool(sp[c]) for c in own_chars) >= max(2, len(own_chars) // 2)
+    fs, _ = best(kid, "flower_start"); fe, _ = best(kid, "flower_end")
+    sp["months"] = [int(fs[0]), int(fe[0])] if fs and fe else None
+    hv, _ = best(kid, "max_height_m"); sp["height"] = num(hv[0]) if hv else None; sp["height_filled"] = bool(hv)
+    sp["status"] = t.get("status") or "N"
+    species.append(sp)
+    fam_lookup[fam]["n"] += 1
+
 fsigs = defaultdict(list)
 for f in families: fsigs[tuple(tuple(sorted(f[c])) for c in fam_chars + ["wet"])].append(f["name"])
 for nm in list(fsigs.values()):
@@ -174,7 +194,7 @@ def slim(d):
     return {k: v for k, v in d.items() if v not in ([], None, "", False)}
 out = dict(
     characters=[dict(c, states=[[s["state_id"], s["label"]] for s in states if s["char_id"] == c["char_id"]]) for c in chars],
-    sources=sources, families=families, species=[slim(s) for s in species], bespoke=sorted(bespoke))
+    sources=sources, families=families, species=[slim(s) for s in species], bespoke=sorted(bespoke - extends), extends=sorted(extends))
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 n_desc = sum(s["described"] for s in species)

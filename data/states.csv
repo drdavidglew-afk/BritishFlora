@@ -195,3 +195,55 @@ fertility,average,Average
 fertility,rich,"Rich: farmyards, nettle beds, verges"
 salt,coast,By the sea or on salty ground
 salt,inland,Inland
+aster_head,rayed,Daisy-like: ray florets round a disc
+aster_head,strap,Dandelion-like: all strap-shaped florets
+aster_head,discoid,No rays: a brush or button of tiny tubes
+aster_spiny,spiny,"Spiny leaves, stems or bracts"
+aster_spiny,none,Not spiny
+aster_sap,milky,Milky
+aster_sap,clear,Clear
+aster_leaves,rosette,All or mostly in a basal rosette
+aster_leaves,stem,Along the stem
+aster_seeds,parachute,Fluffy parachutes (a clock)
+aster_seeds,plain,No parachutes
+grass_head,cylinder,"Dense cylinder or spike, unbranched"
+grass_head,tworows,"Spikelets in two rows on the stem, no stalks"
+grass_head,open,"Open and branched, spikelets on stalks"
+grass_head,clustered,Spikelets in dense one-sided clumps
+grass_awn,awned,"Yes, obvious bristles"
+grass_awn,none,No bristles
+grass_ligule,long,"Long papery flap, over 2 mm"
+grass_ligule,short,"Short, under 2 mm"
+grass_ligule,hairs,A fringe of hairs
+grass_width,fine,"Bristle-like or rolled, under 2 mm"
+grass_width,medium,2 to 6 mm
+grass_width,broad,Over 6 mm
+grass_growth,tufted,Tufted
+grass_growth,creeping,"Creeping, forming mats or patches"
+sedge_type,carex,Sedge: fruits in small sacs on spikes
+sedge_type,cotton,Cotton-grass: white cottony heads
+sedge_type,rush,Spike-rush or club-rush: one spike or a small cluster on a leafless stem
+sedge_type,large,"Large reed-like: bulrush, saw-sedge, sea club-rush"
+sedge_spikes,single,A single spike
+sedge_spikes,similar,Several similar spikes
+sedge_spikes,malefemale,"Male spike at the top, different female spikes below"
+sedge_female,drooping,Long and drooping
+sedge_female,upright,Upright or short
+sedge_stem,triangular,Triangular
+sedge_stem,round,Round
+sedge_growth,tufted,Tufted
+sedge_growth,creeping,"Creeping, forming patches"
+rose_type,tree,Tree
+rose_type,shrub,Shrub
+rose_type,bramble,"Arching prickly stems: brambles, roses"
+rose_type,herb,Non-woody plant
+rose_prickles,yes,Yes
+rose_prickles,no,No
+rose_fruit,hip,Rose hip
+rose_fruit,pome,"Small apple- or berry-like fruit with pips: haws, rowan, apple"
+rose_fruit,stone,"Cherry, plum or sloe, one stone"
+rose_fruit,berry,"Blackberry, raspberry or strawberry"
+rose_fruit,dry,Small dry seeds or burrs
+rose_petals,5,5
+rose_petals,4,4
+rose_petals,none,None or tiny

@@ -6,7 +6,7 @@ An open, multi-access identification key to the wild plants of Britain and Irela
 - **Step 1, family key:** all 144 families of native and established plants in the Kew list (about 2,600 species), scored on 15 general features.
 - **Step 2, species keys:** every family, covering all 2,564 native, ancient and naturalised species in the Kew list.
   - Every species can be narrowed by Kew data with no hand scoring: light, wetness, soil pH, fertility, salt (Ellenberg values), height and distribution.
-  - Described so far: 653 species. The mint family (20 species) and buttercup family (45 species) have their own questions; other families use a standard set (flower colour and size, leaf shape and edge, hairiness). That covers the widespread species (in more than 500 hectads) of every family except the daisy, grass, rose and sedge families, which come next, plus about 25 common species missing from Kew's distribution counts.
+  - Described so far: 917 species, covering every widespread species (in more than 500 hectads) plus about 40 common species that Kew records without counts. The mint and buttercup families have their own questions; the daisy, grass, rose and sedge families have the standard questions plus a few of their own (e.g. ray or strap florets, milky sap, ligule, awns, sedge spike arrangement, rose fruit type); all other families use the standard set (flower colour and size, leaf shape and edge, hairiness).
   - Species not yet described are shown, but ranked below described ones.
   - Most widespread species were bulk-drafted by a smaller Claude model and spot-checked by Claude (source `claude-bulk`); all scores are unverified until checked by a botanist.
 
@@ -42,6 +42,8 @@ docs/               the app itself (served by GitHub Pages)
 ```
 
 Species inherit their family's step 1 scores unless they have their own. Two features are calculated from the Kew table rather than scored by hand: a family's "Where is it growing?" (from its species' Ellenberg wetness values) and maximum height.
+
+Species missing from the Kew table (such as the Dandelion aggregate, which Kew lists only as microspecies) can be added to `taxa.csv` with an id starting `agg:`; their habitat answers and height then come from `scores.csv`.
 
 Every score records where it came from. When sources disagree, the one with the lowest `precedence` number in `sources.csv` wins (own observations 1, Kew 2, Claude drafts 9).
 
