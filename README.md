@@ -6,7 +6,9 @@ An open, multi-access identification key to the wild plants of Britain and Irela
 - **Step 1, family key:** all 144 families of native and established plants in the Kew list (about 2,600 species), scored on 15 general features.
 - **Step 2, species keys:** every family, covering all 2,564 native, ancient and naturalised species in the Kew list.
   - Every species can be narrowed by Kew data with no hand scoring: light, wetness, soil pH, fertility, salt (Ellenberg values), height and distribution.
-  - Fully described so far: mint family (20 species, own questions) and buttercup family (45 species, own questions). Other families use a standard set of species questions (flower colour and size, leaf shape and edge, hairiness), filled in family by family. Species not yet described are shown, but ranked below described ones.
+  - Described so far: 653 species. The mint family (20 species) and buttercup family (45 species) have their own questions; other families use a standard set (flower colour and size, leaf shape and edge, hairiness). That covers the widespread species (in more than 500 hectads) of every family except the daisy, grass, rose and sedge families, which come next, plus about 25 common species missing from Kew's distribution counts.
+  - Species not yet described are shown, but ranked below described ones.
+  - Most widespread species were bulk-drafted by a smaller Claude model and spot-checked by Claude (source `claude-bulk`); all scores are unverified until checked by a botanist.
 
 All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. In a test with 25 well-known plants described as a beginner would, each landed in the correct family with no mismatches.
 

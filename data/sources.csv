@@ -4,3 +4,4 @@ kew-bife,BIFloraExplorer (Royal Botanic Gardens Kew),https://github.com/RBGKew/B
 inat-pheno,Flowering months from iNaturalist observations annotated as flowering (British Isles),https://www.inaturalist.org,Factual aggregate counts,iNaturalist contributors,,3
 wikidata,Wikidata taxon common names (P1843),https://www.wikidata.org,CC0-1.0,Wikidata contributors,,4
 claude-draft,Draft scores written by Claude from general botanical knowledge (unverified),,CC-BY-4.0,British Flora Key contributors,2026-11-01,9
+claude-bulk,"Bulk draft scores by a smaller Claude model, spot-checked by Claude (unverified)",,CC-BY-4.0,British Flora Key contributors,2026-11-01,10
