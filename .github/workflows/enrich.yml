@@ -1,4 +1,4 @@
-name: Fetch English names and flowering months
+name: Fetch English names, flowering months and record counts
 
 on:
   schedule:
@@ -6,8 +6,8 @@ on:
   workflow_dispatch:         # or run it by hand: Actions tab > this workflow > Run workflow
     inputs:
       what:
-        description: "names, flowering or both"
-        default: "both"
+        description: "names, flowering, counts or all"
+        default: "all"
 
 permissions:
   contents: write
@@ -24,9 +24,10 @@ jobs:
       - run: pip install pandas requests
       - name: Fetch open data
         run: |
-          case "${{ github.event.inputs.what || 'both' }}" in
+          case "${{ github.event.inputs.what || 'all' }}" in
             names) python scripts/enrich.py --names ;;
             flowering) python scripts/enrich.py --flowering ;;
+            counts) python scripts/enrich.py --counts ;;
             *) python scripts/enrich.py ;;
           esac
       - name: Rebuild the key
@@ -36,4 +37,4 @@ jobs:
           git config user.name "British Flora Key bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/auto docs/data
-          git diff --cached --quiet || (git commit -m "Monthly update: English names and flowering months" && git push)
+          git diff --cached --quiet || (git commit -m "Monthly update: English names, flowering months and record counts" && git pull --rebase && git push)

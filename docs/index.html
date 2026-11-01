@@ -146,7 +146,7 @@ a.btn { text-decoration: none; display: inline-block; }
   <p><b>Install.</b> Android/Chrome: menu, then <i>Install app</i>. iPhone: Safari's Share button, then <i>Add to Home Screen</i>. Once installed it works with no signal.</p>
   <div class="packs" id="packs"><b>Offline photos.</b> <span id="packsText">No photo packs are available yet.</span></div>
   <p>Code MIT licence; data CC-BY 4.0. Source and corrections: <a href="https://github.com/drdavidglew-afk/BritishFlora">github.com/drdavidglew-afk/BritishFlora</a></p>
-  <p>Version 8 (1 Nov 2026).</p>
+  <p>Version 9 (1 Nov 2026).</p>
   <div><button class="btn" id="copy" type="button">Copy this stage's matrix as CSV</button> <span class="toast" id="toast"></span></div>
 </footer>
 <script>
@@ -169,7 +169,7 @@ function mismatches(it) {
     if (ch.kind === "state") { const have = it[c] || []; if (!have.length) out.unk++; else if (!have.includes(v)) out.push(`${ch.label}: not ${label(c, v).toLowerCase()}`); }
     else if (ch.kind === "feature") { if (!(it[c] || []).includes(v)) out.push(`No ${label(c, v).toLowerCase()}`); }
     else if (ch.kind === "height") { if (it.height != null && it.height < parseFloat(v)) out.push(`Rarely taller than ${Math.round(it.height * 100)} cm`); }
-    else if (ch.kind === "month") { const m = +v; if (it.months && (m < it.months[0] || m > it.months[1])) out.push(`Usually flowers ${MONTHS[it.months[0]-1]}–${MONTHS[it.months[1]-1]}`); }
+    else if (ch.kind === "month") { const m = +v; if (it.months && !inSeason(m, it.months)) out.push(`Usually flowers ${MONTHS[it.months[0]-1]}–${MONTHS[it.months[1]-1]}`); }
     else if (ch.kind === "region" && v === "ie") { if (it.ie != null && it.ie < 25) out.push(`Rare in Ireland (${it.ie} hectads)`); }
   }
   return out;
@@ -195,7 +195,9 @@ function bestNext(cands) {
 }
 
 // Kew has no counts for some common species (renamed or aggregates); described ones were chosen as widespread.
-const freq = s => s.gb ?? (s.described ? 600 : 0);
+const freq = s => s.gb ?? (s.common_nc ? 600 : 0);
+// flowering ranges can run across the new year, e.g. [11, 3]
+const inSeason = (m, [a, b]) => a <= b ? m >= a && m <= b : m >= a || m <= b;
 const statusText = s => s === "N" ? "Native" : s && s.startsWith("Arch") ? "Ancient introduction" : s && s.startsWith("Neo") ? "Introduced" : "Status unknown";
 const nameHit = it => {
   if (!query) return true;
@@ -232,7 +234,9 @@ function speciesCard(sp, mm) {
     : (Object.keys(S()).length ? `<span class="pill ok">Fits all answers</span>` : "");
   const rare = sp.gb != null && sp.gb < 100 && (sp.ie || 0) < 50 ? `<span class="pill">Rare</span>` : "";
   const h = sp.height != null ? `${Math.round(sp.height * 100)} cm${sp.height_filled ? "*" : ""}` : "–";
-  const dist = sp.gb != null ? `<span>GB <b>${sp.gb}</b> · Ireland <b>${sp.ie}</b> hectads since 2000</span>` : `<span>Hectads: no data under this name</span>`;
+  const dist = sp.gb == null ? `<span>Hectads: no data under this name</span>`
+    : sp.gb_est ? `<span>GB about <b>${sp.gb}</b> · Ireland about <b>${sp.ie}</b> hectads (estimated from GBIF records)</span>`
+    : `<span>GB <b>${sp.gb}</b> · Ireland <b>${sp.ie}</b> hectads since 2000</span>`;
   el.innerHTML = `
     <div class="card-top"><h3>${sp.common ? `${esc(sp.common)}<i>${esc(sp.name)}</i>` : `<i class="latin">${esc(sp.name)}</i>`}</h3><span class="pills">${rare}${pill}</span></div>
     <p class="tip">${sp.tip ? esc(sp.tip) : `<span class="later">Not described yet: ranked on Kew habitat data, height and flowering only.</span>`}</p>

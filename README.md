@@ -6,8 +6,7 @@ An open, multi-access identification key to the wild plants of Britain and Irela
 - **Step 1, family key:** all 144 families of native and established plants in the Kew list (about 2,600 species), scored on 15 general features.
 - **Step 2, species keys:** every family, covering all 2,564 native, ancient and naturalised species in the Kew list.
   - Every species can be narrowed by Kew data with no hand scoring: light, wetness, soil pH, fertility, salt (Ellenberg values), height and distribution.
-  - Described so far: 917 species, covering every widespread species (in more than 500 hectads) plus about 40 common species that Kew records without counts. The mint and buttercup families have their own questions; the daisy, grass, rose and sedge families have the standard questions plus a few of their own (e.g. ray or strap florets, milky sap, ligule, awns, sedge spike arrangement, rose fruit type); all other families use the standard set (flower colour and size, leaf shape and edge, hairiness).
-  - Species not yet described are shown, but ranked below described ones.
+  - All 2,565 species are now described: the 917 widespread ones first, then about 1,650 rarer, local and introduced species (critical groups such as whitebeams, eyebrights, hawkweeds and sea-lavenders are scored at group level, with a "specialist needed" note). The mint and buttercup families have their own questions; the daisy, grass, rose and sedge families have the standard questions plus a few of their own; all other families use the standard set.
   - Most widespread species were bulk-drafted by a smaller Claude model and spot-checked by Claude (source `claude-bulk`); all scores are unverified until checked by a botanist.
 
 All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. In a test with 25 well-known plants described as a beginner would, each landed in the correct family with no mismatches.
@@ -63,6 +62,7 @@ A GitHub job (`.github/workflows/enrich.yml`) runs `scripts/enrich.py` on the 2n
 
 - fetches English names from **Wikidata** (CC0) into `data/auto/english_names.csv`;
 - works out flowering months from **iNaturalist** observations in Britain and Ireland marked "Flowering" (counts per month only) into `data/auto/flowering.csv`;
+- counts GBIF records in Great Britain and Ireland into `data/auto/gbif_counts.csv`; for species the Kew table has no hectad counts for, the build estimates hectads by matching rank order against species that have both (shown as "about … hectads (estimated from GBIF records)");
 - rebuilds the key and commits the result.
 
 Hand-entered names and observations still take priority. The flowering run takes one to two hours, because iNaturalist asks for about one request a second; it costs nothing.

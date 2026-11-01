@@ -3,6 +3,7 @@
     python3 scripts/enrich.py              # names + flowering months for every species
     python3 scripts/enrich.py --names      # English names only (fast, a few minutes)
     python3 scripts/enrich.py --flowering  # flowering months only (slow: about 1 to 2 hours)
+    python3 scripts/enrich.py --counts     # GBIF record counts only (about 30 to 45 minutes)
     python3 scripts/enrich.py --limit 20   # try a few species first
 
 Writes:
@@ -10,6 +11,9 @@ Writes:
   data/auto/flowering.csv      Flowering months from iNaturalist observations in Britain and Ireland that
                                observers annotated "Flowering". Only counts per month are used.
   data/auto/inat_taxa.csv      Cache of iNaturalist taxon IDs, so later runs are quicker.
+  data/auto/gbif_counts.csv    Number of GBIF occurrence records in Great Britain (+ Isle of Man) and in Ireland.
+                               build.py turns these into estimated hectad counts for species the Kew table
+                               has no counts for, by matching rank order against species that have both.
 
 Hand-entered values in data/ always win over these (see precedence in data/sources.csv).
 Needs: pandas, requests.
@@ -22,6 +26,7 @@ AUTO = ROOT / "data" / "auto"
 UA = "BritishFloraKey/1.0 (https://github.com/drdavidglew-afk/BritishFlora)"
 WIKIDATA = "https://query.wikidata.org/sparql"
 INAT = "https://api.inaturalist.org/v1"
+GBIF = "https://api.gbif.org/v1"
 # Britain and Ireland (a box; clips a little of northern France)
 BOX = dict(swlat=49.85, swlng=-10.7, nelat=60.9, nelng=1.8)
 MIN_RECORDS = 15       # fewer flowering records than this: leave months blank
@@ -35,7 +40,11 @@ def flora():
     keep = k.extinct_species_marker.isna() & (s.isin(["N", "?N", "Neonative", "Neo-natd"]) | s.fillna("").str.startswith("Arch"))
     f = k[keep]
     f = f[~((f.taxonomic_status != "Accepted") & f.accepted_name.isin(f.taxon_name_binom))]
-    return [(r.kew_id, r.taxon_name_binom) for r in f.itertuples()]
+    out = [(r.kew_id, r.taxon_name_binom) for r in f.itertuples()]
+    # species added by hand that the Kew table lacks (ids "agg:<name>")
+    with open(ROOT / "data" / "taxa.csv", newline="", encoding="utf-8") as fh:
+        out += [(r["kew_id"], r["kew_id"][4:]) for r in csv.DictReader(fh) if r["kew_id"].startswith("agg:")]
+    return out
 
 
 def british_case(name):
@@ -110,6 +119,28 @@ def inat_flowering(species, get, cache, pause=1.1):
     return out
 
 
+def gbif_counts(species, get, pause=0.15):
+    out = {}
+    for i, (kid, n) in enumerate(species, 1):
+        try:
+            m = get(f"{GBIF}/species/match", params={"name": n, "kingdom": "Plantae"})
+            key = m.get("acceptedUsageKey") or m.get("usageKey")
+            if key and m.get("matchType") in ("EXACT", "FUZZY") and m.get("rank") in ("SPECIES", None):
+                c = {}
+                for label, countries in (("gb", ["GB", "IM"]), ("ie", ["IE"])):
+                    c[label] = 0
+                    for cc in countries:
+                        r = get(f"{GBIF}/occurrence/search", params={"taxonKey": key, "country": cc, "limit": 0})
+                        c[label] += int(r.get("count", 0)); time.sleep(pause)
+                out[kid] = (n, key, c["gb"], c["ie"])
+            time.sleep(pause)
+        except Exception as e:
+            print(f"  GBIF: {n}: {e}", file=sys.stderr)
+        if i % 200 == 0 or i == len(species):
+            print(f"  GBIF: {i}/{len(species)}, {len(out)} counted", flush=True)
+    return out
+
+
 def read_cache():
     p = AUTO / "inat_taxa.csv"
     if not p.exists(): return {}
@@ -127,10 +158,11 @@ def write(name, header, rows):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--names", action="store_true"); ap.add_argument("--flowering", action="store_true")
+    ap.add_argument("--counts", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args(argv)
-    do_names = a.names or not a.flowering
-    do_flower = a.flowering or not a.names
+    everything = not (a.names or a.flowering or a.counts)
+    do_names, do_flower, do_counts = a.names or everything, a.flowering or everything, a.counts or everything
     import requests
     s = requests.Session(); s.headers["User-Agent"] = UA
     def get(url, params=None):
@@ -155,6 +187,10 @@ def main(argv=None):
         write("flowering.csv", ["kew_id", "name", "flower_start", "flower_end", "n_records", "source_id"],
               sorted([kid, n, s0, e0, t, "inat-pheno"] for kid, (n, s0, e0, t) in fl.items()))
         write("inat_taxa.csv", ["name", "inat_id"], sorted(cache.items()))
+    if do_counts:
+        gc = gbif_counts(sp, get)
+        write("gbif_counts.csv", ["kew_id", "name", "gbif_key", "gb_records", "ie_records"],
+              sorted([kid, n, k, g, i] for kid, (n, k, g, i) in gc.items()))
 
 
 if __name__ == "__main__":

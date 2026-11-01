@@ -51,8 +51,10 @@ def num(v):
 
 taxa, chars, states, sources, scores = (rows(n) for n in ["taxa.csv", "characters.csv", "states.csv", "sources.csv", "scores.csv"])
 auto_names = rows("auto/english_names.csv", optional=True)
-extends = {r["family"] for r in rows("extends_generic.csv", optional=True)}  # families using generic + their own questions
+extends = {r["family"] for r in rows("extends_generic.csv", optional=True)}
+common_nc = {r["kew_id"] for r in rows("common_without_counts.csv", optional=True)}  # widespread but no Kew counts  # families using generic + their own questions
 auto_flower = rows("auto/flowering.csv", optional=True)
+auto_counts = {r["kew_id"]: r for r in rows("auto/gbif_counts.csv", optional=True)}
 prec = {s["source_id"]: int(s["precedence"]) for s in sources}
 
 kew_all = pd.read_csv(DATA / "kew" / "BI_MAIN.csv", encoding="latin1", low_memory=False)
@@ -182,12 +184,37 @@ for t in [t for t in taxa if t["rank"] == "species" and t["kew_id"].startswith("
     species.append(sp)
     fam_lookup[fam]["n"] += 1
 
+# ---- estimated hectads for species with no Kew counts, from GBIF record counts (rank-order matching) ----
+import bisect
+def estimator(key_kew, key_gbif):
+    pairs = [(float(auto_counts[s["id"]][key_gbif]), s[key_kew]) for s in species
+             if s.get(key_kew) and not s.get("gb_est") and s["id"] in auto_counts and float(auto_counts[s["id"]][key_gbif]) > 0]
+    if len(pairs) < 50: return None
+    recs = sorted(p[0] for p in pairs); hect = sorted(p[1] for p in pairs)
+    def est(x):
+        if x <= 0: return 0
+        q = bisect.bisect_right(recs, x) / len(recs)
+        return hect[min(len(hect) - 1, max(0, int(q * len(hect)) - 1))]
+    return est
+if auto_counts:
+    eg, ei = estimator("gb", "gb_records"), estimator("ie", "ie_records")
+    n_est = 0
+    for s in species:
+        if s.get("gb") is None and s["id"] in auto_counts and eg and ei:
+            r = auto_counts[s["id"]]
+            s["gb"], s["ie"], s["gb_est"] = round(eg(float(r["gb_records"])), -1), round(ei(float(r["ie_records"])), -1), True
+            n_est += 1
+    print(f"Estimated hectad counts from GBIF records for {n_est} species")
+
 fsigs = defaultdict(list)
 for f in families: fsigs[tuple(tuple(sorted(f[c])) for c in fam_chars + ["wet"])].append(f["name"])
 for nm in list(fsigs.values()):
     if len(nm) > 1: print("Warning: identical family scores, the key cannot separate:", ", ".join(nm))
 same = [nm for nm in sigs.values() if len(nm) > 1]
 if same: print(f"Note: {len(same)} groups of described species share identical scores (habitat questions may still separate them)")
+
+for s in species:
+    if s.get("gb") is None and s["id"] in common_nc: s["common_nc"] = True
 
 # compact: drop empty lists and false flags to keep the file small
 def slim(d):
