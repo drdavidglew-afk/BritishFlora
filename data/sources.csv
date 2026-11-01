@@ -1,4 +1,6 @@
 source_id,name,url,licence,attribution,accessed,precedence
 own-obs,Observations by project contributors,,CC-BY-4.0,British Flora Key contributors,,1
 kew-bife,BIFloraExplorer (Royal Botanic Gardens Kew),https://github.com/RBGKew/BIFloraExplorer,MIT / OGL-UK-3.0,"Henniges M.C. et al. (2022) A taxonomic, genetic and ecological data resource for the vascular plants of Britain and Ireland. Scientific Data 9:1. https://doi.org/10.1038/s41597-021-01104-5",2026-11-01,2
+inat-pheno,Flowering months from iNaturalist observations annotated as flowering (British Isles),https://www.inaturalist.org,Factual aggregate counts,iNaturalist contributors,,3
+wikidata,Wikidata taxon common names (P1843),https://www.wikidata.org,CC0-1.0,Wikidata contributors,,4
 claude-draft,Draft scores written by Claude from general botanical knowledge (unverified),,CC-BY-4.0,British Flora Key contributors,2026-11-01,9

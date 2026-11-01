@@ -111,6 +111,10 @@ footer p { margin: 0; max-width: 90ch; }
 .btn.solid { background: var(--accent); color: var(--surface); text-decoration: none; }
 a.btn { text-decoration: none; display: inline-block; }
 .later { font-size: 12.5px; color: var(--muted); }
+.pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill.unk { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+.card.nodesc { border-left-style: dashed; }
+.card h3 i.latin { margin-left: 0; font-size: 18px; color: var(--ink); font-weight: 600; }
 .linkbtn { font: 600 14px var(--body); color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 999px; padding: 4px 10px; cursor: pointer; margin-left: 4px; }
 .linkbtn:hover { background: var(--accent); color: var(--surface); }
 @media (prefers-reduced-motion: no-preference) { fieldset.flash { animation: flash 1.2s ease-out; } }
@@ -121,7 +125,7 @@ a.btn { text-decoration: none; display: inline-block; }
 <header>
   <h1>British Flora Key</h1>
   <div class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Checking offline storage…</span></div>
-  <p>An open identification key to the wild plants of Britain and Ireland. <b>Step 1</b> finds the family; <b>step 2</b> finds the species (so far for the mint and buttercup families). Pick any features you can see, in any order. Plants are ranked by how many of your answers they contradict, so one wrong answer won't hide the right one.</p>
+  <p>An open identification key to the wild plants of Britain and Ireland. <b>Step 1</b> finds the family; <b>step 2</b> finds the species (fully described so far for the mint and buttercup families; other species are ranked on habitat data while their descriptions are written). Pick any features you can see, in any order. Plants are ranked by how many of your answers they contradict, so one wrong answer won't hide the right one.</p>
 </header>
 <nav class="stagebar" id="stagebar" aria-label="Key stage"></nav>
 <main>
@@ -142,7 +146,7 @@ a.btn { text-decoration: none; display: inline-block; }
   <p><b>Install.</b> Android/Chrome: menu, then <i>Install app</i>. iPhone: Safari's Share button, then <i>Add to Home Screen</i>. Once installed it works with no signal.</p>
   <div class="packs" id="packs"><b>Offline photos.</b> <span id="packsText">No photo packs are available yet.</span></div>
   <p>Code MIT licence; data CC-BY 4.0. Source and corrections: <a href="https://github.com/drdavidglew-afk/BritishFlora">github.com/drdavidglew-afk/BritishFlora</a></p>
-  <p>Version 5 (1 Nov 2026).</p>
+  <p>Version 6 (1 Nov 2026).</p>
   <div><button class="btn" id="copy" type="button">Copy this stage's matrix as CSV</button> <span class="toast" id="toast"></span></div>
 </footer>
 <script>
@@ -151,17 +155,18 @@ const SHOW = 30;
 let J = null, stage = "family", sel = { family: {} }, query = "";
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family" : c.stage === st || c.stage === "species"))
+const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family"
+    : c.stage === "species" || c.stage === (J.bespoke.includes(st) ? st : "generic")))
   .map(c => ({ id: c.char_id, label: c.label, help: c.help || "", kind: c.kind, opts: c.states }));
 const items = () => stage === "family" ? J.families : J.species.filter(s => s.family === stage);
 const S = () => (sel[stage] ||= {});
 const label = (c, v) => (charsFor(stage).find(x => x.id === c)?.opts || []).find(o => o[0] === v)?.[1] || v;
 
 function mismatches(it) {
-  const out = [];
+  const out = []; out.unk = 0;
   for (const [c, v] of Object.entries(S())) {
     const ch = charsFor(stage).find(x => x.id === c); if (!ch) continue;
-    if (ch.kind === "state") { const have = it[c] || []; if (have.length && !have.includes(v)) out.push(`${ch.label}: not ${label(c, v).toLowerCase()}`); }
+    if (ch.kind === "state") { const have = it[c] || []; if (!have.length) out.unk++; else if (!have.includes(v)) out.push(`${ch.label}: not ${label(c, v).toLowerCase()}`); }
     else if (ch.kind === "feature") { if (!(it[c] || []).includes(v)) out.push(`No ${label(c, v).toLowerCase()}`); }
     else if (ch.kind === "height") { if (it.height != null && it.height < parseFloat(v)) out.push(`Rarely taller than ${Math.round(it.height * 100)} cm`); }
     else if (ch.kind === "month") { const m = +v; if (it.months && (m < it.months[0] || m > it.months[1])) out.push(`Usually flowers ${MONTHS[it.months[0]-1]}–${MONTHS[it.months[1]-1]}`); }
@@ -193,7 +198,7 @@ const statusText = s => s === "N" ? "Native" : s && s.startsWith("Arch") ? "Anci
 const nameHit = it => {
   if (!query) return true;
   const q = query.toLowerCase();
-  const hay = [it.name, it.common, it.tip, ...(it.genera || []), ...((it.top || []).map(t => t[0]))].join(" ").toLowerCase();
+  const hay = [it.name, it.common, it.tip, it.genus, ...(it.genera || []), ...((it.top || []).map(t => t[0]))].join(" ").toLowerCase();
   return hay.includes(q);
 };
 
@@ -212,22 +217,23 @@ function familyCard(f, mm) {
       ${f.height != null ? `<span>Up to <b>${f.height >= 1 ? f.height.toFixed(f.height < 10 ? 1 : 0) + " m" : Math.round(f.height * 100) + " cm"}</b></span>` : ""}
     </div>
     <p class="genera">Most widespread: ${top}${f.n > 6 ? "…" : ""}</p>
-    <div class="actions">${f.has_key
-      ? `<a class="btn solid" href="#species-${esc(f.name)}">Key out the species →</a>`
-      : `<span class="later">Species key not built yet</span>`}
+    <div class="actions"><a class="btn solid" href="#species-${esc(f.name)}">Key out the ${f.n === 1 ? "species" : f.n + " species"} →</a>
       <a class="btn" href="https://powo.science.kew.org/results?q=${encodeURIComponent(f.name)}" target="_blank" rel="noopener">Plants of the World Online</a></div>`;
   return el;
 }
 
 function speciesCard(sp, mm) {
   const el = document.createElement("article");
-  el.className = "card" + (mm.length === 1 ? " m1" : mm.length > 1 ? " m2" : "");
-  const pill = mm.length ? `<span class="pill mm">${mm.length} mismatch${mm.length > 1 ? "es" : ""}</span>` : (Object.keys(S()).length ? `<span class="pill ok">Fits all answers</span>` : "");
+  el.className = "card" + (mm.length === 1 ? " m1" : mm.length > 1 ? " m2" : "") + (sp.described ? "" : " nodesc");
+  const pill = mm.length ? `<span class="pill mm">${mm.length} mismatch${mm.length > 1 ? "es" : ""}</span>`
+    : mm.unk ? `<span class="pill unk">${mm.unk} unknown</span>`
+    : (Object.keys(S()).length ? `<span class="pill ok">Fits all answers</span>` : "");
+  const rare = sp.gb != null && sp.gb < 100 && (sp.ie || 0) < 50 ? `<span class="pill">Rare</span>` : "";
   const h = sp.height != null ? `${Math.round(sp.height * 100)} cm${sp.height_filled ? "*" : ""}` : "–";
   const dist = sp.gb != null ? `<span>GB <b>${sp.gb}</b> · Ireland <b>${sp.ie}</b> hectads since 2000</span>` : `<span>Hectads: no data under this name</span>`;
   el.innerHTML = `
-    <div class="card-top"><h3>${esc(sp.common)}<i>${esc(sp.name)}</i></h3>${pill}</div>
-    <p class="tip">${esc(sp.tip)}</p>
+    <div class="card-top"><h3>${sp.common ? `${esc(sp.common)}<i>${esc(sp.name)}</i>` : `<i class="latin">${esc(sp.name)}</i>`}</h3><span class="pills">${rare}${pill}</span></div>
+    <p class="tip">${sp.tip ? esc(sp.tip) : `<span class="later">Not described yet: ranked on Kew habitat data, height and flowering only.</span>`}</p>
     ${mm.length ? `<p class="mism">${esc(mm.join(" · "))}</p>` : ""}
     <div class="facts">
       <span>${statusText(sp.status)}</span>
@@ -235,16 +241,17 @@ function speciesCard(sp, mm) {
       ${sp.months ? `<span>Flowers <b>${MONTHS[sp.months[0]-1]}–${MONTHS[sp.months[1]-1]}</b></span>` : ""}
       ${sp.F != null ? `<span>Wetness <b>${sp.F}</b>/12 · pH <b>${sp.R}</b>/9</span>` : ""}
       ${dist}
-      <a href="${esc(sp.powo)}" target="_blank" rel="noopener">Plants of the World Online</a>
+      <a href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:${esc(sp.id)}" target="_blank" rel="noopener">Plants of the World Online</a>
     </div>`;
   return el;
 }
 
 function render() {
   const list = items().filter(nameHit);
-  const rows = list.map(it => ({ it, mm: mismatches(it) }))
-    .sort((a, b) => a.mm.length - b.mm.length || (stage === "family" ? b.it.n_common - a.it.n_common || b.it.n - a.it.n : (b.it.gb || 0) - (a.it.gb || 0)));
-  const fit = rows.filter(r => r.mm.length === 0), near = rows.filter(r => r.mm.length === 1);
+  const rows = list.map(it => { const mm = mismatches(it); return { it, mm, score: mm.length + 0.5 * mm.unk }; })
+    .sort((a, b) => a.score - b.score || (stage === "family" ? b.it.n_common - a.it.n_common || b.it.n - a.it.n
+      : (b.it.described ? 1 : 0) - (a.it.described ? 1 : 0) || (b.it.gb || 0) - (a.it.gb || 0)));
+  const fit = rows.filter(r => r.score === 0), near = rows.filter(r => r.score > 0 && r.score <= 1);
   const n = Object.keys(S()).length, noun = stage === "family" ? "famil" : "species";
   const pl = k => stage === "family" ? (k === 1 ? "family" : "families") : "species";
   document.getElementById("count").textContent =
@@ -252,13 +259,14 @@ function render() {
     !n ? `${list.length} ${pl(list.length)}` :
     fit.length === 1 ? `1 ${pl(1)} fits: ${fit[0].it.common}` : `${fit.length} ${pl(fit.length)} fit all your answers`;
   document.getElementById("jumpText").textContent = !n ? `${list.length} ${pl(list.length)}` : `${fit.length} fit`;
-  const nx = !n && stage === "family" ? "ptype" : bestNext((fit.length ? fit : near).map(r => r.it));
+  const pool = (fit.length ? fit : near).map(r => r.it);
+  const nx = !n && stage === "family" ? "ptype" : bestNext(stage === "family" || pool.filter(s => s.described).length < 2 ? pool : pool.filter(s => s.described));
   const nextEl = document.getElementById("next");
   if (nx) {
     nextEl.innerHTML = `Most useful next question: <button type="button" class="linkbtn" id="gonext" data-c="${esc(nx)}">${esc(charsFor(stage).find(x => x.id === nx).label)} ↑</button>`;
   } else nextEl.textContent = n ? "No remaining question separates these. Check the descriptions." : "Start with whatever is easiest to see.";
   document.querySelectorAll("fieldset").forEach(f => { f.classList.toggle("suggest", f.dataset.c === nx); const h = f.querySelector(".hint"); if (h) h.hidden = f.dataset.c !== nx; });
-  const shown = (query ? rows : rows.filter(r => r.mm.length <= 1)).slice(0, SHOW);
+  const shown = (query ? rows : rows.filter(r => r.score <= 1)).slice(0, SHOW);
   const shownAll = shown.length ? shown : rows.slice(0, 10);
   document.getElementById("cards").replaceChildren(...shownAll.map(r => stage === "family" ? familyCard(r.it, r.mm) : speciesCard(r.it, r.mm)));
   const hidden = rows.length - shownAll.length;
@@ -295,7 +303,7 @@ function buildStagebar() {
 
 function route() {
   const h = decodeURIComponent(location.hash.slice(1));
-  const next = h.startsWith("species-") && J.keyed.includes(h.slice(8)) ? h.slice(8)
+  const next = h.startsWith("species-") && J.families.some(f => f.name === h.slice(8)) ? h.slice(8)
     : (h === "" || h === "families") ? "family" : stage;  // ignore any other address
   if (next !== stage || !document.getElementById("chars").childElementCount) {
     stage = next; query = ""; document.getElementById("search").value = "";

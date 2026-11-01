@@ -31,6 +31,16 @@ rsepals,Green sepals under the petals,state,Ranunculaceae,Buttercups only: look 
 rstalk,Flower stalk,state,Ranunculaceae,Buttercups only: run a fingernail along the stalk.
 rfruit,Fruit,state,Ranunculaceae,
 rhab,Habitat,state,Ranunculaceae,
+gcolour,Flower colour,state,generic,
+gsize,Flower or flower-head size,state,generic,Measure across.
+gleaf,Leaf shape,state,generic,
+gedge,Leaf edge,state,generic,
+ghair,Hairiness,state,generic,Look at stems and leaves.
 height,Height of the tallest stem,height,all,
+light,Light,state,species,This and the next four habitat questions are calculated from published Ellenberg values. A rough answer is fine.
+moist,How wet is the ground?,state,species,
+soil,Soil,state,species,
+fertility,Ground,state,species,
+salt,Coast or inland?,state,species,
 month,Flowering month,month,species,
 region,Where are you?,region,species,

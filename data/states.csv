@@ -161,3 +161,37 @@ rsize,small,Under 1 cm
 rsize,medium,1 to 2.5 cm
 rsize,large,Over 2.5 cm
 rleaf,fan,Stiff flat fans that keep their shape out of water
+gcolour,white,White
+gcolour,yellow,Yellow or orange
+gcolour,pink_red,Pink to red
+gcolour,blue_purple,Blue to purple
+gcolour,green_brown,Green or brown
+gsize,small,Under 1 cm
+gsize,medium,1 to 3 cm
+gsize,large,Over 3 cm
+gleaf,narrow,"Narrow, strap- or grass-like"
+gleaf,oval,Oval or rounded
+gleaf,heart,Heart- or arrow-shaped
+gleaf,lobed,Lobed or deeply cut
+gleaf,compound,Separate leaflets
+gleaf,none,No obvious leaves
+gedge,smooth,"Smooth, untoothed"
+gedge,toothed,Toothed
+ghair,hairless,Hairless
+ghair,hairy,Hairy
+ghair,woolly,Densely woolly or felted
+light,shade,In shade
+light,part,Partly shaded
+light,open,"Open, full light"
+moist,dry,Dry
+moist,damp,Moist
+moist,wet,"Wet, marshy"
+moist,water,In water
+soil,acid,"Acid: heath, moor, bog"
+soil,neutral,Neutral
+soil,lime,Chalk or limestone
+fertility,poor,"Poor, unimproved ground"
+fertility,average,Average
+fertility,rich,"Rich: farmyards, nettle beds, verges"
+salt,coast,By the sea or on salty ground
+salt,inland,Inland

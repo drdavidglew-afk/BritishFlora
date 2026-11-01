@@ -4,7 +4,9 @@ An open, multi-access identification key to the wild plants of Britain and Irela
 
 **Status:**
 - **Step 1, family key:** all 144 families of native and established plants in the Kew list (about 2,600 species), scored on 15 general features.
-- **Step 2, species keys:** mint family (20 common species) and buttercup family (45 species: all natives, ancient introductions and the commoner garden escapes).
+- **Step 2, species keys:** every family, covering all 2,564 native, ancient and naturalised species in the Kew list.
+  - Every species can be narrowed by Kew data with no hand scoring: light, wetness, soil pH, fertility, salt (Ellenberg values), height and distribution.
+  - Fully described so far: mint family (20 species, own questions) and buttercup family (45 species, own questions). Other families use a standard set of species questions (flower colour and size, leaf shape and edge, hairiness), filled in family by family. Species not yet described are shown, but ranked below described ones.
 
 All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. In a test with 25 well-known plants described as a beginner would, each landed in the correct family with no mismatches.
 
@@ -25,7 +27,8 @@ Settings → Pages → *Build and deployment* → Source: **Deploy from a branch
 ```
 data/
   taxa.csv          families (rank=family, id "fam:<Family>") and species (rank=species, Kew ID)
-  characters.csv    the questions the key asks; stage = family, a family name (that family's species key), species (every species key) or all
+  characters.csv    the questions the key asks; stage = family (step 1), a family name (that family's own species questions),
+                    generic (standard species questions for other families), species (every species key) or all
   states.csv        the allowed answers for each question
   scores.csv        one row per species × character × value, with its source
   sources.csv       every data source, its licence, attribution and precedence
