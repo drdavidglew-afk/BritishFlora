@@ -1,9 +1,8 @@
 name: Fetch English names, flowering months and record counts
 
 on:
-  schedule:
-    - cron: "17 3 2 * *"   # 03:17 UTC on the 2nd of each month
-  workflow_dispatch:         # or run it by hand: Actions tab > this workflow > Run workflow
+  workflow_dispatch:         # manual only: Actions tab > this workflow > Run workflow
+                             # (enrich-reminder.yml opens an issue every 3 months as a nudge)
     inputs:
       what:
         description: "names, flowering, counts or all"
@@ -37,4 +36,4 @@ jobs:
           git config user.name "British Flora Key bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/auto docs/data
-          git diff --cached --quiet || (git commit -m "Monthly update: English names, flowering months and record counts" && git pull --rebase && git push)
+          git diff --cached --quiet || (git commit -m "Open-data update: English names, flowering months and record counts" && git pull --rebase && git push)

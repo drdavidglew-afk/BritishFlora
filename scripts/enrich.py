@@ -1,4 +1,4 @@
-"""Fetch open data that fills gaps the Kew table leaves. Run by the monthly GitHub job.
+"""Fetch open data that fills gaps the Kew table leaves. Run by the GitHub job (started by hand).
 
     python3 scripts/enrich.py              # names + flowering months for every species
     python3 scripts/enrich.py --names      # English names only (fast, a few minutes)
