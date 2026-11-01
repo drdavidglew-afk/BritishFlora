@@ -1,11 +1,12 @@
 // Service worker: saves the key on the device so it works with no signal.
 // Bump VERSION whenever you publish new data or code, so phones fetch the update.
-const VERSION = "core-v1";
+const VERSION = "core-v2";
 const CORE = [
   "./",
   "index.html",
   "manifest.webmanifest",
   "data/species.json",
+  "data/packs.json",
   "icons/icon-192.png",
   "icons/icon-512.png",
 ];

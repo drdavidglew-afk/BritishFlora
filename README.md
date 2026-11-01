@@ -2,7 +2,11 @@
 
 An open, multi-access identification key to the wild plants of Britain and Ireland. Pick any features you can see, in any order; species are ranked by how many of your answers they contradict, so one wrong answer won't hide the right plant. It installs on a phone and works with no signal.
 
-**Status:** prototype covering 20 common members of the mint and dead-nettle family (Lamiaceae). The morphological scores are unverified drafts and need checking against specimens or a flora.
+**Status:**
+- **Step 1, family key:** all 144 families of native and established plants in the Kew list (about 2,600 species), scored on 15 general features.
+- **Step 2, species keys:** so far only the mint family (20 common species).
+
+All feature scores are unverified drafts written by Claude and need checking against specimens or a flora. In a test with 25 well-known plants described as a beginner would, each landed in the correct family with no mismatches.
 
 ## Use it
 
@@ -20,8 +24,8 @@ Settings → Pages → *Build and deployment* → Source: **Deploy from a branch
 
 ```
 data/
-  taxa.csv          species in the key: kew_id, name, common name, tip
-  characters.csv    the questions the key asks
+  taxa.csv          families (rank=family, id "fam:<Family>") and species (rank=species, Kew ID)
+  characters.csv    the questions the key asks; stage = family, a family name (species key), or all
   states.csv        the allowed answers for each question
   scores.csv        one row per species × character × value, with its source
   sources.csv       every data source, its licence, attribution and precedence
@@ -32,12 +36,15 @@ docs/               the app itself (served by GitHub Pages)
   index.html, sw.js, manifest.webmanifest, icons/, data/species.json
 ```
 
+Species inherit their family's step 1 scores unless they have their own. Two features are calculated from the Kew table rather than scored by hand: a family's "Where is it growing?" (from its species' Ellenberg wetness values) and maximum height.
+
 Every score records where it came from. When sources disagree, the one with the lowest `precedence` number in `sources.csv` wins (own observations 1, Kew 2, Claude drafts 9).
 
 ## Add or correct data
 
 1. Edit the CSV files in `data/` (a spreadsheet is fine; save as CSV, UTF-8).
-   - New species: add a row to `taxa.csv` using its Kew ID from `data/kew/BI_MAIN.csv`.
+   - New species: add a row to `taxa.csv` (rank `species`, its family, its Kew ID from `data/kew/BI_MAIN.csv`).
+   - New species key for a family: add that family's own questions to `characters.csv` with `stage` set to the family name, their answers to `states.csv`, then score the species. The app adds a "Key out the species" button automatically.
    - New score: add rows to `scores.csv`. Use `source_id` `own-obs` for your own observations and put a photo link in `evidence_url` if you have one.
 2. Run `python3 scripts/build.py` (needs `pip install pandas`). It stops with a clear message if a value isn't an allowed state or a Kew ID doesn't exist, and warns if two species can't be told apart.
 3. In `docs/sw.js`, bump `VERSION` (e.g. `core-v2`) so installed copies update.

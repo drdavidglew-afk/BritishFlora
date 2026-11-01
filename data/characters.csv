@@ -1,11 +1,26 @@
-char_id,label,kind,help
-colour,Flower colour,state,
-lip,Shape of the flower,state,Look at the top of the flower.
-arr,How the flowers are arranged,state,
-leaf,Leaf shape,state,
-smell,Smell of a crushed leaf,state,
-habit,Growth habit,state,
-habitat,Habitat,state,
-height,Height of the tallest stem,height,
-month,Flowering month,month,
-region,Where are you?,region,
+char_id,label,kind,stage,help
+ptype,Plant type,state,family,
+fhabit,Growth habit,state,family,
+larr,Leaf arrangement,state,family,Look at where leaves join the stem.
+lform,Leaf form,state,family,
+veins,Leaf veins,state,family,
+feature,Special features,feature,family,Pick one only if you notice it.
+flowers,Flowers,state,family,
+inflor,How the flowers are arranged,state,family,
+sym,Flower shape,state,family,
+petals,Number of petals,state,family,Count the coloured parts; sepals that look like petals count.
+fused,Petals joined?,state,family,
+ovary,Where is the ovary?,state,family,"The swelling that becomes the fruit. Below the petals, or inside the flower?"
+stamens,Stamens,state,family,
+fruit,Fruit,state,family,
+wet,Where is it growing?,state,family,
+colour,Flower colour,state,Lamiaceae,
+lip,Shape of the flower,state,Lamiaceae,Look at the top of the flower.
+arr,How the flowers are arranged,state,Lamiaceae,
+leaf,Leaf shape,state,Lamiaceae,
+smell,Smell of a crushed leaf,state,Lamiaceae,
+habit,Growth habit,state,Lamiaceae,
+habitat,Habitat,state,Lamiaceae,
+height,Height of the tallest stem,height,all,
+month,Flowering month,month,Lamiaceae,
+region,Where are you?,region,Lamiaceae,

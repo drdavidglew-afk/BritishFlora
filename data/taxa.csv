@@ -1,21 +1,165 @@
-kew_id,name,common,kew_name,tip,group
-448792-1,Lamium album,White Dead-nettle,Lamium album,Looks like a stinging nettle but has white flowers and does not sting.,Lamiaceae
-448939-1,Lamium purpureum,Red Dead-nettle,Lamium purpureum,Upper leaves crowded and tinged purple; an annual of gardens and bare ground.,Lamiaceae
-448797-1,Lamium amplexicaule,Henbit Dead-nettle,Lamium amplexicaule,Upper leaves have no stalk and clasp the stem in pairs beneath the flowers.,Lamiaceae
-448781-1,Lamium galeobdolon,Yellow Archangel,Lamiastrum galeobdolon,Yellow flowers with reddish streaks on the lower lip; an ancient-woodland indicator.,Lamiaceae
-447338-1,Glechoma hederacea,Ground-ivy,Glechoma hederacea,"Kidney-shaped, round-toothed leaves on long creeping stems; smells pungent when crushed.",Lamiaceae
-455176-1,Prunella vulgaris,Selfheal,Prunella vulgaris,"Dense, squarish flower head with purple-tinged bracts and a pair of leaves just below it. Common in lawns.",Lamiaceae
-460020-1,Stachys sylvatica,Hedge Woundwort,Stachys sylvatica,Dark wine-red flowers with white markings; stinks when crushed.,Lamiaceae
-459820-1,Stachys palustris,Marsh Woundwort,Stachys palustris,Paler pinkish-purple flowers than Hedge Woundwort; narrow leaves with little or no stalk.,Lamiaceae
-450192-1,Mentha aquatica,Water Mint,Mentha aquatica,Rounded lilac flower head at the stem tip; strong mint smell.,Lamiaceae
-30026217-2,Mentha arvensis,Corn Mint,Mentha arvensis,"Flowers only in whorls up the stem; the stem ends in leaves, not flowers.",Lamiaceae
-461121-1,Thymus drucei,Wild Thyme,Thymus drucei,Low mats of tiny leaves; stems hairy on two opposite sides only.,Lamiaceae
-453395-1,Origanum vulgare,Wild Marjoram,Origanum vulgare,"Loose, branched clusters with purple bracts; smells of oregano.",Lamiaceae
-460717-1,Teucrium scorodonia,Wood Sage,Teucrium scorodonia,"Pale greenish-yellow flowers with no upper lip; wrinkled, sage-like leaves; acid soils.",Lamiaceae
-444664-1,Ajuga reptans,Bugle,Ajuga reptans,"Glossy leaves, leafy runners and a very short upper lip.",Lamiaceae
-447136-1,Galeopsis tetrahit,Common Hemp-nettle,Galeopsis tetrahit,Bristly stem that swells just below each pair of leaves.,Lamiaceae
-444976-1,Ballota nigra,Black Horehound,Ballota nigra,"Rank-smelling hedgerow plant; the calyx has broad, spreading teeth.",Lamiaceae
-61206-2,Clinopodium vulgare,Wild Basil,Clinopodium vulgare,"Flower whorls wrapped in long, bristly hairs, so they look woolly; only faintly aromatic.",Lamiaceae
-449641-1,Lycopus europaeus,Gypsywort,Lycopus europaeus,Deeply toothed to lobed leaves; tiny purple-dotted white flowers in tight whorls.,Lamiaceae
-458280-1,Scutellaria galericulata,Skullcap,Scutellaria galericulata,"Flowers in pairs in the leaf axils, all facing one way; calyx has a small hump.",Lamiaceae
-445133-1,Betonica officinalis,Betony,Betonica officinalis,"Rosette of long-stalked, oblong leaves; reddish-purple flowers in a dense spike.",Lamiaceae
+kew_id,rank,name,common,kew_name,family,tip
+fam:Asteraceae,family,Asteraceae,Daisy family,,Asteraceae,"What looks like one flower is a head of many tiny florets, often with strap-shaped rays round the edge and a ring of green bracts beneath. Dandelions, thistles, daisies, ragworts."
+fam:Rosaceae,family,Rosaceae,Rose family,,Rosaceae,"Usually 5 separate petals, many stamens and leafy stipules at the base of the leaf stalk; fruits often fleshy (hips, haws, brambles, cherries)."
+fam:Poaceae,family,Poaceae,Grasses,,Poaceae,"Round, usually hollow stems with solid joints; long narrow leaves with a sheath wrapping the stem and a small flap (ligule) where blade meets sheath. Flowers in tiny green spikelets."
+fam:Fabaceae,family,Fabaceae,Pea family,,Fabaceae,"Pea-flowers: a large upper petal, two side wings and a boat-shaped keel. Leaves usually compound, often with tendrils; fruit a pod."
+fam:Cyperaceae,family,Cyperaceae,Sedges,,Cyperaceae,"Grass-like, but stems usually solid and triangular ('sedges have edges'); leaves in three ranks with no ligule flap. Cotton-grasses and spike-rushes belong here too."
+fam:Brassicaceae,family,Brassicaceae,Cabbage family,,Brassicaceae,"Four petals in a cross, six stamens (four long, two short); fruit a pod that splits from the bottom, leaving a papery central wall. Often a cress-like taste."
+fam:Caryophyllaceae,family,Caryophyllaceae,Pink family,,Caryophyllaceae,"Leaves in opposite pairs on stems swollen at the joints; five petals, often notched or deeply split (stitchworts, campions, chickweeds)."
+fam:Apiaceae,family,Apiaceae,Carrot family,,Apiaceae,"Tiny flowers in umbrella-shaped clusters (umbels), usually white; leaves often finely divided with a sheathing base; stems often hollow and ridged. Some are very poisonous."
+fam:Lamiaceae,family,Lamiaceae,Mint family,,Lamiaceae,"Square stems, opposite leaves, two-lipped flowers in rings up the stem; many smell when crushed (mints, dead-nettles, thymes)."
+fam:Plantaginaceae,family,Plantaginaceae,Plantain and speedwell family,,Plantaginaceae,"A mixed family: plantains (ribbed leaves, brown flower spikes), speedwells (4 blue petals, 2 stamens), foxglove, toadflaxes, water-starworts."
+fam:Ranunculaceae,family,Ranunculaceae,Buttercup family,,Ranunculaceae,"Many stamens and separate petals or petal-like sepals; leaves often deeply lobed; fruit a cluster of small dry seeds. Buttercups, anemones, columbines, Clematis."
+fam:Orchidaceae,family,Orchidaceae,Orchids,,Orchidaceae,"Six petal-like parts, the lowest forming a distinctive lip, often patterned or spurred; leaves with parallel veins, sometimes spotted."
+fam:Polygonaceae,family,Polygonaceae,Dock family,,Polygonaceae,"A papery sheath (ochrea) round the stem above each leaf base; small flowers, 3 to 6 parts; fruit a 3-sided nut. Docks, sorrels, knotweeds, bistorts."
+fam:Amaranthaceae,family,Amaranthaceae,Goosefoot family,,Amaranthaceae,"Small green flowers in dense clusters; leaves often mealy or fleshy; plants of bare and salty ground (goosefoots, oraches, glassworts)."
+fam:Boraginaceae,family,Boraginaceae,Borage family,,Boraginaceae,"Rough, bristly hairs; flowers in coiled sprays that unroll as they open, often turning from pink to blue (forget-me-nots, comfreys, borage)."
+fam:Amaryllidaceae,family,Amaryllidaceae,Onion and daffodil family,,Amaryllidaceae,"Six-petalled flowers from a papery sheath; leaves strap-like from a bulb. Onions and garlics (umbels, onion smell), daffodils (with a trumpet), snowdrops."
+fam:Orobanchaceae,family,Orobanchaceae,Broomrape and eyebright family,,Orobanchaceae,"Semi-parasites (eyebright, yellow-rattle, cow-wheat, lousewort) with two-lipped flowers; broomrapes have no green at all."
+fam:Ericaceae,family,Ericaceae,Heather family,,Ericaceae,"Small evergreen shrubs with bell- or urn-shaped flowers; leaves often tiny, needle-like or leathery (heathers, bilberry, rhododendron)."
+fam:Juncaceae,family,Juncaceae,Rushes and woodrushes,,Juncaceae,"Grass-like; rushes have round stems, often filled with white pith; woodrushes have flat, hairy-edged leaves. Flowers small, brown, six-parted."
+fam:Iridaceae,family,Iridaceae,Iris family,,Iridaceae,"Sword-shaped leaves in a flat fan; showy flowers with 6 parts and 3 stamens (irises, crocuses, montbretia)."
+fam:Asparagaceae,family,Asparagaceae,Bluebell and asparagus family,,Asparagaceae,"Bulb or rhizome plants with parallel-veined leaves and six-parted flowers: bluebell, lily-of-the-valley, Solomon's-seal, butcher's-broom."
+fam:Geraniaceae,family,Geraniaceae,Cranesbill family,,Geraniaceae,Five separate petals and a long beak-like fruit (the 'crane's bill'); leaves usually lobed like a hand or finely divided.
+fam:Campanulaceae,family,Campanulaceae,Bellflower family,,Campanulaceae,"Bell-shaped, usually blue flowers; milky sap; ovary below the flower (harebell, bellflowers, sheep's-bit)."
+fam:Primulaceae,family,Primulaceae,Primrose family,,Primulaceae,"Five petals joined at the base, with the stamens opposite the petal lobes (primroses, cowslips, loosestrifes, scarlet pimpernel)."
+fam:Crassulaceae,family,Crassulaceae,Stonecrop family,,Crassulaceae,"Thick, fleshy, water-storing leaves; star-shaped flowers. Walls, rocks and dry places (stonecrops, houseleek, navelwort)."
+fam:Caprifoliaceae,family,Caprifoliaceae,Honeysuckle and scabious family,,Caprifoliaceae,"Opposite leaves; includes honeysuckle, teasels and scabiouses (flower heads), valerians and snowberry."
+fam:Aspleniaceae,family,Aspleniaceae,"Spleenwort, lady-fern and hard-fern family",,Aspleniaceae,"Ferns: no flowers; fronds uncurl from a crozier and carry spore patches underneath. Spleenworts, lady-fern, hard-fern, bladder-ferns."
+fam:Papaveraceae,family,Papaveraceae,Poppy and fumitory family,,Papaveraceae,"Poppies: 4 crumpled petals, many stamens, often milky or coloured sap. Fumitories and corydalis have small tubular, spurred flowers."
+fam:Saxifragaceae,family,Saxifragaceae,Saxifrage family,,Saxifragaceae,"Small plants of rocks, mountains and damp places; five petals, often white; leaves frequently in a basal rosette. Golden-saxifrages have no petals."
+fam:Potamogetonaceae,family,Potamogetonaceae,Pondweeds,,Potamogetonaceae,Water plants with floating or submerged leaves and small green flower spikes held above the water.
+fam:Onagraceae,family,Onagraceae,Willowherb family,,Onagraceae,"Four petals and a long, thin ovary below the flower; seeds often with silky hairs (willowherbs, evening-primroses, enchanter's-nightshade has 2 petals)."
+fam:Salicaceae,family,Salicaceae,Willows and poplars,,Salicaceae,"Trees and shrubs with catkins, male and female on separate plants; seeds with cottony hairs."
+fam:Rubiaceae,family,Rubiaceae,Bedstraw family,,Rubiaceae,Leaves in whorls (rings) of 4 to 12 round square stems; tiny 4-petalled flowers. Cleavers is the sticky one.
+fam:Polypodiaceae,family,Polypodiaceae,Buckler-fern and polypody family,,Polypodiaceae,"Ferns: no flowers. Buckler-ferns, male-fern, shield-ferns and polypodies, with round spore patches on the frond underside."
+fam:Hypericaceae,family,Hypericaceae,St John's-wort family,,Hypericaceae,"Opposite leaves, often with see-through dots when held up to the light; yellow flowers with many stamens in bundles."
+fam:Euphorbiaceae,family,Euphorbiaceae,Spurge family,,Euphorbiaceae,Spurges have milky sap and odd cup-like green flower clusters with no petals; dog's mercury has small green flowers on spikes.
+fam:Plumbaginaceae,family,Plumbaginaceae,Thrift and sea-lavender family,,Plumbaginaceae,"Coastal plants with leaves in a basal rosette; pink or lavender flowers with papery calyces (thrift heads, sea-lavender sprays)."
+fam:Gentianaceae,family,Gentianaceae,Gentian family,,Gentianaceae,"Hairless plants with opposite leaves and petals joined into a tube with 4 to 5 spreading lobes (centauries, gentians, yellow-wort)."
+fam:Scrophulariaceae,family,Scrophulariaceae,Figwort and mullein family,,Scrophulariaceae,Figworts have square stems and small brown two-lipped flowers; mulleins have tall spikes of yellow flowers and often woolly leaves. Buddleja belongs here.
+fam:Araceae,family,Araceae,Arum and duckweed family,,Araceae,"Lords-and-ladies: a hooded leaf-like spathe round a club-shaped spike, then red berries. Duckweeds (tiny floating green discs) are in this family too."
+fam:Oxalidaceae,family,Oxalidaceae,Wood-sorrel family,,Oxalidaceae,Clover-like leaves of three heart-shaped leaflets that fold down at night; five petals; sharp-tasting.
+fam:Solanaceae,family,Solanaceae,Nightshade family,,Solanaceae,"Five petals joined into a star or bell, with stamens forming a cone in the centre; fruit a berry or capsule. Many poisonous (bittersweet, deadly nightshade, henbane)."
+fam:Violaceae,family,Violaceae,Violet family,,Violaceae,"Five unequal petals, the lowest with a backward spur; leaves often heart-shaped (violets and pansies)."
+fam:Aizoaceae,family,Aizoaceae,Hottentot-fig family,,Aizoaceae,"Introduced succulents with thick, three-sided or cylindrical leaves and large daisy-like flowers with many narrow petals; coastal cliffs."
+fam:Malvaceae,family,Malvaceae,Mallow and lime family,,Malvaceae,Mallows: five notched petals and a central column of stamens; fruit like a round cheese. Limes are trees with a strap-like bract on the flower stalk.
+fam:Hydrocharitaceae,family,Hydrocharitaceae,Frogbit and waterweed family,,Hydrocharitaceae,"Water plants: frogbit (floating, kidney-shaped leaves, 3 white petals), water-soldier, and the submerged waterweeds with whorled leaves."
+fam:Alismataceae,family,Alismataceae,Water-plantain family,,Alismataceae,"Wetland plants with long-stalked basal leaves and flowers with 3 white or pale pink petals (water-plantains, arrowhead)."
+fam:Araliaceae,family,Araliaceae,Ivy family,,Araliaceae,"Ivy: evergreen climber with lobed leaves on climbing stems and ball-shaped umbels of greenish flowers in autumn. Marsh pennywort has round, umbrella-like leaves."
+fam:Lentibulariaceae,family,Lentibulariaceae,Butterwort and bladderwort family,,Lentibulariaceae,"Insect-catching plants: butterworts have sticky, pale green leaf rosettes; bladderworts float in water with tiny bladder traps."
+fam:Betulaceae,family,Betulaceae,Birch and hazel family,,Betulaceae,"Trees and shrubs with catkins in late winter or spring; fruits are nuts (hazel), tiny winged seeds (birch) or woody 'cones' (alder)."
+fam:Pinaceae,family,Pinaceae,Pine family,,Pinaceae,"Conifers with needles (single, in pairs or in bunches) and woody cones (pines, spruces, firs, larch)."
+fam:Liliaceae,family,Liliaceae,Lily family,,Liliaceae,"Bulb plants with large six-petalled flowers and parallel-veined leaves (fritillary, tulips, lilies, yellow star-of-Bethlehem)."
+fam:Equisetaceae,family,Equisetaceae,Horsetails,,Equisetaceae,"No flowers; jointed, ridged stems with rings of tiny teeth and whorls of thin green branches; spores in a cone at the stem tip."
+fam:Viburnaceae,family,Viburnaceae,Elder and guelder-rose family,,Viburnaceae,"Shrubs with opposite leaves and flat-topped clusters of small white flowers, then berries (elder, guelder-rose, wayfaring-tree). Moschatel is a small herb."
+fam:Asphodelaceae,family,Asphodelaceae,Asphodel and flax-lily family,,Asphodelaceae,"Mostly introduced: New Zealand flax (huge leathery sword leaves), red-hot pokers, day-lilies; six-parted flowers."
+fam:Typhaceae,family,Typhaceae,Bulrush and bur-reed family,,Typhaceae,Tall water-edge plants with long flat leaves: bulrushes have brown sausage-shaped heads; bur-reeds have spiky green balls.
+fam:Convolvulaceae,family,Convolvulaceae,Bindweed family,,Convolvulaceae,Twining climbers with funnel-shaped flowers and arrow-shaped leaves. Dodders are leafless pink threads with no green.
+fam:Fagaceae,family,Fagaceae,Beech and oak family,,Fagaceae,"Trees with catkins; fruit a nut in a cup or husk (acorns, beech-mast, sweet chestnuts)."
+fam:Oleaceae,family,Oleaceae,Olive and ash family,,Oleaceae,"Opposite leaves; flowers with 4 joined petals and 2 stamens, or no petals in ash. Ash has winged 'keys'; privet has black berries."
+fam:Sapindaceae,family,Sapindaceae,Maple and horse-chestnut family,,Sapindaceae,Trees with opposite leaves: maples and sycamore have lobed leaves and paired winged fruits; horse-chestnut has hand-like compound leaves and conkers.
+fam:Urticaceae,family,Urticaceae,Nettle family,,Urticaceae,"Small green flowers in dangling tassels; stinging nettle has stinging hairs, pellitory-of-the-wall does not."
+fam:Lycopodiaceae,family,Lycopodiaceae,Clubmosses,,Lycopodiaceae,"No flowers; creeping or upright stems densely covered in small, narrow, overlapping leaves; spores in cones or leaf bases."
+fam:Grossulariaceae,family,Grossulariaceae,Currant family,,Grossulariaceae,"Shrubs with lobed, maple-like leaves and hanging sprays of small flowers, then berries (currants, gooseberry, which is spiny)."
+fam:Cistaceae,family,Cistaceae,Rock-rose family,,Cistaceae,"Low, often woody-based plants of dry grassland with crumpled, short-lived yellow petals and many stamens."
+fam:Haloragaceae,family,Haloragaceae,Water-milfoil family,,Haloragaceae,Submerged water plants with feathery leaves in whorls; small flowers on spikes above the water.
+fam:Linaceae,family,Linaceae,Flax family,,Linaceae,"Slender plants with narrow, untoothed leaves and 5 separate petals that drop quickly (fairy flax is white, flax blue)."
+fam:Cornaceae,family,Cornaceae,Dogwood family,,Cornaceae,Opposite leaves whose veins curve round towards the tip; 4-petalled flowers in flat clusters; dogwood has red winter stems.
+fam:Ulmaceae,family,Ulmaceae,Elm family,,Ulmaceae,"Trees with rough, toothed leaves that are lopsided at the base; fruit a flat papery wing round a seed."
+fam:Ophioglossaceae,family,Ophioglossaceae,Adder's-tongue and moonwort,,Ophioglossaceae,Small ferns with a single leaf and a separate spore-bearing spike or branch.
+fam:Cupressaceae,family,Cupressaceae,Cypress and juniper family,,Cupressaceae,Conifers with tiny scale-like or short prickly leaves; juniper has blue-black berry-like cones.
+fam:Aristolochiaceae,family,Aristolochiaceae,Birthwort family,,Aristolochiaceae,Introduced woodland plants with heart- or kidney-shaped leaves and odd tubular or cup-shaped brownish flowers.
+fam:Montiaceae,family,Montiaceae,Blinks and spring-beauty family,,Montiaceae,"Small, fleshy, hairless plants with 5 white or pink petals; spring-beauty has a leaf collar round the stem below the flowers."
+fam:Resedaceae,family,Resedaceae,Mignonette family,,Resedaceae,"Spikes of small yellowish flowers with deeply cut petals and many stamens (weld, wild mignonette); bare chalky ground."
+fam:Pteridaceae,family,Pteridaceae,Maidenhair and parsley-fern family,,Pteridaceae,Ferns: no flowers. Maidenhair fern has black stalks and fan-shaped leaflets; parsley fern grows in upland screes.
+fam:Nymphaeaceae,family,Nymphaeaceae,Water-lily family,,Nymphaeaceae,Large round floating leaves with a slit to the centre; big white or yellow flowers floating or held just above the water.
+fam:Berberidaceae,family,Berberidaceae,Barberry family,,Berberidaceae,Spiny shrubs with yellow flowers and berries; Oregon-grape has holly-like compound leaves.
+fam:Vitaceae,family,Vitaceae,Grape-vine family,,Vitaceae,"Woody climbers with tendrils; Virginia-creeper has hand-like leaves that turn red; small greenish flowers, then berries."
+fam:Polygalaceae,family,Polygalaceae,Milkwort family,,Polygalaceae,"Small plants of grassland and heath with blue, pink or white flowers: two large petal-like side sepals and a fringed lower petal."
+fam:Balsaminaceae,family,Balsaminaceae,Balsam family,,Balsaminaceae,"Succulent stems; hooded, spurred flowers; seed pods that explode when touched (Himalayan balsam, touch-me-not)."
+fam:Acanthaceae,family,Acanthaceae,Bear's-breech family,,Acanthaceae,"Introduced: large glossy, deeply lobed leaves and tall spikes of hooded flowers under spiny purple bracts."
+fam:Droseraceae,family,Droseraceae,Sundews,,Droseraceae,Small bog plants with rosettes of round or narrow leaves covered in sticky red hairs that trap insects.
+fam:Isoetaceae,family,Isoetaceae,Quillworts,,Isoetaceae,"No flowers; underwater rosettes of stiff, quill-like leaves at the bottom of clear lakes; spores at the leaf bases."
+fam:Lythraceae,family,Lythraceae,Loosestrife family,,Lythraceae,Purple-loosestrife: tall spikes of magenta flowers with 6 crinkled petals by water. Water-purslane is small and creeping.
+fam:Apocynaceae,family,Apocynaceae,Periwinkle family,,Apocynaceae,Trailing evergreen periwinkles with glossy opposite leaves and blue flowers whose 5 petals look twisted like a propeller.
+fam:Anacardiaceae,family,Anacardiaceae,Sumach family,,Anacardiaceae,"Introduced stag's-horn sumach: shrub with velvety shoots, long pinnate leaves that turn red, dense red fruit clusters."
+fam:Phrymaceae,family,Phrymaceae,Monkeyflower family,,Phrymaceae,"Waterside plants with opposite leaves and large yellow, two-lipped, snapdragon-like flowers, often red-spotted."
+fam:Rutaceae,family,Rutaceae,Rue family,,Rutaceae,"Introduced aromatic shrubs with gland-dotted leaves (Mexican orange-blossom, rue)."
+fam:Rhamnaceae,family,Rhamnaceae,Buckthorn family,,Rhamnaceae,"Shrubs with small greenish 4 to 5-parted flowers and black berries; buckthorn is thorny with opposite leaves, alder buckthorn is thornless."
+fam:Hymenophyllaceae,family,Hymenophyllaceae,Filmy-ferns,,Hymenophyllaceae,"Tiny ferns with translucent fronds one cell thick, on wet shaded rocks and tree trunks in the west."
+fam:Celastraceae,family,Celastraceae,Spindle and grass-of-Parnassus family,,Celastraceae,"Spindle: shrub with green stems and pink four-lobed fruits with orange seeds. Grass-of-Parnassus: white 5-petalled flowers with fringed glands, wet places."
+fam:Juglandaceae,family,Juglandaceae,Walnut family,,Juglandaceae,"Introduced trees with large aromatic pinnate leaves and catkins; walnuts, wing-nuts."
+fam:Acoraceae,family,Acoraceae,Sweet-flag,,Acoraceae,Iris-like leaves that smell of tangerines when crushed; a green finger-like flower spike sticking out sideways from a leaf-like stem.
+fam:Menyanthaceae,family,Menyanthaceae,Bogbean family,,Menyanthaceae,Water plants: bogbean has three-part leaves and fringed white-pink flowers; fringed water-lily has small round floating leaves and yellow flowers.
+fam:Dennstaedtiaceae,family,Dennstaedtiaceae,Bracken,,Dennstaedtiaceae,"Fern: no flowers. Bracken has tall, single, much-divided fronds rising from underground stems, often in large stands."
+fam:Thymelaeaceae,family,Thymelaeaceae,Daphne family,,Thymelaeaceae,"Shrubs with leathery leaves crowded towards the shoot tips and scented four-lobed flowers, then poisonous berries (mezereon, spurge-laurel)."
+fam:Santalaceae,family,Santalaceae,Mistletoe and bastard-toadflax family,,Santalaceae,"Mistletoe: evergreen ball of forked green stems in trees, white berries. Bastard-toadflax: small parasitic herb of chalk grassland."
+fam:Zosteraceae,family,Zosteraceae,Eelgrasses,,Zosteraceae,"Marine plants: long, grass-like ribbon leaves on sandy and muddy shores below the tide line."
+fam:Myricaceae,family,Myricaceae,Bog-myrtle,,Myricaceae,Low shrub of bogs with grey-green leaves that smell resinous when crushed; catkins in spring.
+fam:Elatinaceae,family,Elatinaceae,Waterworts,,Elatinaceae,Tiny creeping plants of lake edges and mud with opposite leaves and minute pinkish flowers.
+fam:Ceratophyllaceae,family,Ceratophyllaceae,Hornworts,,Ceratophyllaceae,"Rootless submerged water plants with whorls of stiff, forked, finely toothed leaves."
+fam:Cannabaceae,family,Cannabaceae,Hop family,,Cannabaceae,"Hop: twining rough-stemmed climber with lobed leaves and papery, cone-like female flower heads."
+fam:Juncaginaceae,family,Juncaginaceae,Arrowgrasses,,Juncaginaceae,"Grass-like plants of salt marsh and wet ground with fleshy, narrow leaves and a long slender spike of tiny green flowers."
+fam:Elaeagnaceae,family,Elaeagnaceae,Sea-buckthorn family,,Elaeagnaceae,"Spiny shrub with narrow silvery leaves and bright orange berries, mostly on sand dunes."
+fam:Selaginellaceae,family,Selaginellaceae,Lesser clubmoss,,Selaginellaceae,"Small moss-like plant with tiny pointed leaves, in wet upland grassland and flushes; no flowers."
+fam:Pittosporaceae,family,Pittosporaceae,Pittosporum family,,Pittosporaceae,Introduced evergreen shrubs or trees with glossy leaves and small dark purple scented flowers; south-west coasts.
+fam:Ruppiaceae,family,Ruppiaceae,Tasselweeds,,Ruppiaceae,Submerged plants of brackish pools with thread-like leaves; flowers on long stalks.
+fam:Myrtaceae,family,Myrtaceae,Myrtle family,,Myrtaceae,"Introduced evergreen shrubs with aromatic, gland-dotted opposite leaves, white flowers with many stamens and edible berries."
+fam:Nothofagaceae,family,Nothofagaceae,Southern beeches,,Nothofagaceae,"Introduced trees planted for forestry, similar to beech but with smaller leaves."
+fam:Verbenaceae,family,Verbenaceae,Vervain family,,Verbenaceae,"Wiry plant with square stems, lobed opposite leaves and long thin spikes of tiny lilac flowers."
+fam:Sarraceniaceae,family,Sarraceniaceae,Pitcherplants,,Sarraceniaceae,Introduced to a few bogs: leaves form upright tubes (pitchers) that trap insects.
+fam:Aquifoliaceae,family,Aquifoliaceae,Holly,,Aquifoliaceae,"Evergreen tree or shrub with glossy, usually spiny leaves, small white 4-petalled flowers and red berries."
+fam:Alstroemeriaceae,family,Alstroemeriaceae,Peruvian lily family,,Alstroemeriaceae,Garden escape with twisted leaf stalks and showy streaked flowers with 6 tepals.
+fam:Melanthiaceae,family,Melanthiaceae,Herb-Paris,,Melanthiaceae,"Woodland plant with a single ring of four broad leaves and one starry green flower, then a black berry."
+fam:Marsileaceae,family,Marsileaceae,Pillwort,,Marsileaceae,Tiny fern of pond margins with grass-like leaves that uncurl like a crozier and pea-sized spore pills at the base.
+fam:Limnanthaceae,family,Limnanthaceae,Meadow-foam family,,Limnanthaceae,Garden escape (poached-egg plant): white petals with yellow centres and divided leaves.
+fam:Lauraceae,family,Lauraceae,Laurel family,,Lauraceae,Bay: evergreen tree or shrub with aromatic leathery leaves used in cooking.
+fam:Frankeniaceae,family,Frankeniaceae,Sea-heath,,Frankeniaceae,"Low, mat-forming plant of salt marshes with tiny inrolled leaves and small pink flowers."
+fam:Eriocaulaceae,family,Eriocaulaceae,Pipewort,,Eriocaulaceae,Western Scottish and Irish lakes: underwater rosettes of grass-like leaves and small white button-heads on leafless stalks above the water.
+fam:Gunneraceae,family,Gunneraceae,Giant-rhubarb family,,Gunneraceae,"Introduced: gigantic rhubarb-like leaves on prickly stalks, with a huge cone-like spike of tiny flowers."
+fam:Butomaceae,family,Butomaceae,Flowering-rush,,Butomaceae,Tall water-edge plant with three-angled leaves and an umbel of pink six-petalled flowers.
+fam:Cabombaceae,family,Cabombaceae,Fanwort,,Cabombaceae,"Introduced aquarium plant: submerged fan-shaped, finely divided opposite leaves and small white flowers."
+fam:Buxaceae,family,Buxaceae,Box,,Buxaceae,"Evergreen shrub with small, glossy, oval opposite leaves and tiny greenish flowers; chalk slopes and gardens."
+fam:Calceolariaceae,family,Calceolariaceae,Slipperwort family,,Calceolariaceae,"Introduced: pouched, slipper-shaped yellow two-lipped flowers."
+fam:Colchicaceae,family,Colchicaceae,Meadow saffron,,Colchicaceae,Pink crocus-like flowers in autumn without leaves; broad leaves appear in spring. Poisonous.
+fam:Cucurbitaceae,family,Cucurbitaceae,White bryony,,Cucurbitaceae,"Climber with coiled tendrils, rough lobed leaves, greenish-white flowers and red berries."
+fam:Diapensiaceae,family,Diapensiaceae,Diapensia,,Diapensiaceae,"Very rare: cushion plant on one Scottish mountain, with white five-petalled flowers."
+fam:Dioscoreaceae,family,Dioscoreaceae,Black bryony,,Dioscoreaceae,"Twining climber with glossy heart-shaped leaves, small greenish flowers and red berries; no tendrils."
+fam:Pontederiaceae,family,Pontederiaceae,Pickerelweed family,,Pontederiaceae,Introduced water plants with glossy leaves and spikes of blue flowers.
+fam:Portulacaceae,family,Portulacaceae,Purslane,,Portulacaceae,"Fleshy, sprawling annual with small yellow flowers; a garden weed."
+fam:Polemoniaceae,family,Polemoniaceae,Jacob's-ladder,,Polemoniaceae,Ladder-like pinnate leaves and clusters of blue bell-shaped flowers; limestone in northern England.
+fam:Paulowniaceae,family,Paulowniaceae,Foxglove-tree,,Paulowniaceae,"Introduced tree with very large, soft, opposite leaves and upright clusters of violet foxglove-like flowers."
+fam:Phytolaccaceae,family,Phytolaccaceae,Pokeweed,,Phytolaccaceae,"Introduced tall plant with reddish stems, upright spikes of small flowers and dark purple berries."
+fam:Moraceae,family,Moraceae,Mulberry,,Moraceae,"Introduced tree with heart-shaped, sometimes lobed leaves, milky sap and blackberry-like fruits."
+fam:Osmundaceae,family,Osmundaceae,Royal fern,,Osmundaceae,"Large fern of wet places whose fertile fronds end in rusty-brown, flower-like spore clusters; no true flowers."
+fam:Paeoniaceae,family,Paeoniaceae,Peony,,Paeoniaceae,Garden escape with large red flowers and divided leaves.
+fam:Nartheciaceae,family,Nartheciaceae,Bog asphodel,,Nartheciaceae,"Bog plant with flat, sword-shaped leaves and spikes of starry orange-yellow flowers."
+fam:Scheuchzeriaceae,family,Scheuchzeriaceae,Rannoch-rush,,Scheuchzeriaceae,"Very rare bog plant with grass-like leaves that have a pore at the tip, and a few yellowish-green flowers."
+fam:Salviniaceae,family,Salviniaceae,Water fern,,Salviniaceae,Introduced tiny floating fern forming red or green carpets on still water; no flowers.
+fam:Saururaceae,family,Saururaceae,Chameleon plant,,Saururaceae,Introduced: heart-shaped leaves smelling of orange peel and spikes of tiny flowers with four white petal-like bracts.
+fam:Tropaeolaceae,family,Tropaeolaceae,Nasturtium,,Tropaeolaceae,"Garden escape with round, umbrella-like leaves and orange or yellow spurred flowers."
+fam:Tofieldiaceae,family,Tofieldiaceae,Scottish asphodel,,Tofieldiaceae,Small northern plant of wet flushes with a fan of short flat leaves and a tight head of pale greenish-white flowers.
+fam:Simaroubaceae,family,Simaroubaceae,Tree-of-heaven,,Simaroubaceae,"Introduced tree with very long pinnate leaves, unpleasant-smelling when crushed, and twisted winged fruits."
+fam:Cyatheaceae,family,Cyatheaceae,Tree-ferns,,Cyatheaceae,Introduced tree-fern (Dicksonia) with a fibrous trunk topped by large fronds; south-west gardens and woods.
+fam:Taxaceae,family,Taxaceae,Yew,,Taxaceae,"Evergreen conifer with flat, dark green needles in two rows and red fleshy cups around single seeds; no cones. All parts except the red flesh are poisonous."
+448792-1,species,Lamium album,White Dead-nettle,Lamium album,Lamiaceae,Looks like a stinging nettle but has white flowers and does not sting.
+448939-1,species,Lamium purpureum,Red Dead-nettle,Lamium purpureum,Lamiaceae,Upper leaves crowded and tinged purple; an annual of gardens and bare ground.
+448797-1,species,Lamium amplexicaule,Henbit Dead-nettle,Lamium amplexicaule,Lamiaceae,Upper leaves have no stalk and clasp the stem in pairs beneath the flowers.
+448781-1,species,Lamium galeobdolon,Yellow Archangel,Lamiastrum galeobdolon,Lamiaceae,Yellow flowers with reddish streaks on the lower lip; an ancient-woodland indicator.
+447338-1,species,Glechoma hederacea,Ground-ivy,Glechoma hederacea,Lamiaceae,"Kidney-shaped, round-toothed leaves on long creeping stems; smells pungent when crushed."
+455176-1,species,Prunella vulgaris,Selfheal,Prunella vulgaris,Lamiaceae,"Dense, squarish flower head with purple-tinged bracts and a pair of leaves just below it. Common in lawns."
+460020-1,species,Stachys sylvatica,Hedge Woundwort,Stachys sylvatica,Lamiaceae,Dark wine-red flowers with white markings; stinks when crushed.
+459820-1,species,Stachys palustris,Marsh Woundwort,Stachys palustris,Lamiaceae,Paler pinkish-purple flowers than Hedge Woundwort; narrow leaves with little or no stalk.
+450192-1,species,Mentha aquatica,Water Mint,Mentha aquatica,Lamiaceae,Rounded lilac flower head at the stem tip; strong mint smell.
+30026217-2,species,Mentha arvensis,Corn Mint,Mentha arvensis,Lamiaceae,"Flowers only in whorls up the stem; the stem ends in leaves, not flowers."
+461121-1,species,Thymus drucei,Wild Thyme,Thymus drucei,Lamiaceae,Low mats of tiny leaves; stems hairy on two opposite sides only.
+453395-1,species,Origanum vulgare,Wild Marjoram,Origanum vulgare,Lamiaceae,"Loose, branched clusters with purple bracts; smells of oregano."
+460717-1,species,Teucrium scorodonia,Wood Sage,Teucrium scorodonia,Lamiaceae,"Pale greenish-yellow flowers with no upper lip; wrinkled, sage-like leaves; acid soils."
+444664-1,species,Ajuga reptans,Bugle,Ajuga reptans,Lamiaceae,"Glossy leaves, leafy runners and a very short upper lip."
+447136-1,species,Galeopsis tetrahit,Common Hemp-nettle,Galeopsis tetrahit,Lamiaceae,Bristly stem that swells just below each pair of leaves.
+444976-1,species,Ballota nigra,Black Horehound,Ballota nigra,Lamiaceae,"Rank-smelling hedgerow plant; the calyx has broad, spreading teeth."
+61206-2,species,Clinopodium vulgare,Wild Basil,Clinopodium vulgare,Lamiaceae,"Flower whorls wrapped in long, bristly hairs, so they look woolly; only faintly aromatic."
+449641-1,species,Lycopus europaeus,Gypsywort,Lycopus europaeus,Lamiaceae,Deeply toothed to lobed leaves; tiny purple-dotted white flowers in tight whorls.
+458280-1,species,Scutellaria galericulata,Skullcap,Scutellaria galericulata,Lamiaceae,"Flowers in pairs in the leaf axils, all facing one way; calyx has a small hump."
+445133-1,species,Betonica officinalis,Betony,Betonica officinalis,Lamiaceae,"Rosette of long-stalked, oblong leaves; reddish-purple flowers in a dense spike."

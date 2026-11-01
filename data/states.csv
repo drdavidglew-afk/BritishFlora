@@ -1,4 +1,83 @@
 char_id,state_id,label
+ptype,tree,Tree
+ptype,shrub,Shrub or woody climber
+ptype,herb,Non-woody plant
+ptype,grass,"Grass-, sedge- or rush-like"
+ptype,fern,"Fern, horsetail or clubmoss"
+fhabit,up,Upright
+fhabit,creep,Creeping or mat-forming
+fhabit,climb,"Climbing, twining or scrambling"
+fhabit,water,Floating or under water
+larr,alt,"Alternate, one per joint"
+larr,opp,Opposite pairs
+larr,whorl,Rings of 3 or more
+larr,basal,All from the base
+larr,none,No obvious leaves
+lform,simple,"Simple, may be toothed"
+lform,lobed,Deeply lobed or finely divided
+lform,compound,Separate leaflets
+lform,grassy,"Long, narrow, grass-like"
+lform,needle,Needles or tiny scales
+veins,par,"Parallel, running lengthwise"
+veins,net,Branching net
+feature,milky,Milky or coloured sap
+feature,sting,Stinging hairs
+feature,spiny,"Spines, thorns or prickles"
+feature,square,Square stem
+feature,tri,Triangular stem
+feature,nodes,Stem swollen at leaf joints
+feature,sheath,Papery sheath round stem at leaf base
+feature,tendril,Tendrils
+feature,aromatic,Strong smell when crushed
+feature,bristly,"Rough, bristly hairs"
+feature,dots,See-through dots in leaves
+feature,succulent,"Thick, fleshy leaves"
+feature,insect,Leaves that trap insects
+feature,nogreen,No green at all
+feature,jointed,Jointed stems with rings of teeth
+flowers,showy,"Coloured, noticeable"
+flowers,small_green,"Small green or brown, or catkins"
+flowers,none,No flowers (spores or cones)
+inflor,single,Single or a few separate
+inflor,head,Packed head that looks like one flower
+inflor,umbel,Umbrella-shaped clusters
+inflor,spike,Spike or stalked along a stem
+inflor,whorls,Rings up the stem
+inflor,coil,Coiled spray that unrolls
+inflor,branched,Loose branched clusters
+inflor,catkin,Catkins
+inflor,spadix,Club-shaped spike in a hood
+sym,radial,"Regular, star-like"
+sym,bilateral,"Irregular: lipped, spurred or pea-like"
+petals,2,2
+petals,3,3
+petals,4,4
+petals,5,5
+petals,6,6
+petals,many,More than 6
+petals,none,None or not obvious
+fused,free,Separate to the base
+fused,fused,"Joined into a tube, bell or lips"
+fused,none,No petals
+ovary,inf,Below the petals
+ovary,sup,Inside the flower
+stamens,few,10 or fewer
+stamens,many,More than 10
+fruit,berry,"Fleshy berry, hip or cherry"
+fruit,pod,Pea-pod
+fruit,crucifer,"Pod splitting from below, leaving a papery wall"
+fruit,capsule,Dry capsule
+fruit,small_dry,Small dry seeds or nutlets
+fruit,plumed,Seeds with silky hairs or a parachute
+fruit,burr,Hooked burrs
+fruit,beaked,Long beak like a crane's bill
+fruit,nut,Nut or acorn
+fruit,winged,Winged seed or key
+fruit,cone,Woody cone
+fruit,spores,"Spores, no seeds"
+wet,water,In water
+wet,wet,"Wet ground, bogs, marshes"
+wet,land,Dry or damp ground
 colour,white,White
 colour,yellow,Yellow
 colour,pink,Pink to purple

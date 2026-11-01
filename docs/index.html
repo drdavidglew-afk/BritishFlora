@@ -97,114 +97,176 @@ footer { max-width: 1200px; margin: 0 auto; padding: 0 20px 32px; color: var(--m
 footer p { margin: 0; max-width: 90ch; }
 .toast { font-size: 12px; color: var(--good); min-height: 1em; }
 @media (prefers-reduced-motion: no-preference) { .card { transition: opacity .15s; } }
+
+.stagebar { max-width: 1200px; margin: 0 auto; padding: 4px 20px 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.step { font: 600 13px/1 var(--body); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); text-decoration: none; }
+.step.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.step.back { color: var(--accent); }
+.step i { font-weight: 500; }
+.searchrow input { width: 100%; font: 15px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.searchrow input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.genera { margin: 0; font-size: 13px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn.solid { background: var(--accent); color: var(--surface); text-decoration: none; }
+a.btn { text-decoration: none; display: inline-block; }
+.later { font-size: 12.5px; color: var(--muted); }
 </style>
 </head>
 <body>
 <header>
   <h1>British Flora Key</h1>
   <div class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Checking offline storage…</span></div>
-  <p><b>Prototype: mint and dead-nettle family.</b> A multi-access key to 20 common British and Irish members of the mint family (Lamiaceae): square stems, opposite leaves, two-lipped flowers. Pick any features you can see, in any order. Species are ranked by how many of your answers they contradict, so one wrong answer won't hide the right plant.</p>
+  <p>An open identification key to the wild plants of Britain and Ireland. <b>Step 1</b> finds the family; <b>step 2</b> finds the species (so far for the mint family only). Pick any features you can see, in any order. Plants are ranked by how many of your answers they contradict, so one wrong answer won't hide the right one.</p>
 </header>
+<nav class="stagebar" id="stagebar" aria-label="Key stage"></nav>
 <main>
   <section class="panel" aria-label="Characters">
     <div class="panel-head"><h2>What can you see?</h2><button class="btn" id="reset" type="button">Clear all</button></div>
     <div id="chars"></div>
   </section>
   <section class="results" id="results" aria-live="polite">
+    <div class="searchrow"><label for="search" class="sr">Search by name</label><input id="search" type="search" placeholder="Search by name: buttercup, Ranunculus, Poaceae…" autocomplete="off"></div>
     <div class="summary"><div><div class="big" id="count"></div><div class="sub" id="next"></div></div></div>
     <div class="cards" id="cards"></div>
-    <details class="more" id="moreWrap"><summary id="moreLabel"></summary><div class="cards" id="more"></div></details>
+    <p class="sub" id="moreNote"></p>
   </section>
 </main>
 <a class="jump" id="jump" href="#results"><span id="jumpText"></span><span>See matches ↓</span></a>
 <footer>
-  <p><b>Data.</b> Names, status, maximum height, Ellenberg values and hectad counts come from Kew's BIFloraExplorer (Henniges et al. 2022, <i>Scientific Data</i> 9:1, MIT/OGL), joined on Kew ID. Morphological scores and tips are unverified drafts written by Claude from general botanical knowledge, not copied from a published flora. Check any identification against Stace or another flora. Heights marked * are estimates where Kew has no value.</p>
+  <p><b>Data.</b> Names, status, heights, Ellenberg wetness and hectad counts come from Kew's BIFloraExplorer (Henniges et al. 2022, <i>Scientific Data</i> 9:1, MIT/OGL). "Where is it growing?" for families is calculated from those Ellenberg values. All family and species features are unverified drafts written by Claude from general botanical knowledge, not copied from a published flora. Check any identification against Stace or another flora. Heights marked * are estimates where Kew has no value.</p>
   <p><b>Install.</b> Android/Chrome: menu, then <i>Install app</i>. iPhone: Safari's Share button, then <i>Add to Home Screen</i>. Once installed it works with no signal.</p>
   <div class="packs" id="packs"><b>Offline photos.</b> <span id="packsText">No photo packs are available yet.</span></div>
   <p>Code MIT licence; data CC-BY 4.0. Source and corrections: <a href="https://github.com/drdavidglew-afk/BritishFlora">github.com/drdavidglew-afk/BritishFlora</a></p>
-  <div><button class="btn" id="copy" type="button">Copy character matrix as CSV</button> <span class="toast" id="toast"></span></div>
+  <div><button class="btn" id="copy" type="button">Copy this stage's matrix as CSV</button> <span class="toast" id="toast"></span></div>
 </footer>
 <script>
-let DATA = [], CHARS = [], SOURCES = [];
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const MORPH = ["colour","lip","arr","leaf","smell","habit","habitat"];
-const label = (c, v) => (CHARS.find(x => x.id === c).opts || []).find(o => o[0] === v)?.[1] || v;
-let sel = {};
+const SHOW = 30;
+let J = null, stage = "family", sel = { family: {} }, query = "";
 
-function mismatches(sp) {
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family" : c.stage === st))
+  .map(c => ({ id: c.char_id, label: c.label, help: c.help || "", kind: c.kind, opts: c.states }));
+const items = () => stage === "family" ? J.families : J.species.filter(s => s.family === stage);
+const S = () => (sel[stage] ||= {});
+const label = (c, v) => (charsFor(stage).find(x => x.id === c)?.opts || []).find(o => o[0] === v)?.[1] || v;
+
+function mismatches(it) {
   const out = [];
-  for (const [c, v] of Object.entries(sel)) {
-    if (MORPH.includes(c)) { if (!sp[c].includes(v)) out.push(`${CHARS.find(x=>x.id===c).label}: not ${label(c,v).toLowerCase()}`); }
-    else if (c === "height") { if (sp.height != null && sp.height < parseFloat(v)) out.push(`Rarely grows taller than ${Math.round(sp.height*100)} cm`); }
-    else if (c === "month") { const m = +v; if (m < sp.months[0] || m > sp.months[1]) out.push(`Usually flowers ${MONTHS[sp.months[0]-1]}–${MONTHS[sp.months[1]-1]}`); }
-    else if (c === "region" && v === "ie") { if (sp.ie != null && sp.ie < 25) out.push(`Rare in Ireland (${sp.ie} hectads)`); }
+  for (const [c, v] of Object.entries(S())) {
+    const ch = charsFor(stage).find(x => x.id === c); if (!ch) continue;
+    if (ch.kind === "state") { const have = it[c] || []; if (have.length && !have.includes(v)) out.push(`${ch.label}: not ${label(c, v).toLowerCase()}`); }
+    else if (ch.kind === "feature") { if (!(it[c] || []).includes(v)) out.push(`No ${label(c, v).toLowerCase()}`); }
+    else if (ch.kind === "height") { if (it.height != null && it.height < parseFloat(v)) out.push(`Rarely taller than ${Math.round(it.height * 100)} cm`); }
+    else if (ch.kind === "month") { const m = +v; if (it.months && (m < it.months[0] || m > it.months[1])) out.push(`Usually flowers ${MONTHS[it.months[0]-1]}–${MONTHS[it.months[1]-1]}`); }
+    else if (ch.kind === "region" && v === "ie") { if (it.ie != null && it.ie < 25) out.push(`Rare in Ireland (${it.ie} hectads)`); }
   }
   return out;
 }
 
+const ADVANCED = ["ovary", "stamens", "fruit"];
 function bestNext(cands) {
   if (cands.length < 2) return null;
   let best = null;
-  for (const c of MORPH) {
-    if (sel[c]) continue;
-    const ch = CHARS.find(x => x.id === c);
-    let score = 0, splits = 0;
-    for (const [v] of ch.opts) { const k = cands.filter(s => s[c].includes(v)).length; score += k*k; if (k > 0 && k < cands.length) splits++; }
-    if (!splits) continue;
-    if (!best || score < best.score) best = { c, score };
+  for (const ch of charsFor(stage)) {
+    if (S()[ch.id] || !(ch.kind === "state" || ch.kind === "feature")) continue;
+    let score = 0, splits = 0, known = 0;
+    for (const [v] of ch.opts) {
+      const k = cands.filter(s => (s[ch.id] || []).includes(v)).length;
+      score += k * k; if (k > 0 && k < cands.length) splits++;
+    }
+    known = cands.filter(s => (s[ch.id] || []).length).length;
+    if (!splits || known < cands.length * 0.6 || ch.kind === "feature") continue;
+    score = score / known * (ADVANCED.includes(ch.id) ? 2 : 1);
+    if (!best || score < best.score) best = { id: ch.id, score };
   }
-  return best && best.c;
+  return best && best.id;
 }
 
-function statusText(s) { return s === "N" ? "Native" : s && s.startsWith("Arch") ? "Ancient introduction" : (s || "Status unknown"); }
+const statusText = s => s === "N" ? "Native" : s && s.startsWith("Arch") ? "Ancient introduction" : s && s.startsWith("Neo") ? "Introduced" : "Status unknown";
+const nameHit = it => {
+  if (!query) return true;
+  const q = query.toLowerCase();
+  const hay = [it.name, it.common, it.tip, ...(it.genera || []), ...((it.top || []).map(t => t[0]))].join(" ").toLowerCase();
+  return hay.includes(q);
+};
 
-function card(sp, mm) {
+function familyCard(f, mm) {
   const el = document.createElement("article");
   el.className = "card" + (mm.length === 1 ? " m1" : mm.length > 1 ? " m2" : "");
-  const pill = mm.length ? `<span class="pill mm">${mm.length} mismatch${mm.length>1?"es":""}</span>` : (Object.keys(sel).length ? `<span class="pill ok">Fits all answers</span>` : "");
-  const h = sp.height != null ? `${Math.round(sp.height*100)} cm${sp.height_filled ? "*" : ""}` : "–";
+  const pill = mm.length ? `<span class="pill mm">${mm.length} mismatch${mm.length > 1 ? "es" : ""}</span>` : (Object.keys(S()).length ? `<span class="pill ok">Fits all answers</span>` : "");
+  const top = f.top.slice(0, 6).map(t => `<i>${esc(t[0])}</i>`).join(", ");
+  el.innerHTML = `
+    <div class="card-top"><h3>${esc(f.common)}<i>${esc(f.name)}</i></h3>${pill}</div>
+    <p class="tip">${esc(f.tip)}</p>
+    ${mm.length ? `<p class="mism">${esc(mm.join(" · "))}</p>` : ""}
+    <div class="facts">
+      <span><b>${f.n}</b> species here (${f.n_native} native)</span>
+      <span><b>${f.n_common}</b> widespread</span>
+      ${f.height != null ? `<span>Up to <b>${f.height >= 1 ? f.height.toFixed(f.height < 10 ? 1 : 0) + " m" : Math.round(f.height * 100) + " cm"}</b></span>` : ""}
+    </div>
+    <p class="genera">Most widespread: ${top}${f.n > 6 ? "…" : ""}</p>
+    <div class="actions">${f.has_key
+      ? `<a class="btn solid" href="#species-${esc(f.name)}">Key out the species →</a>`
+      : `<span class="later">Species key not built yet</span>`}
+      <a class="btn" href="https://powo.science.kew.org/results?q=${encodeURIComponent(f.name)}" target="_blank" rel="noopener">Plants of the World Online</a></div>`;
+  return el;
+}
+
+function speciesCard(sp, mm) {
+  const el = document.createElement("article");
+  el.className = "card" + (mm.length === 1 ? " m1" : mm.length > 1 ? " m2" : "");
+  const pill = mm.length ? `<span class="pill mm">${mm.length} mismatch${mm.length > 1 ? "es" : ""}</span>` : (Object.keys(S()).length ? `<span class="pill ok">Fits all answers</span>` : "");
+  const h = sp.height != null ? `${Math.round(sp.height * 100)} cm${sp.height_filled ? "*" : ""}` : "–";
   const dist = sp.gb != null ? `<span>GB <b>${sp.gb}</b> · Ireland <b>${sp.ie}</b> hectads since 2000</span>` : `<span>Hectads: no data under this name</span>`;
   el.innerHTML = `
-    <div class="card-top"><h3>${sp.common}<i>${sp.name}</i></h3>${pill}</div>
-    <p class="tip">${sp.tip}</p>
-    ${mm.length ? `<p class="mism">${mm.join(" · ")}</p>` : ""}
+    <div class="card-top"><h3>${esc(sp.common)}<i>${esc(sp.name)}</i></h3>${pill}</div>
+    <p class="tip">${esc(sp.tip)}</p>
+    ${mm.length ? `<p class="mism">${esc(mm.join(" · "))}</p>` : ""}
     <div class="facts">
       <span>${statusText(sp.status)}</span>
       <span>Max height <b>${h}</b></span>
-      <span>Flowers <b>${MONTHS[sp.months[0]-1]}–${MONTHS[sp.months[1]-1]}</b></span>
+      ${sp.months ? `<span>Flowers <b>${MONTHS[sp.months[0]-1]}–${MONTHS[sp.months[1]-1]}</b></span>` : ""}
       ${sp.F != null ? `<span>Wetness <b>${sp.F}</b>/12 · pH <b>${sp.R}</b>/9</span>` : ""}
       ${dist}
-      <a href="${sp.powo}" target="_blank" rel="noopener">Plants of the World Online</a>
+      <a href="${esc(sp.powo)}" target="_blank" rel="noopener">Plants of the World Online</a>
     </div>`;
   return el;
 }
 
 function render() {
-  const rows = DATA.map(sp => ({ sp, mm: mismatches(sp) }))
-    .sort((a, b) => a.mm.length - b.mm.length || (b.sp.gb || 0) - (a.sp.gb || 0));
-  const fit = rows.filter(r => r.mm.length === 0), near = rows.filter(r => r.mm.length === 1), rest = rows.filter(r => r.mm.length > 1);
-  const n = Object.keys(sel).length;
-  document.getElementById("count").textContent = !n ? `All ${DATA.length} species` : fit.length === 1 ? `1 species fits: ${fit[0].sp.common}` : `${fit.length} species fit all your answers`;
-  document.getElementById("jumpText").textContent = !n ? `${DATA.length} species` : `${fit.length} fit`;
-  const nx = bestNext(fit.length ? fit.map(r => r.sp) : near.map(r => r.sp));
-  document.getElementById("next").textContent = nx ? `Most useful next question: ${CHARS.find(x=>x.id===nx).label.toLowerCase()}` : (n ? "No remaining question separates these. Check the tips." : "Start with whatever is easiest to see.");
-  document.querySelectorAll("fieldset").forEach(f => f.classList.toggle("suggest", f.dataset.c === nx));
-  const cards = document.getElementById("cards"); cards.replaceChildren(...[...fit, ...near].map(r => card(r.sp, r.mm)));
-  const more = document.getElementById("more"); more.replaceChildren(...rest.map(r => card(r.sp, r.mm)));
-  document.getElementById("moreWrap").hidden = !rest.length;
-  document.getElementById("moreLabel").textContent = `${rest.length} more with 2 or more mismatches`;
-  document.querySelectorAll(".opt").forEach(b => b.setAttribute("aria-pressed", sel[b.dataset.c] === b.dataset.v ? "true" : "false"));
-  document.getElementById("month").value = sel.month || "";
+  const list = items().filter(nameHit);
+  const rows = list.map(it => ({ it, mm: mismatches(it) }))
+    .sort((a, b) => a.mm.length - b.mm.length || (stage === "family" ? b.it.n_common - a.it.n_common || b.it.n - a.it.n : (b.it.gb || 0) - (a.it.gb || 0)));
+  const fit = rows.filter(r => r.mm.length === 0), near = rows.filter(r => r.mm.length === 1);
+  const n = Object.keys(S()).length, noun = stage === "family" ? "famil" : "species";
+  const pl = k => stage === "family" ? (k === 1 ? "family" : "families") : "species";
+  document.getElementById("count").textContent =
+    query ? `${list.length} ${pl(list.length)} ${list.length === 1 ? "matches" : "match"} “${query}”${n ? `, ${fit.length} fit your answers` : ""}` :
+    !n ? `${list.length} ${pl(list.length)}` :
+    fit.length === 1 ? `1 ${pl(1)} fits: ${fit[0].it.common}` : `${fit.length} ${pl(fit.length)} fit all your answers`;
+  document.getElementById("jumpText").textContent = !n ? `${list.length} ${pl(list.length)}` : `${fit.length} fit`;
+  const nx = !n && stage === "family" ? "ptype" : bestNext((fit.length ? fit : near).map(r => r.it));
+  document.getElementById("next").textContent = nx ? `Most useful next question: ${charsFor(stage).find(x => x.id === nx).label.toLowerCase()}` : (n ? "No remaining question separates these. Check the descriptions." : "Start with whatever is easiest to see.");
+  document.querySelectorAll("fieldset").forEach(f => { f.classList.toggle("suggest", f.dataset.c === nx); const h = f.querySelector(".hint"); if (h) h.hidden = f.dataset.c !== nx; });
+  const shown = (query ? rows : rows.filter(r => r.mm.length <= 1)).slice(0, SHOW);
+  const shownAll = shown.length ? shown : rows.slice(0, 10);
+  document.getElementById("cards").replaceChildren(...shownAll.map(r => stage === "family" ? familyCard(r.it, r.mm) : speciesCard(r.it, r.mm)));
+  const hidden = rows.length - shownAll.length;
+  document.getElementById("moreNote").textContent = hidden > 0 ? `${hidden} more ${pl(hidden)} not shown (more mismatches or lower in the list). Answer another question or search by name.` : "";
+  document.querySelectorAll(".opt").forEach(b => b.setAttribute("aria-pressed", S()[b.dataset.c] === b.dataset.v ? "true" : "false"));
+  const m = document.getElementById("month"); if (m) m.value = S().month || "";
 }
 
-function build() {
-  const wrap = document.getElementById("chars");
-  for (const ch of CHARS) {
+function buildPanel() {
+  const wrap = document.getElementById("chars"); wrap.replaceChildren();
+  for (const ch of charsFor(stage)) {
     const fs = document.createElement("fieldset"); fs.dataset.c = ch.id;
-    fs.innerHTML = `<legend>${ch.label}<span class="hint">Try this</span></legend>`;
-    if (ch.help) fs.insertAdjacentHTML("beforeend", `<p class="help">${ch.help}</p>`);
-    if (ch.select) {
-      fs.insertAdjacentHTML("beforeend", `<select id="month" aria-label="Flowering month"><option value="">Any month</option>${MONTHS.map((m,i)=>`<option value="${i+1}">${m}</option>`).join("")}</select>`);
+    fs.innerHTML = `<legend>${esc(ch.label)}<span class="hint" hidden>Try this</span></legend>`;
+    if (ch.help) fs.insertAdjacentHTML("beforeend", `<p class="help">${esc(ch.help)}</p>`);
+    if (ch.kind === "month") {
+      fs.insertAdjacentHTML("beforeend", `<select id="month" aria-label="Flowering month"><option value="">Any month</option>${MONTHS.map((m, i) => `<option value="${i + 1}">${m}</option>`).join("")}</select>`);
     } else {
       const o = document.createElement("div"); o.className = "opts";
       for (const [v, t] of ch.opts) { const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.id = `opt-${ch.id}-${v}`; b.dataset.c = ch.id; b.dataset.v = v; b.textContent = t; o.append(b); }
@@ -212,31 +274,50 @@ function build() {
     }
     wrap.append(fs);
   }
-  wrap.querySelectorAll("legend .hint").forEach(h => h.style.display = "none");
-  wrap.addEventListener("click", e => {
+  const m = document.getElementById("month");
+  if (m) m.addEventListener("change", e => { if (e.target.value) S().month = e.target.value; else delete S().month; render(); });
+}
+
+function buildStagebar() {
+  const bar = document.getElementById("stagebar");
+  bar.innerHTML = stage === "family"
+    ? `<span class="step on">1. Which family?</span><span class="step">2. Which species?</span>`
+    : `<a class="step back" href="#families">← 1. Families</a><span class="step on">2. Which species? ${esc(J.families.find(f => f.name === stage)?.common || stage)} (<i>${esc(stage)}</i>)</span>`;
+}
+
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const next = h.startsWith("species-") && J.keyed.includes(h.slice(8)) ? h.slice(8) : "family";
+  if (next !== stage || !document.getElementById("chars").childElementCount) {
+    stage = next; query = ""; document.getElementById("search").value = "";
+    document.getElementById("search").placeholder = stage === "family" ? "Search by name: buttercup, Ranunculus, Poaceae…" : "Search by name: mint, Stachys…";
+    buildStagebar(); buildPanel(); window.scrollTo(0, 0);
+  }
+  render();
+}
+
+function wire() {
+  document.getElementById("chars").addEventListener("click", e => {
     const b = e.target.closest(".opt"); if (!b) return;
-    if (sel[b.dataset.c] === b.dataset.v) delete sel[b.dataset.c]; else sel[b.dataset.c] = b.dataset.v;
-    render(); hints();
+    if (S()[b.dataset.c] === b.dataset.v) delete S()[b.dataset.c]; else S()[b.dataset.c] = b.dataset.v;
+    render();
   });
-  document.getElementById("month").addEventListener("change", e => { if (e.target.value) sel.month = e.target.value; else delete sel.month; render(); hints(); });
-  document.getElementById("reset").addEventListener("click", () => { sel = {}; render(); hints(); });
+  document.getElementById("reset").addEventListener("click", () => { sel[stage] = {}; render(); });
+  document.getElementById("search").addEventListener("input", e => { query = e.target.value.trim(); render(); });
+  addEventListener("hashchange", route);
   document.getElementById("copy").addEventListener("click", async () => {
-    const cols = ["name","common","kew_id",...MORPH,"flower_start","flower_end","max_height_m"];
-    const lines = [cols.join(",")].concat(DATA.map(s => [s.name,s.common,s.kew_id,...MORPH.map(c => s[c].join("|")),s.months[0],s.months[1],s.height ?? ""].map(x => `"${x}"`).join(",")));
+    const cs = charsFor(stage).filter(c => c.kind === "state" || c.kind === "feature");
+    const lines = [["name", "common", ...cs.map(c => c.id)].join(",")].concat(items().map(s => [s.name, s.common, ...cs.map(c => (s[c.id] || []).join("|"))].map(x => `"${String(x).replace(/"/g, '""')}"`).join(",")));
     const t = document.getElementById("toast");
     try { await navigator.clipboard.writeText(lines.join("\n")); t.textContent = "Copied. Paste into a spreadsheet."; }
     catch { t.textContent = "Your browser blocked copying."; }
   });
 }
-function hints() { document.querySelectorAll("fieldset").forEach(f => { const h = f.querySelector(".hint"); if (h) h.style.display = f.classList.contains("suggest") ? "inline" : "none"; }); }
 
 async function load() {
   const res = await fetch("data/species.json");
-  const j = await res.json();
-  SOURCES = j.sources;
-  DATA = j.species.filter(s => s.months);
-  CHARS = j.characters.map(c => ({ id: c.char_id, label: c.label, help: c.help || "", select: c.kind === "month", opts: c.states.length ? c.states : null }));
-  build(); render(); hints();
+  J = await res.json();
+  wire(); route();
 }
 
 async function offline() {
@@ -262,7 +343,7 @@ async function packs() {
   for (const p of list) {
     const row = document.createElement("div");
     const have = (await Promise.all(p.files.map(f => cache.match(f)))).every(Boolean);
-    row.innerHTML = `<span>${p.label} · ${p.files.length} photos · ${p.size_mb} MB</span> <button class="btn" type="button" id="pack-${p.id}">${have ? "Remove" : "Download"}</button> <span class="toast"></span>`;
+    row.innerHTML = `<span>${esc(p.label)} · ${p.files.length} photos · ${p.size_mb} MB</span> <button class="btn" type="button" id="pack-${esc(p.id)}">${have ? "Remove" : "Download"}</button> <span class="toast"></span>`;
     const btn = row.querySelector("button"), note = row.querySelector(".toast");
     btn.addEventListener("click", async () => {
       if (btn.textContent === "Remove") { await Promise.all(p.files.map(f => cache.delete(f))); btn.textContent = "Download"; note.textContent = "Removed."; return; }
@@ -274,7 +355,7 @@ async function packs() {
   }
 }
 
-load().catch(() => { document.getElementById("count").textContent = "Couldn't load the species data. Check your connection and reload."; });
+load().catch(() => { document.getElementById("count").textContent = "Couldn't load the plant data. Check your connection and reload."; });
 offline(); packs();
 </script>
 </body>
