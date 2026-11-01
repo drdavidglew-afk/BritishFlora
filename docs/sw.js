@@ -1,6 +1,6 @@
 // Service worker: saves the key on the device so it works with no signal.
 // Bump VERSION whenever you publish new data or code, so phones fetch the update.
-const VERSION = "core-v4";
+const VERSION = "core-v5";
 const CORE = [
   "./",
   "index.html",
@@ -12,7 +12,8 @@ const CORE = [
 ];
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
+  // cache: "reload" skips the browser's HTTP cache, so a new version never saves a stale copy of the page.
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE.map((u) => new Request(u, { cache: "reload" })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
@@ -32,7 +33,7 @@ self.addEventListener("fetch", (e) => {
   // Species data and the page: try the network first so updates arrive, fall back to the saved copy offline.
   if (url.origin === location.origin && (url.pathname.endsWith("species.json") || req.mode === "navigate")) {
     e.respondWith(
-      fetch(req)
+      fetch(req, { cache: "no-cache" })
         .then((res) => { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); return res; })
         .catch(() => caches.match(req).then((r) => r || caches.match("index.html")))
     );
