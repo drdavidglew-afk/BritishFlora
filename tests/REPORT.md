@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | plants | 417 | 342 | 417 | 397 | **322** |
 
-Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 297.
+Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 295.
 
 ## Failures (95)
 
@@ -113,7 +113,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Bellis perennis | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (3) |
 | Taraxacum officinale agg. | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (10) |
 | Cirsium vulgare | Asteraceae | 6 | yes | 1 | 5 | yes | 1 (13) |
-| Cirsium arvense | Asteraceae | 5 | yes | 1 | 6 | yes | 2 (11) |
+| Cirsium arvense | Asteraceae | 5 | yes | 1 | 6 | yes | 2 (12) |
 | Senecio vulgaris | Asteraceae | 4 | yes | 1 | 5 | yes | 2 (11) |
 | Leucanthemum vulgare | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (5) |
 | Achillea millefolium | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (2) |
@@ -218,12 +218,12 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Lotus corniculatus | Fabaceae | 6 | yes | 1 | 5 | yes | 1 (26) |
 | Trifolium repens | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (15) |
 | Trifolium pratense | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (13) |
-| Vicia cracca | Fabaceae | 6 | yes | 1 | 4 | yes | 1 (20) |
+| Vicia cracca | Fabaceae | 6 | yes | 1 | 4 | yes | 2 (22) |
 | Ulex europaeus | Fabaceae | 5 | yes | 1 | 5 | yes | 1 (1) |
 | Cytisus scoparius | Fabaceae | 5 | yes | 1 | 5 | yes | 3 (11) |
 | Lathyrus pratensis | Fabaceae | 6 | yes | 1 | 4 | yes | 2 (33) |
 | Medicago lupulina | Fabaceae | 5 | yes | 1 | 5 | yes | 2 (18) |
-| Vicia sepium | Fabaceae | 5 | yes | 1 | 4 | yes | 1 (11) |
+| Vicia sepium | Fabaceae | 5 | yes | 1 | 4 | yes | 2 (13) |
 | Anthyllis vulneraria | Fabaceae | 5 | yes | 1 | 6 | yes | 2 (12) |
 | Laburnum anagyroides | Fabaceae | 6 | yes | 1 | 5 | yes | 5 (11) |
 | Ononis repens | Fabaceae | 4 | yes | 1 | 5 | yes | 1 (1) |
