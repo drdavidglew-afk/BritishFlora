@@ -1,0 +1,37 @@
+char_id,state_id,label
+colour,white,White
+colour,yellow,Yellow
+colour,pink,Pink to purple
+colour,blue,Blue to violet
+lip,hooded,Hooded upper lip
+lip,flat,Flat or shallow upper lip
+lip,absent,Upper lip tiny or missing
+lip,regular,"Almost regular, 4 even lobes"
+arr,head,Dense head or spike at the top
+arr,whorls,Rings up the stem
+arr,pairs,"Pairs in leaf axils, facing one way"
+arr,onesided,Loose one-sided spikes
+leaf,heart,"Heart-shaped, nettle-like"
+leaf,rounded,Rounded or kidney-shaped
+leaf,oval,Oval
+leaf,narrow,"Narrow, lance-shaped"
+leaf,tiny,"Tiny, under 1 cm"
+leaf,lobed,Deeply toothed or lobed
+smell,aromatic,Minty or herby
+smell,foul,Unpleasant
+smell,none,Little or none
+habit,upright,Upright
+habit,creeping,"Creeping, matted or with runners"
+habitat,wood,Woodland
+habitat,hedge,Hedges and roadsides
+habitat,grass,Grassland and lawns
+habitat,wet,Wet ground and watersides
+habitat,arable,"Gardens, fields and bare ground"
+habitat,heath,Heaths and acid ground
+habitat,chalk,Chalk and limestone
+height,0,Under 20 cm
+height,0.2,20–50 cm
+height,0.5,50 cm–1 m
+height,1,Over 1 m
+region,gb,Great Britain
+region,ie,Ireland

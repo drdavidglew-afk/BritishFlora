@@ -1,0 +1,11 @@
+char_id,label,kind,help
+colour,Flower colour,state,
+lip,Shape of the flower,state,Look at the top of the flower.
+arr,How the flowers are arranged,state,
+leaf,Leaf shape,state,
+smell,Smell of a crushed leaf,state,
+habit,Growth habit,state,
+habitat,Habitat,state,
+height,Height of the tallest stem,height,
+month,Flowering month,month,
+region,Where are you?,region,
