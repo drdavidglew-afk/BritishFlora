@@ -72,3 +72,8 @@ Species step (step 2):
 - **tip says the leaf edge is (slightly) toothed** (2): Plantago maritima `gedge` smooth → smooth toothed; Rumex rupestris `gedge` smooth → smooth toothed
 - **gorses have spines instead of leaves: gleaf none, as for Common and Western Gorse** (1): Ulex minor `gleaf` narrow → narrow none
 
+### Batch 8: second look at species-step rank failures
+
+- **flowering plants have their leaves along a leafy stem (the basal rosette withers or is small), so "mostly in a basal rosette" was wrong and drowned the genuinely rosette-forming species (Dwarf Thistle, daisy, cat's-ear)** (6): Cirsium vulgare `aster_leaves` stem rosette → stem; Carduus crispus `aster_leaves` stem rosette → stem; Sonchus asper `aster_leaves` stem rosette → stem; Sonchus oleraceus `aster_leaves` stem rosette → stem; Sonchus arvensis `aster_leaves` stem rosette → stem; Lactuca serriola `aster_leaves` stem rosette → stem
+- **Yorkshire-fog's awn is short, hooked and hidden inside the spikelet, so a beginner sees no bristles (earlier 'awned/none' was a hedge); Common Bent is only rarely awned** (2): Holcus lanatus `grass_awn` awned none → none; Agrostis capillaris `grass_awn` none awned → none
+

@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | plants | 417 | 342 | 417 | 397 | **322** |
 
-Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 294.
+Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 295.
 
 ## Failures (95)
 
@@ -15,7 +15,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Hordeum murinum** (Poaceae), species step: fits but ranks 6 (18 fit all answers). Top: Anthoxanthum odoratum (0.0), Cynosurus cristatus (0.0), Alopecurus pratensis (0.0)
 - **Deschampsia cespitosa** (Poaceae), species step: fits but ranks 4 (28 fit all answers). Top: Holcus lanatus (0.0), Poa trivialis (0.0), Arrhenatherum elatius (0.0)
 - **Avena fatua** (Poaceae), species step: fits but ranks 4 (11 fit all answers). Top: Schedonorus arundinaceus (0.0), Schedonorus giganteus (0.0), Bromopsis ramosa (0.0)
-- **Anisantha sterilis** (Poaceae), species step: fits but ranks 7 (35 fit all answers). Top: Holcus lanatus (0.0), Agrostis capillaris (0.0), Arrhenatherum elatius (0.0)
+- **Anisantha sterilis** (Poaceae), species step: fits but ranks 5 (33 fit all answers). Top: Arrhenatherum elatius (0.0), Deschampsia cespitosa (0.0), Festuca rubra (0.0)
 - **Festuca ovina** (Poaceae), species step: fits but ranks 4 (13 fit all answers). Top: Agrostis capillaris (0.0), Aira praecox (0.0), Danthonia decumbens (0.0)
 - **Cladium mariscus** (Cyperaceae), species step: fits but ranks 5 (8 fit all answers). Top: Bolboschoenus maritimus (0.0), Schoenoplectus tabernaemontani (0.0), Scirpus sylvaticus (0.0)
 - **Alchemilla glabra** (Rosaceae), species step: fits but ranks 4 (18 fit all answers). Top: Alchemilla mollis (0.0), Aphanes arvensis (0.0), Aphanes australis (0.0)
@@ -104,7 +104,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 - **Frangula alnus** (Rhamnaceae), family step: fits but ranks 8 (13 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Ericaceae (0.0)
 - **Daphne laureola** (Thymelaeaceae), family step: fits but ranks 9 (13 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Ericaceae (0.0)
 - **Lysimachia tenella** (Primulaceae), family step: fits but ranks 7 (15 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
-- **Cirsium acaule** (Asteraceae), species step: fits but ranks 8 (16 fit all answers). Top: Cirsium vulgare (0.0), Arctium minus (0.0), Carduus crispus (0.0)
+- **Cirsium acaule** (Asteraceae), species step: fits but ranks 6 (14 fit all answers). Top: Arctium minus (0.0), Carduus nutans (0.0), Arctium lappa (0.0)
 
 ## All plants
 
@@ -119,7 +119,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Achillea millefolium | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (4) |
 | Tussilago farfara | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (3) |
 | Centaurea nigra | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (8) |
-| Hypochaeris radicata | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (39) |
+| Hypochaeris radicata | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (37) |
 | Sonchus oleraceus | Asteraceae | 4 | yes | 1 | 6 | yes | 4 (14) |
 | Tanacetum vulgare | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (9) |
 | Artemisia vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (6) |
@@ -135,7 +135,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Tragopogon pratensis | Asteraceae | 5 | yes | 1 | 6 | yes | 3 (31) |
 | Jacobaea vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (6) |
 | Carlina vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (2) |
-| Scorzoneroides autumnalis | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (41) |
+| Scorzoneroides autumnalis | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (37) |
 | Galinsoga quadriradiata | Asteraceae | 4 | yes | 1 | 5 | yes | 2 (12) |
 | Bidens tripartita | Asteraceae | 4 | yes | 1 | 5 | yes | 3 (12) |
 | Cirsium palustre | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (1) |
@@ -147,7 +147,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Poa annua | Poaceae | 4 | yes | 1 | 6 | yes | 2 (10) |
 | Lolium perenne | Poaceae | 5 | yes | 1 | 6 | yes | 1 (3) |
 | Dactylis glomerata | Poaceae | 4 | yes | 1 | 6 | yes | 1 (1) |
-| Arrhenatherum elatius | Poaceae | 4 | yes | 1 | 6 | yes | 2 (29) |
+| Arrhenatherum elatius | Poaceae | 4 | yes | 1 | 6 | yes | 1 (28) |
 | Anthoxanthum odoratum | Poaceae | 4 | yes | 1 | 5 | yes | 1 (9) |
 | Phleum pratense | Poaceae | 4 | yes | 1 | 5 | yes | 1 (7) |
 | Alopecurus pratensis | Poaceae | 4 | yes | 1 | 6 | yes | 2 (2) |
@@ -167,7 +167,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Bromus hordeaceus | Poaceae | 4 | yes | 1 | 6 | yes | 1 (2) |
 | Avena fatua | Poaceae | 3 | yes | 1 | 6 | yes | 4 (11) |
 | Aira praecox | Poaceae | 3 | yes | 1 | 6 | yes | 2 (12) |
-| Anisantha sterilis | Poaceae | 3 | yes | 1 | 6 | yes | 7 (35) |
+| Anisantha sterilis | Poaceae | 3 | yes | 1 | 6 | yes | 5 (33) |
 | Festuca ovina | Poaceae | 3 | yes | 1 | 6 | yes | 4 (13) |
 | Carex flacca | Cyperaceae | 5 | yes | 1 | 5 | yes | 1 (40) |
 | Carex pendula | Cyperaceae | 4 | yes | 1 | 6 | yes | 1 (7) |
@@ -521,7 +521,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Lysimachia tenella | Primulaceae | 5 | yes | 7 | 6 | yes | 3 (4) |
 | Lotus pedunculatus | Fabaceae | 4 | yes | 1 | 5 | yes | 1 (2) |
 | Vicia sativa | Fabaceae | 5 | yes | 1 | 5 | yes | 2 (7) |
-| Cirsium acaule | Asteraceae | 4 | yes | 1 | 6 | yes | 8 (16) |
+| Cirsium acaule | Asteraceae | 4 | yes | 1 | 6 | yes | 6 (14) |
 | Bromopsis ramosa | Poaceae | 3 | yes | 1 | 6 | yes | 3 (11) |
 | Carex riparia | Cyperaceae | 5 | yes | 1 | 6 | yes | 3 (10) |
 | Juncus conglomeratus | Juncaceae | 4 | yes | 2 | 6 | yes | 2 (3) |
