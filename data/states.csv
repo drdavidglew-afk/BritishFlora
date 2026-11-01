@@ -114,3 +114,50 @@ height,0.5,50 cm–1 m
 height,1,Over 1 m
 region,gb,Great Britain
 region,ie,Ireland
+rcolour,yellow,Yellow
+rcolour,white,White
+rcolour,blue_purple,Blue to purple
+rcolour,pink_red,Pink to red
+rcolour,green,Green
+rform,open,Open cup or saucer
+rform,globe,Globe of incurved petals
+rform,bell,Nodding bell
+rform,spurred,Spurred or hooded
+rform,tufted,"A fluffy tuft of stamens, petals tiny or none"
+rpetals,4,4
+rpetals,5,5
+rpetals,many,6 or more
+rpetals,none,"None, or misshapen"
+rleaf,simple,"Undivided: heart, kidney or oval"
+rleaf,lobed,"Lobed or cut, like a hand or feathery"
+rleaf,compound,Separate leaflets
+rleaf,narrow,"Narrow, strap- or spear-shaped"
+rleaf,ivy,"Floating, ivy- or kidney-shaped"
+rleaf,thread,"Thread-like, under water"
+rhabit,upright,Upright
+rhabit,creeping,"Creeping, with rooting runners"
+rhabit,climbing,Woody climber
+rhabit,water,Growing in water
+rsepals,spreading,Spreading or pressed to the petals
+rsepals,reflexed,Folded back down the stalk
+rstalk,furrowed,Furrowed (grooved)
+rstalk,smooth,Round and smooth
+rfruit,achenes,Head of small dry seeds
+rfruit,spiny,Seeds covered in spines or bumps
+rfruit,spike,Long thin spike of seeds
+rfruit,pods,Pods that split open
+rfruit,plumed,Seeds with long feathery tails
+rfruit,berry,Berries
+rhab,wood,Woodland
+rhab,hedge,Hedges and scrub
+rhab,grass,Grassland
+rhab,wet,"Marsh, mud and pond edges"
+rhab,pond,"In ponds, lakes or ditches"
+rhab,river,In flowing streams and rivers
+rhab,brackish,Brackish coastal water
+rhab,arable,Fields and disturbed ground
+rhab,rocky,"Mountains, rocks, limestone"
+rsize,small,Under 1 cm
+rsize,medium,1 to 2.5 cm
+rsize,large,Over 2.5 cm
+rleaf,fan,Stiff flat fans that keep their shape out of water

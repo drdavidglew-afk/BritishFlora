@@ -21,6 +21,16 @@ leaf,Leaf shape,state,Lamiaceae,
 smell,Smell of a crushed leaf,state,Lamiaceae,
 habit,Growth habit,state,Lamiaceae,
 habitat,Habitat,state,Lamiaceae,
+rcolour,Flower colour,state,Ranunculaceae,
+rform,Shape of the flower,state,Ranunculaceae,
+rpetals,Number of petals,state,Ranunculaceae,Count the coloured parts.
+rsize,Flower size,state,Ranunculaceae,Measure across the open flower.
+rleaf,Leaves,state,Ranunculaceae,
+rhabit,Growth habit,state,Ranunculaceae,
+rsepals,Green sepals under the petals,state,Ranunculaceae,Buttercups only: look underneath the flower.
+rstalk,Flower stalk,state,Ranunculaceae,Buttercups only: run a fingernail along the stalk.
+rfruit,Fruit,state,Ranunculaceae,
+rhab,Habitat,state,Ranunculaceae,
 height,Height of the tallest stem,height,all,
-month,Flowering month,month,Lamiaceae,
-region,Where are you?,region,Lamiaceae,
+month,Flowering month,month,species,
+region,Where are you?,region,species,

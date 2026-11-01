@@ -1,6 +1,6 @@
 // Service worker: saves the key on the device so it works with no signal.
 // Bump VERSION whenever you publish new data or code, so phones fetch the update.
-const VERSION = "core-v2";
+const VERSION = "core-v3";
 const CORE = [
   "./",
   "index.html",

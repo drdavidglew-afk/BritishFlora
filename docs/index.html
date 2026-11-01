@@ -111,13 +111,17 @@ footer p { margin: 0; max-width: 90ch; }
 .btn.solid { background: var(--accent); color: var(--surface); text-decoration: none; }
 a.btn { text-decoration: none; display: inline-block; }
 .later { font-size: 12.5px; color: var(--muted); }
+.linkbtn { font: 600 14px var(--body); color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 999px; padding: 4px 10px; cursor: pointer; margin-left: 4px; }
+.linkbtn:hover { background: var(--accent); color: var(--surface); }
+@media (prefers-reduced-motion: no-preference) { fieldset.flash { animation: flash 1.2s ease-out; } }
+@keyframes flash { 0% { background: var(--accent-soft); } 100% { background: transparent; } }
 </style>
 </head>
 <body>
 <header>
   <h1>British Flora Key</h1>
   <div class="status" id="status"><span class="dot" id="dot"></span><span id="statusText">Checking offline storage…</span></div>
-  <p>An open identification key to the wild plants of Britain and Ireland. <b>Step 1</b> finds the family; <b>step 2</b> finds the species (so far for the mint family only). Pick any features you can see, in any order. Plants are ranked by how many of your answers they contradict, so one wrong answer won't hide the right one.</p>
+  <p>An open identification key to the wild plants of Britain and Ireland. <b>Step 1</b> finds the family; <b>step 2</b> finds the species (so far for the mint and buttercup families). Pick any features you can see, in any order. Plants are ranked by how many of your answers they contradict, so one wrong answer won't hide the right one.</p>
 </header>
 <nav class="stagebar" id="stagebar" aria-label="Key stage"></nav>
 <main>
@@ -146,7 +150,7 @@ const SHOW = 30;
 let J = null, stage = "family", sel = { family: {} }, query = "";
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family" : c.stage === st))
+const charsFor = st => J.characters.filter(c => c.stage === "all" || (st === "family" ? c.stage === "family" : c.stage === st || c.stage === "species"))
   .map(c => ({ id: c.char_id, label: c.label, help: c.help || "", kind: c.kind, opts: c.states }));
 const items = () => stage === "family" ? J.families : J.species.filter(s => s.family === stage);
 const S = () => (sel[stage] ||= {});
@@ -248,7 +252,10 @@ function render() {
     fit.length === 1 ? `1 ${pl(1)} fits: ${fit[0].it.common}` : `${fit.length} ${pl(fit.length)} fit all your answers`;
   document.getElementById("jumpText").textContent = !n ? `${list.length} ${pl(list.length)}` : `${fit.length} fit`;
   const nx = !n && stage === "family" ? "ptype" : bestNext((fit.length ? fit : near).map(r => r.it));
-  document.getElementById("next").textContent = nx ? `Most useful next question: ${charsFor(stage).find(x => x.id === nx).label.toLowerCase()}` : (n ? "No remaining question separates these. Check the descriptions." : "Start with whatever is easiest to see.");
+  const nextEl = document.getElementById("next");
+  if (nx) {
+    nextEl.innerHTML = `Most useful next question: <button type="button" class="linkbtn" id="gonext" data-c="${esc(nx)}">${esc(charsFor(stage).find(x => x.id === nx).label)} ↑</button>`;
+  } else nextEl.textContent = n ? "No remaining question separates these. Check the descriptions." : "Start with whatever is easiest to see.";
   document.querySelectorAll("fieldset").forEach(f => { f.classList.toggle("suggest", f.dataset.c === nx); const h = f.querySelector(".hint"); if (h) h.hidden = f.dataset.c !== nx; });
   const shown = (query ? rows : rows.filter(r => r.mm.length <= 1)).slice(0, SHOW);
   const shownAll = shown.length ? shown : rows.slice(0, 10);
@@ -303,6 +310,14 @@ function wire() {
     render();
   });
   document.getElementById("reset").addEventListener("click", () => { sel[stage] = {}; render(); });
+  document.getElementById("next").addEventListener("click", e => {
+    const b = e.target.closest("#gonext"); if (!b) return;
+    const fs = document.querySelector(`fieldset[data-c="${b.dataset.c}"]`); if (!fs) return;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    fs.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    fs.classList.remove("flash"); void fs.offsetWidth; fs.classList.add("flash");
+    const first = fs.querySelector(".opt, select"); if (first) first.focus({ preventScroll: true });
+  });
   document.getElementById("search").addEventListener("input", e => { query = e.target.value.trim(); render(); });
   addEventListener("hashchange", route);
   document.getElementById("copy").addEventListener("click", async () => {
