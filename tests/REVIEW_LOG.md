@@ -40,3 +40,12 @@ Species step (step 2):
 - **burdocks: the hooked bracts feel prickly, so "spiny" must not reject them** (3): Arctium minus `aster_spiny` none → spiny none; Arctium lappa `aster_spiny` none → spiny none; Arctium nemorosum `aster_spiny` none → spiny none
 - **orange-red heads: add pink_red** (1): Pilosella aurantiaca `gcolour` yellow → yellow pink_red
 
+### Batch 3: Asteraceae (rarer), Caryophyllaceae, Apiaceae, Ranunculaceae
+
+- **Lesser Stitchwort flowers are about 5-8 mm across (the tip wrongly said penny-sized, which is Greater Stitchwort): size small, tip corrected** (2): Stellaria graminea `gsize` medium → small; Stellaria graminea tip → "Slender, grass-like stitchwort with narrow, smooth leaves and loose, branched clusters of small white flowers (petals cleft almost to the base). Grassy banks, heaths and roadsides."
+- **Common Mouse-ear flowers are about 1 cm across: small or medium** (1): Cerastium fontanum `gsize` small → small medium
+- **finely divided umbellifer leaves are "lobed or deeply cut" as well as "separate leaflets"** (8): Chaerophyllum temulum `gleaf` compound → compound lobed; Aethusa cynapium `gleaf` compound → compound lobed; Myrrhis odorata `gleaf` compound → compound lobed; Foeniculum vulgare `gleaf` compound → compound lobed; Silaum silaus `gleaf` compound → compound lobed; Pimpinella saxifraga `gleaf` compound → compound lobed; Anthriscus caucalis `gleaf` compound → compound lobed; Torilis nodosa `gleaf` compound → compound lobed
+- **buttercups with deeply cut, hand-like or three-parted leaves: a beginner may say "lobed" or "separate leaflets", so both** (4): Ranunculus repens `rleaf` compound → compound lobed; Ranunculus bulbosus `rleaf` compound → compound lobed; Ranunculus acris `rleaf` lobed → lobed compound; Ranunculus sardous `rleaf` compound → compound lobed
+- **Traveller's-joy flowers are mostly a fluffy tuft of stamens with four creamy sepals** (1): Clematis vitalba `rform` open → open tufted
+- **Galinsoga parviflora: white rays (yellow only in the disc)** (1): Galinsoga parviflora `gcolour` white yellow → white
+

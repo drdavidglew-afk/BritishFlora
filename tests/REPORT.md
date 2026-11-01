@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | plants | 417 | 342 | 417 | 397 | **322** |
 
-Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 296.
+Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 297.
 
 ## Failures (95)
 
@@ -125,7 +125,7 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Artemisia vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (5) |
 | Eupatorium cannabinum | Asteraceae | 4 | yes | 1 | 6 | yes | 2 (2) |
 | Petasites hybridus | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (1) |
-| Solidago virgaurea | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (18) |
+| Solidago virgaurea | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (17) |
 | Pulicaria dysenterica | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (5) |
 | Cichorium intybus | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (6) |
 | Lapsana communis | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (5) |
@@ -241,27 +241,27 @@ Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step
 | Thlaspi arvense | Brassicaceae | 5 | yes | 1 | 5 | yes | 2 (18) |
 | Cakile maritima | Brassicaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
 | Stellaria media | Caryophyllaceae | 4 | yes | 4 | 6 | yes | 2 (9) |
-| Stellaria holostea | Caryophyllaceae | 5 | yes | 2 | 6 | yes | 2 (4) |
+| Stellaria holostea | Caryophyllaceae | 5 | yes | 2 | 6 | yes | 1 (3) |
 | Silene dioica | Caryophyllaceae | 5 | yes | 1 | 6 | yes | 1 (1) |
 | Silene latifolia | Caryophyllaceae | 4 | yes | 3 | 6 | yes | 1 (5) |
 | Silene flos-cuculi | Caryophyllaceae | 5 | yes | 3 | 6 | yes | 1 (1) |
 | Silene vulgaris | Caryophyllaceae | 4 | yes | 3 | 6 | yes | 1 (4) |
 | Cerastium fontanum | Caryophyllaceae | 4 | yes | 4 | 6 | yes | 1 (12) |
-| Sagina procumbens | Caryophyllaceae | 4 | yes | 3 | 5 | yes | 1 (16) |
+| Sagina procumbens | Caryophyllaceae | 4 | yes | 3 | 5 | yes | 1 (17) |
 | Arenaria serpyllifolia | Caryophyllaceae | 4 | yes | 3 | 6 | yes | 5 (11) |
 | Spergula arvensis | Caryophyllaceae | 4 | yes | 2 | 6 | yes | 1 (4) |
 | Saponaria officinalis | Caryophyllaceae | 4 | yes | 3 | 6 | yes | 1 (1) |
 | Agrostemma githago | Caryophyllaceae | 4 | yes | 3 | 6 | yes | 1 (1) |
-| Anthriscus sylvestris | Apiaceae | 6 | yes | 1 | 5 | yes | 2 (2) |
+| Anthriscus sylvestris | Apiaceae | 6 | yes | 1 | 5 | yes | 2 (5) |
 | Heracleum sphondylium | Apiaceae | 5 | yes | 1 | 6 | yes | 1 (3) |
 | Aegopodium podagraria | Apiaceae | 5 | yes | 1 | 5 | yes | 2 (32) |
-| Daucus carota | Apiaceae | 5 | yes | 1 | 5 | yes | 3 (4) |
+| Daucus carota | Apiaceae | 5 | yes | 1 | 5 | yes | 3 (7) |
 | Angelica sylvestris | Apiaceae | 4 | yes | 1 | 5 | yes | 1 (9) |
-| Conopodium majus | Apiaceae | 4 | yes | 1 | 5 | yes | 1 (3) |
-| Conium maculatum | Apiaceae | 4 | yes | 1 | 5 | yes | 1 (3) |
+| Conopodium majus | Apiaceae | 4 | yes | 1 | 5 | yes | 1 (4) |
+| Conium maculatum | Apiaceae | 4 | yes | 1 | 5 | yes | 1 (5) |
 | Oenanthe crocata | Apiaceae | 5 | yes | 1 | 5 | yes | 1 (11) |
-| Torilis japonica | Apiaceae | 4 | yes | 1 | 5 | yes | 2 (4) |
-| Sanicula europaea | Apiaceae | 4 | yes | 3 | 6 | yes | 1 (1) |
+| Torilis japonica | Apiaceae | 4 | yes | 1 | 5 | yes | 2 (6) |
+| Sanicula europaea | Apiaceae | 4 | yes | 3 | 6 | yes | 1 (2) |
 | Smyrnium olusatrum | Apiaceae | 5 | yes | 1 | 4 | yes | 1 (1) |
 | Pastinaca sativa | Apiaceae | 5 | yes | 1 | 5 | yes | 1 (1) |
 | Helosciadium nodiflorum | Apiaceae | 5 | yes | 1 | 6 | yes | 2 (6) |
