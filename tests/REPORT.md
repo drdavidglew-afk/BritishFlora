@@ -4,14 +4,13 @@
 
 | | family fits all answers | family in top 3 | species fits all answers | species in top 3 | both steps pass |
 |---|---|---|---|---|---|
-| plants | 417 | 342 | 417 | 396 | **321** |
+| plants | 417 | 342 | 417 | 397 | **322** |
 
-Overall pass rate: **77.0%**. Rank 1 at family step: 223; rank 1 at species step: 296.
+Overall pass rate: **77.2%**. Rank 1 at family step: 223; rank 1 at species step: 296.
 
-## Failures (96)
+## Failures (95)
 
 - **Sonchus oleraceus** (Asteraceae), species step: fits but ranks 4 (14 fit all answers). Top: Scorzoneroides autumnalis (0.0), Sonchus asper (0.0), Crepis capillaris (0.0)
-- **Senecio squalidus** (Asteraceae), species step: fits but ranks 6 (14 fit all answers). Top: Achillea millefolium (0.0), Senecio vulgaris (0.0), Tripleurospermum inodorum (0.0)
 - **Briza media** (Poaceae), species step: fits but ranks 9 (22 fit all answers). Top: Holcus lanatus (0.0), Agrostis capillaris (0.0), Poa trivialis (0.0)
 - **Hordeum murinum** (Poaceae), species step: fits but ranks 6 (18 fit all answers). Top: Anthoxanthum odoratum (0.0), Cynosurus cristatus (0.0), Alopecurus pratensis (0.0)
 - **Deschampsia cespitosa** (Poaceae), species step: fits but ranks 4 (28 fit all answers). Top: Holcus lanatus (0.0), Poa trivialis (0.0), Arrhenatherum elatius (0.0)
@@ -105,7 +104,7 @@ Overall pass rate: **77.0%**. Rank 1 at family step: 223; rank 1 at species step
 - **Frangula alnus** (Rhamnaceae), family step: fits but ranks 8 (13 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Ericaceae (0.0)
 - **Daphne laureola** (Thymelaeaceae), family step: fits but ranks 9 (13 fit all answers). Top: Rosaceae (0.0), Ranunculaceae (0.0), Ericaceae (0.0)
 - **Lysimachia tenella** (Primulaceae), family step: fits but ranks 7 (15 fit all answers). Top: Asteraceae (0.0), Plantaginaceae (0.0), Caryophyllaceae (0.0)
-- **Cirsium acaule** (Asteraceae), species step: fits but ranks 5 (13 fit all answers). Top: Cirsium vulgare (0.0), Carduus crispus (0.0), Carduus nutans (0.0)
+- **Cirsium acaule** (Asteraceae), species step: fits but ranks 8 (16 fit all answers). Top: Cirsium vulgare (0.0), Arctium minus (0.0), Carduus crispus (0.0)
 
 ## All plants
 
@@ -113,8 +112,8 @@ Overall pass rate: **77.0%**. Rank 1 at family step: 223; rank 1 at species step
 |---|---|---|---|---|---|---|---|
 | Bellis perennis | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (3) |
 | Taraxacum officinale agg. | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (10) |
-| Cirsium vulgare | Asteraceae | 6 | yes | 1 | 5 | yes | 1 (10) |
-| Cirsium arvense | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (7) |
+| Cirsium vulgare | Asteraceae | 6 | yes | 1 | 5 | yes | 1 (13) |
+| Cirsium arvense | Asteraceae | 5 | yes | 1 | 6 | yes | 2 (11) |
 | Senecio vulgaris | Asteraceae | 4 | yes | 1 | 5 | yes | 2 (11) |
 | Leucanthemum vulgare | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (5) |
 | Achillea millefolium | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (2) |
@@ -126,21 +125,21 @@ Overall pass rate: **77.0%**. Rank 1 at family step: 223; rank 1 at species step
 | Artemisia vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (5) |
 | Eupatorium cannabinum | Asteraceae | 4 | yes | 1 | 6 | yes | 2 (2) |
 | Petasites hybridus | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (1) |
-| Solidago virgaurea | Asteraceae | 5 | yes | 1 | 5 | yes | 3 (21) |
-| Pulicaria dysenterica | Asteraceae | 4 | yes | 1 | 6 | yes | 2 (6) |
+| Solidago virgaurea | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (18) |
+| Pulicaria dysenterica | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (5) |
 | Cichorium intybus | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (6) |
 | Lapsana communis | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (5) |
 | Arctium minus | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (3) |
 | Tripleurospermum inodorum | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (10) |
 | Matricaria discoidea | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (4) |
 | Tragopogon pratensis | Asteraceae | 5 | yes | 1 | 6 | yes | 3 (31) |
-| Jacobaea vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 3 (7) |
+| Jacobaea vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (6) |
 | Carlina vulgaris | Asteraceae | 5 | yes | 1 | 5 | yes | 1 (2) |
 | Scorzoneroides autumnalis | Asteraceae | 4 | yes | 1 | 5 | yes | 1 (41) |
 | Galinsoga quadriradiata | Asteraceae | 4 | yes | 1 | 5 | yes | 2 (12) |
 | Bidens tripartita | Asteraceae | 4 | yes | 1 | 5 | yes | 3 (11) |
 | Cirsium palustre | Asteraceae | 5 | yes | 1 | 6 | yes | 1 (1) |
-| Senecio squalidus | Asteraceae | 5 | yes | 1 | 5 | yes | 6 (14) |
+| Senecio squalidus | Asteraceae | 5 | yes | 1 | 5 | yes | 2 (9) |
 | Sonchus arvensis | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (2) |
 | Gnaphalium uliginosum | Asteraceae | 4 | yes | 1 | 6 | yes | 1 (14) |
 | Achillea ptarmica | Asteraceae | 5 | yes | 1 | 6 | yes | 2 (9) |
@@ -522,7 +521,7 @@ Overall pass rate: **77.0%**. Rank 1 at family step: 223; rank 1 at species step
 | Lysimachia tenella | Primulaceae | 5 | yes | 7 | 6 | yes | 3 (4) |
 | Lotus pedunculatus | Fabaceae | 4 | yes | 1 | 5 | yes | 1 (2) |
 | Vicia sativa | Fabaceae | 5 | yes | 1 | 5 | yes | 2 (7) |
-| Cirsium acaule | Asteraceae | 4 | yes | 1 | 6 | yes | 5 (13) |
+| Cirsium acaule | Asteraceae | 4 | yes | 1 | 6 | yes | 8 (16) |
 | Bromopsis ramosa | Poaceae | 3 | yes | 1 | 6 | yes | 3 (11) |
 | Carex riparia | Cyperaceae | 5 | yes | 1 | 6 | yes | 3 (10) |
 | Juncus conglomeratus | Juncaceae | 4 | yes | 2 | 6 | yes | 2 (3) |
