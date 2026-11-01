@@ -146,7 +146,7 @@ a.btn { text-decoration: none; display: inline-block; }
   <p><b>Install.</b> Android/Chrome: menu, then <i>Install app</i>. iPhone: Safari's Share button, then <i>Add to Home Screen</i>. Once installed it works with no signal.</p>
   <div class="packs" id="packs"><b>Offline photos.</b> <span id="packsText">No photo packs are available yet.</span></div>
   <p>Code MIT licence; data CC-BY 4.0. Source and corrections: <a href="https://github.com/drdavidglew-afk/BritishFlora">github.com/drdavidglew-afk/BritishFlora</a></p>
-  <p>Version 12 (1 Nov 2026).</p>
+  <p>Version 13 (1 Nov 2026).</p>
   <div><button class="btn" id="copy" type="button">Copy this stage's matrix as CSV</button> <span class="toast" id="toast"></span></div>
 </footer>
 <script>
@@ -218,7 +218,7 @@ function familyCard(f, mm) {
     <div class="facts">
       <span><b>${f.n}</b> species here (${f.n_native} native)</span>
       <span><b>${f.n_common}</b> widespread</span>
-      ${f.height != null ? `<span>Up to <b>${f.height >= 1 ? f.height.toFixed(f.height < 10 ? 1 : 0) + " m" : Math.round(f.height * 100) + " cm"}</b></span>` : ""}
+      ${f.height_typ != null ? `<span>Usually up to <b>${f.height_typ >= 1 ? f.height_typ.toFixed(f.height_typ < 10 ? 1 : 0) + " m" : Math.round(f.height_typ * 100) + " cm"}</b></span>` : ""}
     </div>
     <p class="genera">Most widespread: ${top}${f.n > 6 ? "…" : ""}</p>
     <div class="actions"><a class="btn solid" href="#species-${esc(f.name)}">Key out the ${f.n === 1 ? "species" : f.n + " species"} →</a>
