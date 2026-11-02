@@ -48,7 +48,7 @@ jobs:
 
           $last
 
-          **To run it:** [Actions → Fetch English names, flowering months and record counts](https://github.com/$GH_REPO/actions/workflows/enrich.yml) → *Run workflow* (leave it on \`all\`). It takes about 1.5 to 2.5 hours and costs nothing on a public repo.
+          **To run it:** [Actions → Fetch English names, flowering months and record counts](https://github.com/$GH_REPO/actions/workflows/enrich.yml) → *Run workflow* (leave it on \`all\`). It takes about 2 to 4 hours (the 5-hour limit leaves room) and costs nothing on a public repo.
 
           Close this issue once it has run."
           body=$(printf '%s\n' "$body" | sed 's/^          //')
