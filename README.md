@@ -74,7 +74,7 @@ A GitHub job (`.github/workflows/enrich.yml`) runs `scripts/enrich.py` when you 
 - counts GBIF records in Great Britain and Ireland into `data/auto/gbif_counts.csv`; for species the Kew table has no hectad counts for, the build estimates hectads by matching rank order against species that have both (shown as "about … hectads (estimated from GBIF records)");
 - rebuilds the key and commits the result.
 
-Hand-entered names and observations still take priority. A full run takes about 1.5 to 2.5 hours, mostly because iNaturalist asks for about one request a second; it costs nothing on a public repo.
+Hand-entered names and observations still take priority. A full run takes about 2 to 4 hours (the first took 3¾), mostly because iNaturalist asks for about one request a second; it costs nothing on a public repo.
 
 GitHub switches off scheduled jobs in a public repo after 60 days with no commits. If that happens to the reminder, GitHub shows a notice on the Actions tab; turn it back on there.
 
